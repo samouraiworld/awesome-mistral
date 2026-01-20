@@ -61,7 +61,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) ⭐ 3k+ – Official lightweight LoRA-based fine-tuning library.
 - 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) ⭐ 2k+ – Official notebooks and examples for common use cases.
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
-- 🧠 [Mistral Vibe](https://github.com/mistralai/vibe) – Native CLI coding assistant.
+- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
 
 ---
@@ -147,7 +147,7 @@ High-quality community fine-tunes built on Mistral base models:
 ### Official Libraries
 
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
-- 🧠 [Mistral Vibe](https://github.com/mistralai/vibe) – Native CLI coding assistant powered by Devstral.
+- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant powered by Devstral.
 
 ---
 
