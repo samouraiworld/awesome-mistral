@@ -15,6 +15,7 @@ This repository maps and curates the entire Mistral.ai ecosystem for AI engineer
 
 ## Contents
 
+- [What's New (March 2026)](#whats-new-march-2026)
 - [Why Mistral?](#why-mistral)
 - [Official Mistral Resources](#official-mistral-resources)
 - [Models](#models)
@@ -37,17 +38,29 @@ This repository maps and curates the entire Mistral.ai ecosystem for AI engineer
 
 ---
 
+## What's New (March 2026)
+
+- 🚀 **[Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)** – Hybrid MoE (119B/6.5B active) unifying reasoning, coding, and multimodal in one model.
+- 🧪 **[Leanstral](https://huggingface.co/mistralai/Leanstral-2603)** – First open-source Lean 4 formal proof agent.
+- 🏢 **[Mistral Forge](https://mistral.ai/news/forge)** – Enterprise platform for training models on proprietary data.
+- 🎙️ **[Voxtral Mini 4B Realtime](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602)** – Real-time speech-to-text with sub-200ms latency.
+- 🛡️ **Mistral Moderation 2603** – Updated content moderation with jailbreaking detection.
+- 🖥️ **[Mistral Compute](https://mistral.ai/products/compute)** – European-hosted GPU cloud.
+
+---
+
 ## Why Mistral?
 
 Mistral AI offers a compelling alternative in the LLM landscape:
 
 | Aspect | Mistral Advantage |
 |--------|-------------------|
-| **Open Weights** | Models like Mistral Large 3 and Ministral are fully open-weight (Apache 2.0), enabling local deployment and full control |
-| **Efficiency** | Mistral Large 3 (675B) uses active parameter routing (41B active) for high efficiency; Ministral models are optimized for edge |
-| **European Sovereignty** | Paris-based company offering GDPR-compliant, EU-hosted API options |
+| **Open Weights** | Models like Mistral Large 3, Small 4, and Ministral are fully open-weight (Apache 2.0), enabling local deployment and full control |
+| **Efficiency** | Mistral Small 4 (119B/6.5B active) and Large 3 (675B/41B active) use MoE parameter routing for high efficiency; Ministral 3B/8B/14B are optimized for edge |
+| **European Sovereignty** | Paris-based company offering GDPR-compliant, EU-hosted API options via Forge and Compute |
 | **Cost Efficiency** | Competitive API pricing; open models enable free self-hosting |
-| **Innovation** | Pioneered efficient MoE architectures, local reasoning models, and multimodal edge AI |
+| **Innovation** | Pioneered efficient MoE architectures, hybrid reasoning models, formal proof agents (Leanstral), and real-time speech AI |
+| **Full-Stack Platform** | Forge (enterprise model training) + Compute (European GPU cloud) + le Chat (AI assistant) |
 
 ---
 
@@ -55,8 +68,11 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 - 🧠 [Mistral AI](https://mistral.ai) – Official company website with product information and announcements.
 - 🧠 [Mistral AI Documentation](https://docs.mistral.ai) – Comprehensive API documentation, guides, and model specifications.
-- 🧠 [Mistral AI Console](https://console.mistral.ai) – Web interface for API key management and model access.
-- 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization with 22+ repositories.
+- 🧠 [AI Studio (la Plateforme)](https://console.mistral.ai) – Developer console for API keys, model access, and agent management.
+- 🧠 [le Chat](https://chat.mistral.ai) – AI assistant (web, iOS, Android) with free and Pro tiers.
+- 🧠 [Mistral Forge](https://mistral.ai/news/forge) – Enterprise platform for training frontier-grade models on proprietary data.
+- 🧠 [Mistral Compute](https://mistral.ai/products/compute) – European-hosted GPU cloud (NVIDIA Grace Blackwell).
+- 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization with 24+ repositories.
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – Official inference library for running Mistral models.
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) ⭐ 3k+ – Official lightweight LoRA-based fine-tuning library.
 - 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) ⭐ 2k+ – Official notebooks and examples for common use cases.
@@ -72,26 +88,29 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 | Model | Context | License | Best For |
 |-------|---------|---------|----------|
+| **Mistral Small 4** | 256k | Apache 2.0 | Hybrid reasoning + coding + multimodal (119B MoE / 6.5B active) |
 | **Mistral Large 3** | 256k | Apache 2.0 | Complex reasoning, multilingual, coding, vision (675B / 41B active) |
-| **Mistral Medium 3.1** | 128k | Proprietary | Prototype-to-production, balanced performance |
+| **Mistral Medium 3.1** | 128k | Proprietary | Prototype-to-production, balanced multimodal performance |
 | **Mistral Small 3.2** | 128k | Apache 2.0 | Low-latency, cost-sensitive applications (24B) |
 | **Mistral OCR 3** | — | Proprietary | Document parsing, table reconstruction ($2/1k pages) |
 
 ### Open-Weight Models
 
 #### General Purpose & Reasoning
+- 🧠 [Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) – Hybrid MoE (119B / 6.5B active) unifying reasoning, coding, and multimodal. Configurable `reasoning_effort`.
 - 🧠 [Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) – Flagship MoE (675B) with state-of-the-art reasoning and vision.
 - 🧠 [Mistral Small 3.2](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506) – High-performance dense 24B model (v3.2).
-- 🧠 [Magistral Small 3](https://huggingface.co/mistralai/Magistral-Small-2506) – Specialized 24B reasoning model for complex logical tasks.
+- 🧠 [Magistral Small 1.2](https://huggingface.co/mistralai/Magistral-Small-2509) – Specialized 24B reasoning model with multimodality.
 - 🧠 [Mixtral 8x22B](https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1) – Legacy MoE workhorse (141B total / 39B active).
 
 #### Edge & On-Device (Ministral)
+- 🧠 [Ministral 14B](https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512) – Dense edge model with vision (14B). Best-in-class at small scale.
 - 🧠 [Ministral 8B](https://huggingface.co/mistralai/Ministral-8B-Instruct-2410) – High-performance edge model (8B).
 - 🧠 [Ministral 3B](https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512) – Ultralight model for mobile/browser (3B).
 
 #### Coding & Agentic (Devstral)
-- 🧠 [Devstral 2](https://huggingface.co/mistralai/Devstral-2-123B-2501) – 123B coding model (MIT License). 72.2% SWE-bench Verified.
-- 🧠 [Devstral Small 2](https://huggingface.co/mistralai/Devstral-Small-2-24B-2501) – 24B coding model (Apache 2.0) for local agents.
+- 🧠 [Devstral 2](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) – 123B coding model (Modified MIT License). 72.2% SWE-bench Verified.
+- 🧠 [Devstral Small 2](https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512) – 24B coding model (Apache 2.0) for local agents.
 - 🧠 [Codestral 25.01](https://huggingface.co/mistralai/Codestral-2501) – Legacy code specialist.
 
 #### Multimodal (Pixtral)
@@ -100,7 +119,9 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 ### Specialized Models
 - 🧠 **Mistral OCR 3** – Advanced document understanding and table reconstruction.
-- 🧠 **Voxtral** – Voice-native models for speech processing.
+- 🧠 [Leanstral](https://huggingface.co/mistralai/Leanstral-2603) – First open-source Lean 4 formal proof agent (119B/6.5B active, Apache 2.0).
+- 🧠 [Voxtral Mini 4B Realtime](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602) – Real-time speech-to-text, sub-200ms latency, 13 languages (Apache 2.0).
+- 🧠 **Mistral Moderation 2603** – Content moderation with jailbreaking, dangerous, and criminal detection (3B, API only).
 
 ---
 
@@ -135,7 +156,8 @@ High-quality community fine-tunes built on Mistral base models:
 ### Official SDKs
 
 - 🧠 [client-python](https://github.com/mistralai/client-python) – Official Python client library.
-- 🧠 [@mistralai/mistralai](https://www.npmjs.com/package/@mistralai/mistralai) – Official TypeScript/JavaScript SDK.
+- 🧠 [client-ts](https://github.com/mistralai/client-ts) – Official TypeScript/JavaScript client library.
+- 🧠 [@mistralai/mistralai](https://www.npmjs.com/package/@mistralai/mistralai) – Official TypeScript/JavaScript SDK (npm).
 
 ### Community SDKs
 
@@ -173,7 +195,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🌍 [LocalAI](https://github.com/mudler/LocalAI) ⭐ 25k+ – OpenAI-compatible local API server.
 - 🌍 [SkyPilot](https://github.com/skypilot-org/skypilot) – Run on any cloud with cost optimization.
-- 🌍 [MLC LLM](https://github.com/mlc-ai/mlc-llm) – Univseral deployment (iOS/Android) perfect for Ministral 3B.
+- 🌍 [MLC LLM](https://github.com/mlc-ai/mlc-llm) – Universal deployment (iOS/Android) perfect for Ministral 3B.
 - 🧠 [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) – Optimized inference for Mistral Large 3 on NVIDIA GPUs.
 
 ---
@@ -348,6 +370,11 @@ High-quality community fine-tunes built on Mistral base models:
 - 🧠 [Mistral 7B](https://arxiv.org/abs/2310.06825) – Foundational 7B architecture paper.
 - 🧠 [Mixtral of Experts](https://arxiv.org/abs/2401.04088) – Sparse MoE architecture.
 - 🧠 [Mistral Large 3 Blog](https://mistral.ai/news/mistral-large-3) – Technical announcement and benchmarks.
+- 🧠 [Mistral Small 4 Blog](https://mistral.ai/news/mistral-small-4) – Hybrid MoE architecture announcement.
+- 🧠 [Leanstral Blog](https://mistral.ai/news/leanstral) – First open-source Lean 4 formal proof agent.
+- 🧠 [Forge Announcement](https://mistral.ai/news/forge) – Enterprise model training platform.
+- 🧠 [Voxtral Blog](https://mistral.ai/news/voxtral/) – Real-time speech-to-text models.
+- 🧠 [Voxtral Mini Technical Report](https://arxiv.org/abs/2602.11298) – Voxtral Mini 4B Realtime architecture paper.
 
 ### Related Research
 
@@ -364,6 +391,7 @@ High-quality community fine-tunes built on Mistral base models:
 ### Official Channels
 
 - 🧠 [Mistral AI Blog](https://mistral.ai/news/) – Official announcements.
+- 🧠 [le Chat](https://chat.mistral.ai) – Official AI assistant.
 - 🧠 [Mistral AI Discord](https://discord.gg/mistralai) – Official community server.
 - 🧠 [Mistral AI Twitter/X](https://twitter.com/MistralAI) – Official updates.
 
@@ -395,7 +423,10 @@ High-quality community fine-tunes built on Mistral base models:
 ### Partnerships
 
 - 🧠 [Microsoft Azure Partnership](https://azure.microsoft.com/en-us/blog/microsoft-and-mistral-ai-announce-new-partnership-to-accelerate-ai-innovation-and-introduce-mistral-large-first-on-azure/) – Strategic Azure partnership.
-- 🧠 [La Plateforme](https://console.mistral.ai/) – Mistral's cloud platform.
+- 🧠 [NVIDIA Nemotron Coalition](https://mistral.ai/news/mistral-small-4) – Founding member of NVIDIA's AI collaboration initiative.
+- 🧠 [AI Studio (la Plateforme)](https://console.mistral.ai/) – Mistral’s developer and enterprise cloud platform.
+- 🧠 [Mistral Forge](https://mistral.ai/news/forge) – Enterprise model training on proprietary data.
+- 🧠 [Mistral Compute](https://mistral.ai/products/compute) – European-hosted GPU cloud infrastructure.
 
 ---
 
