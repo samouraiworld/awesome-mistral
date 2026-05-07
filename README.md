@@ -38,8 +38,12 @@ This repository maps and curates the entire Mistral.ai ecosystem for AI engineer
 
 ---
 
-## What's New (March 2026)
+## What's New (May 2026)
 
+- 🚀 **[Mistral Medium 3.5](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B)** – 128B dense flagship model unifying reasoning, coding, and vision with 256k context (Modified MIT License).
+- 🤖 **Mistral Vibe Remote Agents** – Cloud-async coding agents capable of parallel sandbox execution and automated PR generation.
+- 💼 **le Chat Work Mode** – Agentic multi-step workflows for cross-tool productivity, email, and research.
+- ⚙️ **AI Studio Workflows** – Public preview for production-grade Python orchestration with human-in-the-loop approvals.
 - 🚀 **[Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)** – Hybrid MoE (119B/6.5B active) unifying reasoning, coding, and multimodal in one model.
 - 🧪 **[Leanstral](https://huggingface.co/mistralai/Leanstral-2603)** – First open-source Lean 4 formal proof agent.
 - 🏢 **[Mistral Forge](https://mistral.ai/news/forge)** – Enterprise platform for training models on proprietary data.
@@ -55,8 +59,8 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 | Aspect | Mistral Advantage |
 |--------|-------------------|
-| **Open Weights** | Models like Mistral Large 3, Small 4, and Ministral are fully open-weight (Apache 2.0), enabling local deployment and full control |
-| **Efficiency** | Mistral Small 4 (119B/6.5B active) and Large 3 (675B/41B active) use MoE parameter routing for high efficiency; Ministral 3B/8B/14B are optimized for edge |
+| **Open Weights** | Models like Mistral Medium 3.5 (Modified MIT), Mistral Large 3, Small 4, and Ministral are open-weight, enabling local deployment and full control |
+| **Efficiency** | Mistral Small 4 (119B/6.5B active) and Large 3 (675B/41B active) use MoE parameter routing; Medium 3.5 provides high-density performance (128B); Ministral 3B/8B/14B are optimized for edge |
 | **European Sovereignty** | Paris-based company offering GDPR-compliant, EU-hosted API options via Forge and Compute |
 | **Cost Efficiency** | Competitive API pricing; open models enable free self-hosting |
 | **Innovation** | Pioneered efficient MoE architectures, hybrid reasoning models, formal proof agents (Leanstral), and real-time speech AI |
@@ -68,8 +72,8 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 - 🧠 [Mistral AI](https://mistral.ai) – Official company website with product information and announcements.
 - 🧠 [Mistral AI Documentation](https://docs.mistral.ai) – Comprehensive API documentation, guides, and model specifications.
-- 🧠 [AI Studio (la Plateforme)](https://console.mistral.ai) – Developer console for API keys, model access, and agent management.
-- 🧠 [le Chat](https://chat.mistral.ai) – AI assistant (web, iOS, Android) with free and Pro tiers.
+- 🧠 [AI Studio (la Plateforme)](https://console.mistral.ai) – Developer console featuring Workflows for production orchestration, API keys, and model access.
+- 🧠 [le Chat](https://chat.mistral.ai) – AI assistant featuring Work Mode for multi-step agentic tasks across connected tools.
 - 🧠 [Mistral Forge](https://mistral.ai/news/forge) – Enterprise platform for training frontier-grade models on proprietary data.
 - 🧠 [Mistral Compute](https://mistral.ai/products/compute) – European-hosted GPU cloud (NVIDIA Grace Blackwell).
 - 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization with 24+ repositories.
@@ -77,7 +81,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) ⭐ 3k+ – Official lightweight LoRA-based fine-tuning library.
 - 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) ⭐ 2k+ – Official notebooks and examples for common use cases.
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
-- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant.
+- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant featuring cloud-async Remote Agents and sandbox PR generation.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
 
 ---
@@ -90,13 +94,14 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 |-------|---------|---------|----------|
 | **Mistral Small 4** | 256k | Apache 2.0 | Hybrid reasoning + coding + multimodal (119B MoE / 6.5B active) |
 | **Mistral Large 3** | 256k | Apache 2.0 | Complex reasoning, multilingual, coding, vision (675B / 41B active) |
-| **Mistral Medium 3.1** | 128k | Proprietary | Prototype-to-production, balanced multimodal performance |
+| **Mistral Medium 3.5** | 256k | Modified MIT | Unified reasoning, coding, and vision (128B dense) |
 | **Mistral Small 3.2** | 128k | Apache 2.0 | Low-latency, cost-sensitive applications (24B) |
 | **Mistral OCR 3** | — | Proprietary | Document parsing, table reconstruction ($2/1k pages) |
 
 ### Open-Weight Models
 
 #### General Purpose & Reasoning
+- 🧠 [Mistral Medium 3.5](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) – Dense flagship model (128B) unifying instruction-following, reasoning, and coding with 256k context and configurable `reasoning_effort`.
 - 🧠 [Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) – Hybrid MoE (119B / 6.5B active) unifying reasoning, coding, and multimodal. Configurable `reasoning_effort`.
 - 🧠 [Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) – Flagship MoE (675B) with state-of-the-art reasoning and vision.
 - 🧠 [Mistral Small 3.2](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506) – High-performance dense 24B model (v3.2).

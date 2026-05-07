@@ -5,6 +5,7 @@ This file contains a checklist for maintainers to perform monthly or upon major 
 ## Monthly Checks
 
 ### Model Specifications
+- [ ] **Mistral Medium 3.5**: Verify current version and specs (128B dense, 256k ctx, Modified MIT license).
 - [ ] **Mistral Small 4**: Verify current version and specs (119B MoE / 6.5B active, 256k ctx).
 - [ ] **Mistral Large**: Verify current version (e.g., Mistral Large 3) and context length (256k).
 - [ ] **Ministral Family**: Verify 3B/8B/14B models and any new sizes.
@@ -18,6 +19,11 @@ This file contains a checklist for maintainers to perform monthly or upon major 
 - [ ] **Hugging Face IDs**: Ensure links point to specific, non-deprecated model IDs (e.g., `mistralai/Mistral-Small-4-119B-2603`).
 - [ ] **Official Docs**: Verify links to `docs.mistral.ai` pages are still valid.
 - [ ] **Product Pages**: Verify Forge, Compute, le Chat, and AI Studio URLs.
+
+### Product Features
+- [ ] **Vibe Remote Agents**: Verify features related to cloud-async sandboxing.
+- [ ] **Le Chat Work Mode**: Verify features related to multi-step agent workflows.
+- [ ] **AI Studio Workflows**: Verify status of Python orchestration capabilities.
 
 ### New Releases
 - [ ] Check [Mistral News](https://mistral.ai/news/) for any new "stral" models.
