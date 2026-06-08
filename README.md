@@ -260,6 +260,10 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Outlines](https://github.com/outlines-dev/outlines) ⭐ 10k+ – Guaranteed structured generation.
 - 🌍 [Marvin](https://github.com/prefecthq/marvin) – AI functions with type hints.
 
+### Agent Trust & Identity
+
+- 🌍 [TWZRD Agent Intel](https://intel.twzrd.xyz) – Trust scoring and wallet identity verification for Mistral-powered agents on Solana before x402 micropayments. Free MCP: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
+
 ---
 
 ## Tooling & Dev Experience
