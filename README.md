@@ -268,6 +268,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Instructor](https://github.com/567-labs/instructor) ⭐ 13k+ – Structured outputs with Pydantic.
 - 🌍 [Outlines](https://github.com/dottxt-ai/outlines) ⭐ 14k+ – Guaranteed structured generation.
 - 🌍 [Marvin](https://github.com/prefecthq/marvin) – AI functions with type hints.
+- 🌍 [Superhighway](https://superhighway.walls.sh/guides/web-search-mistral) – Guide: add live web search to a Mistral app with function calling. Free API key or pay-per-call with USDC.
 
 ---
 
