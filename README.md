@@ -47,7 +47,7 @@ This repository maps and curates the entire Mistral.ai ecosystem for AI engineer
 - 🔌 **Connectors in Studio** – Built-in and custom MCP connectors with direct tool calling and human-in-the-loop approvals.
 - 🚀 **[Mistral Medium 3.5](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B)** – 128B dense flagship unifying reasoning, coding, and vision with 256k context (Modified MIT License); now the default model in Vibe. 77.6% SWE-bench Verified.
 - 🎙️ **[Voxtral TTS](https://huggingface.co/mistralai/Voxtral-4B-TTS-2603)** – 4B text-to-speech model across 9 languages (CC BY-NC 4.0).
-- 🚀 **[Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)** – Hybrid MoE (119B / 6B active) unifying reasoning, coding, and multimodal (Apache 2.0).
+- 🚀 **[Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)** – Hybrid MoE (119B / 6.5B active) unifying reasoning, coding, and multimodal (Apache 2.0).
 - 🧪 **[Leanstral](https://huggingface.co/mistralai/Leanstral-2603)** – Open-source Lean 4 formal proof agent.
 - 🏢 **[Mistral Forge](https://mistral.ai/news/forge)** – Enterprise platform for training models on proprietary data.
 - 🎙️ **[Voxtral Mini 4B Realtime](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602)** – Real-time speech-to-text with sub-500ms latency (13 languages, Apache 2.0).
@@ -63,7 +63,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 | Aspect | Mistral Advantage |
 |--------|-------------------|
 | **Open Weights** | Models like Mistral Medium 3.5 (Modified MIT), Mistral Large 3, Small 4, and Ministral are open-weight, enabling local deployment and full control |
-| **Efficiency** | Mistral Small 4 (119B/6B active) and Large 3 (675B/41B active) use MoE parameter routing; Medium 3.5 provides high-density performance (128B); Ministral 3B/8B/14B are optimized for edge |
+| **Efficiency** | Mistral Small 4 (119B/6.5B active) and Large 3 (675B/41B active) use MoE parameter routing; Medium 3.5 provides high-density performance (128B); Ministral 3B/8B/14B are optimized for edge |
 | **European Sovereignty** | Paris-based company offering GDPR-compliant, EU-hosted API options via Forge and Compute |
 | **Cost Efficiency** | Competitive API pricing; open models enable free self-hosting |
 | **Innovation** | Pioneered efficient MoE architectures, hybrid reasoning models, formal proof agents (Leanstral), and real-time speech AI |
@@ -95,7 +95,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 | Model | Context | License | Best For |
 |-------|---------|---------|----------|
-| **Mistral Small 4** | 256k | Apache 2.0 | Hybrid reasoning + coding + multimodal (119B MoE / 6B active) |
+| **Mistral Small 4** | 256k | Apache 2.0 | Hybrid reasoning + coding + multimodal (119B MoE / 6.5B active) |
 | **Mistral Large 3** | 256k | Apache 2.0 | Complex reasoning, multilingual, coding, vision (675B / 41B active) |
 | **Mistral Medium 3.5** | 256k | Modified MIT | Unified reasoning, coding, and vision (128B dense) |
 | **Mistral Small 3.2** | 128k | Apache 2.0 | Low-latency, cost-sensitive applications (24B) |
@@ -105,7 +105,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 #### General Purpose & Reasoning
 - 🧠 [Mistral Medium 3.5](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) – Dense flagship model (128B) unifying instruction-following, reasoning, and coding with 256k context and configurable `reasoning_effort`.
-- 🧠 [Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) – Hybrid MoE (119B / 6B active) unifying reasoning, coding, and multimodal. Configurable `reasoning_effort`.
+- 🧠 [Mistral Small 4](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) – Hybrid MoE (119B / 6.5B active) unifying reasoning, coding, and multimodal. Configurable `reasoning_effort`.
 - 🧠 [Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) – Flagship MoE (675B / 41B active) with state-of-the-art reasoning and vision.
 - 🧠 [Mistral Small 3.2](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506) – High-performance dense 24B model (v3.2).
 - 🧠 [Magistral Small 1.2](https://huggingface.co/mistralai/Magistral-Small-2509) – Open 24B multimodal reasoning model (Apache 2.0, 128k context, `[THINK]` tokens).
@@ -134,7 +134,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 
 ### Specialized Models
 - 🧠 **Mistral OCR 3** – Advanced document understanding and table reconstruction (API `mistral-ocr-2512`, $2/1k pages).
-- 🧠 [Leanstral](https://huggingface.co/mistralai/Leanstral-2603) – First open-source Lean 4 formal proof agent (119B / 6B active, Apache 2.0).
+- 🧠 [Leanstral](https://huggingface.co/mistralai/Leanstral-2603) – First open-source Lean 4 formal proof agent (119B / 6.5B active, Apache 2.0).
 - 🧠 **Mistral Moderation 2603** – Content moderation with jailbreaking, dangerous, and criminal detection (3B, API only).
 
 ---
