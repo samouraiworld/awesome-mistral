@@ -284,10 +284,11 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Development Tools
 
-- 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 51k+ – Unified API for 100+ LLMs.
-- 🌍 [Promptfoo](https://github.com/promptfoo/promptfoo) ⭐ 22k+ – LLM evaluation and red-teaming.
 - 🌍 [Langfuse](https://github.com/langfuse/langfuse) ⭐ 29k+ – Open-source LLM observability.
+- 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 51k+ – Unified API for 100+ LLMs.
+- 🌍 [llm-box](https://github.com/alib8b8/llm-box) – Terminal-first AI workflow engine, compose automations with YAML workflows.
 - 🌍 [Phoenix](https://github.com/Arize-ai/phoenix) – ML observability for LLM apps.
+- 🌍 [Promptfoo](https://github.com/promptfoo/promptfoo) ⭐ 22k+ – LLM evaluation and red-teaming.
 - 🌍 [Weights & Biases](https://wandb.ai) – Experiment tracking with LLM support.
 
 ---
