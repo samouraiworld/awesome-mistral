@@ -261,6 +261,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) – Microsoft's AI orchestration SDK.
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) – End-to-end NLP framework.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) – Type-safe AI agent framework.
+- 🌍 [nika](https://github.com/supernovae-st/nika) – Rust workflow engine where Mistral is a first-class named provider: `.nika.yaml` DAGs statically checked before execution, tamper-evident traces after.
 
 ### Function Calling & Structured Output
 
