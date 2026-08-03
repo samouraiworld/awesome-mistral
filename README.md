@@ -258,6 +258,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) – End-to-end NLP framework.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) – Type-safe AI agent framework.
 - 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 5k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
+- 🌍 [Aeon](https://github.com/aeonfun/aeon) ⭐ 588 – Autonomous agent framework that runs unattended on GitHub Actions and drives Mistral Vibe as one of six coding-agent harnesses behind a single contract, with quality scoring, persistent memory, and a self-healing loop.
 
 ### Function Calling & Structured Output
 
