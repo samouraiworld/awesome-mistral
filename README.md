@@ -40,6 +40,7 @@ This repository maps and curates the entire Mistral.ai ecosystem for AI engineer
 
 ## What's New (August 2026)
 
+- 🔍 **[Agentic Search](https://mistral.ai/news/agentic-search/)** – Multi-step retrieval toolkit (search, open, navigate, read, grep) for models to work across long documents and multiple sources; ~3x accuracy gain on FinanceBench, up to 39.6% lower p90 latency. Available in Search Toolkit, Studio, and Vibe.
 - 🇪🇺 **[Regional Endpoints & European Compute Coalition](https://mistral.ai/news/regional-inference-open-models-new-compute/)** – EU/US data-residency inference regions (GA), a new Priority Tier SLA (preview), first third-party model support (Z.ai's GLM-5.2), and a compute coalition with Amadeus, ASML, Capgemini, Caisse des Dépôts, and CMA CGM targeting 1GW of European capacity by 2030.
 - 🛡️ **[Shieldstral](https://mistral.ai/news/shieldstral/)** – 3B open-weight policy-adaptive safety classifier (Apache 2.0): plain-language moderation policies at inference time, no retraining needed; outperforms guard models up to 7× its size.
 - 🤝 **[Microsoft partnership expansion](https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/)** – Multibillion-dollar deal to expand European AI compute (NVIDIA Vera Rubin GPUs); Mistral Medium 3.5 and OCR 4 now available in Microsoft Foundry and Copilot Studio, with cloud, cloud-connected, and fully disconnected deployment options.
@@ -105,7 +106,7 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 - 🧠 [Mistral Small 3.2](https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506) – High-performance dense 24B model (v3.2).
 - 🧠 [Magistral Small 1.2](https://huggingface.co/mistralai/Magistral-Small-2509) – Open 24B multimodal reasoning model (Apache 2.0, 128k context, `[THINK]` tokens).
 - 🧠 [Magistral Medium 1.2](https://docs.mistral.ai/models/magistral-medium-1-2-25-09) – Frontier-class multimodal reasoning model (API, `magistral-medium-2509`).
-- 🧠 [Mixtral 8x22B](https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1) – Legacy MoE workhorse (141B total / 39B active).
+- 🧠 [Mixtral 8x22B](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1) – Legacy MoE workhorse (141B total / 39B active).
 
 #### Edge & On-Device (Ministral)
 - 🧠 [Ministral 14B](https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512) – Dense edge model with vision (14B). Best-in-class at small scale.
@@ -189,7 +190,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
 - 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 124k+ – CPU/GPU inference with GGUF quantization.
 - 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization.
-- 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 31k+ – Fast serving with RadixAttention.
+- 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 32k+ – Fast serving with RadixAttention.
 
 ### Local Inference
 
@@ -214,7 +215,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained.
 - 🌍 [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) ⭐ 12k+ – Streamlined LoRA/QLoRA/full fine-tuning.
-- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 68k+ – 2-5x faster fine-tuning, 80% less memory.
+- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 74k+ – 2-5x faster fine-tuning, 80% less memory.
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
 - 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
@@ -248,9 +249,9 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Agent Frameworks
 
-- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 142k+ – LLM app framework with native Mistral support.
+- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 144k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 51k+ – Data framework for RAG with Mistral.
-- 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 56k+ – Multi-agent orchestration.
+- 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 57k+ – Multi-agent orchestration.
 - 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 60k+ – Microsoft's multi-agent framework.
 - 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 81k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
@@ -292,7 +293,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Chat Interfaces
 
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 148k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 149k+ – Self-hosted ChatGPT-like UI.
 - 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 42k+ – Multi-model chat interface.
 - 🌍 [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) ⭐ 33k+ – Open-source ChatGPT clone.
 - 🌍 [BetterChatGPT](https://github.com/ztjhz/BetterChatGPT) ⭐ 8k+ – Enhanced chat interface.
@@ -324,7 +325,7 @@ High-quality community fine-tunes built on Mistral base models:
 ### Community Examples
 
 - 🌍 [Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM) ⭐ 27k+ – Curated LLM resources including Mistral.
-- 🌍 [LangGraph](https://github.com/langchain-ai/langgraph) ⭐ 39k+ – Stateful multi-agent and workflow examples with Mistral.
+- 🌍 [LangGraph](https://github.com/langchain-ai/langgraph) ⭐ 40k+ – Stateful multi-agent and workflow examples with Mistral.
 
 ---
 
