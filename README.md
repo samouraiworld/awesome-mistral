@@ -222,7 +222,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
 - 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
-- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) – ⚠️ Archived, no longer maintained – use Axolotl or Unsloth instead.
+- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) ⭐ 5k+ – ⚠️ Archived, no longer maintained – use Axolotl or Unsloth instead.
 
 ### Training Infrastructure
 
@@ -241,7 +241,7 @@ High-quality community fine-tunes built on Mistral base models:
 ### Quantization Tools
 
 - 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) – GGUF quantization (Q4, Q5, Q8).
-- 🌍 [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ) – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
+- 🌍 [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ) ⭐ 5k+ – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [AutoAWQ](https://github.com/casper-hansen/AutoAWQ) – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes) ⭐ 8k+ – 4-bit and 8-bit quantization.
 - 🌍 [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) – Quantization format specification.
