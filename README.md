@@ -77,8 +77,8 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 - 🧠 [Mistral Compute (AI Cloud)](https://mistral.ai/products/aicloud/) – European-hosted GPU cloud (NVIDIA GB200/GB300) with EU/US Regional Endpoints and a Priority Tier SLA.
 - 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization with 28 public repositories.
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use [vLLM](https://github.com/vllm-project/vllm), [mistral.rs](https://github.com/EricLBuehler/mistral.rs), or the Mistral API instead.
-- 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) ⭐ 3k+ – ⚠️ Archived, no longer maintained – use [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [Unsloth](https://github.com/unslothai/unsloth), or Hugging Face [TRL](https://github.com/huggingface/trl) instead.
-- 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) ⭐ 2k+ – Official notebooks and examples for common use cases.
+- 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained – use [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [Unsloth](https://github.com/unslothai/unsloth), or Hugging Face [TRL](https://github.com/huggingface/trl) instead.
+- 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) – Official notebooks and examples for common use cases.
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
 - 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant featuring cloud-async Remote Agents and sandbox PR generation.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
@@ -222,7 +222,7 @@ High-quality community fine-tunes built on Mistral base models:
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
 - 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
-- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) ⭐ 5k+ – ⚠️ Archived, no longer maintained – use Axolotl or Unsloth instead.
+- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) ⭐ 5k+ – ⚠️ No longer maintained – development wound down in 2025; use Axolotl or Unsloth instead.
 
 ### Training Infrastructure
 
@@ -304,7 +304,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🌍 [PrivateGPT](https://github.com/zylon-ai/private-gpt) ⭐ 57k+ – Private document Q&A.
 - 🌍 [Onyx](https://github.com/onyx-dot-app/onyx) ⭐ 31k+ – Enterprise Q&A over internal docs (formerly Danswer).
-- 🌍 [Quivr](https://github.com/QuivrHQ/quivr) ⭐ 39k+ – Personal knowledge base.
+- 🌍 [Quivr](https://github.com/The-Vibe-Company/Quivr) ⭐ 39k+ – Personal knowledge base.
 - 🌍 [Khoj](https://github.com/khoj-ai/khoj) ⭐ 36k+ – AI second brain.
 - 🌍 [LocalGPT](https://github.com/PromtEngineer/localGPT) ⭐ 22k+ – Chat with documents locally.
 
