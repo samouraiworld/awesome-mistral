@@ -77,8 +77,8 @@ Mistral AI offers a compelling alternative in the LLM landscape:
 - 🧠 [Mistral Compute (AI Cloud)](https://mistral.ai/products/aicloud/) – European-hosted GPU cloud (NVIDIA GB200/GB300) with EU/US Regional Endpoints and a Priority Tier SLA.
 - 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization with 28 public repositories.
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use [vLLM](https://github.com/vllm-project/vllm), [mistral.rs](https://github.com/EricLBuehler/mistral.rs), or the Mistral API instead.
-- 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) ⭐ 3k+ – ⚠️ Archived, no longer maintained – use [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [Unsloth](https://github.com/unslothai/unsloth), or Hugging Face [TRL](https://github.com/huggingface/trl) instead.
-- 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) ⭐ 2k+ – Official notebooks and examples for common use cases.
+- 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained – use [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [Unsloth](https://github.com/unslothai/unsloth), or Hugging Face [TRL](https://github.com/huggingface/trl) instead.
+- 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) – Official notebooks and examples for common use cases.
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
 - 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant featuring cloud-async Remote Agents and sandbox PR generation.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
@@ -188,15 +188,15 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### High-Performance Inference
 
-- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 89k+ – High-throughput with PagedAttention. Excellent Mistral support.
+- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 90k+ – High-throughput with PagedAttention. Excellent Mistral support.
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
-- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 125k+ – CPU/GPU inference with GGUF quantization.
+- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 126k+ – CPU/GPU inference with GGUF quantization.
 - 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization.
 - 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 32k+ – Fast serving with RadixAttention.
 
 ### Local Inference
 
-- 🌍 [Ollama](https://ollama.com) ⭐ 178k+ – Simple CLI for local Mistral models.
+- 🌍 [Ollama](https://ollama.com) ⭐ 179k+ – Simple CLI for local Mistral models.
 - 🌍 [LM Studio](https://lmstudio.ai) – Desktop GUI for local LLMs.
 - 🌍 [Jan](https://jan.ai) – Open-source ChatGPT alternative running locally.
 - 🌍 [GPT4All](https://www.nomic.ai/gpt4all) – Local inference with Mistral support.
@@ -218,15 +218,15 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained.
 - 🌍 [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) ⭐ 12k+ – Streamlined LoRA/QLoRA/full fine-tuning.
-- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 74k+ – 2-5x faster fine-tuning, 80% less memory.
+- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 75k+ – 2-5x faster fine-tuning, 80% less memory.
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
 - 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
-- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) – ⚠️ Archived, no longer maintained – use Axolotl or Unsloth instead.
+- 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) ⭐ 5k+ – ⚠️ No longer maintained – development wound down in 2025; use Axolotl or Unsloth instead.
 
 ### Training Infrastructure
 
-- 🌍 [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) ⭐ 42k+ – Distributed training optimization.
+- 🌍 [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) ⭐ 43k+ – Distributed training optimization.
 - 🌍 [Hugging Face Accelerate](https://github.com/huggingface/accelerate) ⭐ 9k+ – Simple distributed training.
 
 ---
@@ -241,7 +241,7 @@ High-quality community fine-tunes built on Mistral base models:
 ### Quantization Tools
 
 - 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) – GGUF quantization (Q4, Q5, Q8).
-- 🌍 [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ) – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
+- 🌍 [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ) ⭐ 5k+ – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [AutoAWQ](https://github.com/casper-hansen/AutoAWQ) – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes) ⭐ 8k+ – 4-bit and 8-bit quantization.
 - 🌍 [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) – Quantization format specification.
@@ -252,16 +252,16 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Agent Frameworks
 
-- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 144k+ – LLM app framework with native Mistral support.
+- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 145k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 51k+ – Data framework for RAG with Mistral.
 - 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 57k+ – Multi-agent orchestration.
 - 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 60k+ – Microsoft's multi-agent framework.
-- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 81k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
+- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
 - 🌍 [Aeon](https://github.com/aeonfun/aeon) – Autonomous agent framework that runs unattended on GitHub Actions and drives Mistral Vibe as one of six coding-agent harnesses behind a single contract, with quality scoring, persistent memory, and a self-healing loop.
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
-- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 6k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
+- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 7k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 
 ### Function Calling & Structured Output
 
@@ -295,7 +295,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Chat Interfaces
 
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 149k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 150k+ – Self-hosted ChatGPT-like UI.
 - 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 42k+ – Multi-model chat interface.
 - 🌍 [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) ⭐ 33k+ – Open-source ChatGPT clone.
 - 🌍 [BetterChatGPT](https://github.com/ztjhz/BetterChatGPT) ⭐ 8k+ – Enhanced chat interface.
@@ -304,7 +304,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🌍 [PrivateGPT](https://github.com/zylon-ai/private-gpt) ⭐ 57k+ – Private document Q&A.
 - 🌍 [Onyx](https://github.com/onyx-dot-app/onyx) ⭐ 31k+ – Enterprise Q&A over internal docs (formerly Danswer).
-- 🌍 [Quivr](https://github.com/QuivrHQ/quivr) ⭐ 39k+ – Personal knowledge base.
+- 🌍 [Quivr](https://github.com/The-Vibe-Company/Quivr) ⭐ 39k+ – Personal knowledge base.
 - 🌍 [Khoj](https://github.com/khoj-ai/khoj) ⭐ 36k+ – AI second brain.
 - 🌍 [LocalGPT](https://github.com/PromtEngineer/localGPT) ⭐ 22k+ – Chat with documents locally.
 
@@ -312,7 +312,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🌍 [Fabric](https://github.com/danielmiessler/fabric) ⭐ 43k+ – AI augmentation framework.
 - 🌍 [GPT Researcher](https://github.com/assafelovic/gpt-researcher) ⭐ 29k+ – Autonomous research agent.
-- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 84k+ – AI software engineer (formerly OpenDevin).
+- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 85k+ – AI software engineer (formerly OpenDevin).
 
 ---
 
