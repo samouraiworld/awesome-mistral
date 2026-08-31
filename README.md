@@ -196,7 +196,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Local Inference
 
-- 🌍 [Ollama](https://ollama.com) ⭐ 178k+ – Simple CLI for local Mistral models.
+- 🌍 [Ollama](https://ollama.com) ⭐ 179k+ – Simple CLI for local Mistral models.
 - 🌍 [LM Studio](https://lmstudio.ai) – Desktop GUI for local LLMs.
 - 🌍 [Jan](https://jan.ai) – Open-source ChatGPT alternative running locally.
 - 🌍 [GPT4All](https://www.nomic.ai/gpt4all) – Local inference with Mistral support.
