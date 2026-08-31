@@ -188,9 +188,9 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### High-Performance Inference
 
-- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 89k+ – High-throughput with PagedAttention. Excellent Mistral support.
+- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 90k+ – High-throughput with PagedAttention. Excellent Mistral support.
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
-- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 125k+ – CPU/GPU inference with GGUF quantization.
+- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 126k+ – CPU/GPU inference with GGUF quantization.
 - 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization.
 - 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 32k+ – Fast serving with RadixAttention.
 
@@ -218,7 +218,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained.
 - 🌍 [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) ⭐ 12k+ – Streamlined LoRA/QLoRA/full fine-tuning.
-- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 74k+ – 2-5x faster fine-tuning, 80% less memory.
+- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 75k+ – 2-5x faster fine-tuning, 80% less memory.
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
 - 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
@@ -226,7 +226,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Training Infrastructure
 
-- 🌍 [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) ⭐ 42k+ – Distributed training optimization.
+- 🌍 [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) ⭐ 43k+ – Distributed training optimization.
 - 🌍 [Hugging Face Accelerate](https://github.com/huggingface/accelerate) ⭐ 9k+ – Simple distributed training.
 
 ---
@@ -252,16 +252,16 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Agent Frameworks
 
-- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 144k+ – LLM app framework with native Mistral support.
+- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 145k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 51k+ – Data framework for RAG with Mistral.
 - 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 57k+ – Multi-agent orchestration.
 - 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 60k+ – Microsoft's multi-agent framework.
-- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 81k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
+- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
 - 🌍 [Aeon](https://github.com/aeonfun/aeon) – Autonomous agent framework that runs unattended on GitHub Actions and drives Mistral Vibe as one of six coding-agent harnesses behind a single contract, with quality scoring, persistent memory, and a self-healing loop.
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
-- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 6k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
+- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 7k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 
 ### Function Calling & Structured Output
 
@@ -295,7 +295,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 ### Chat Interfaces
 
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 149k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 150k+ – Self-hosted ChatGPT-like UI.
 - 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 42k+ – Multi-model chat interface.
 - 🌍 [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) ⭐ 33k+ – Open-source ChatGPT clone.
 - 🌍 [BetterChatGPT](https://github.com/ztjhz/BetterChatGPT) ⭐ 8k+ – Enhanced chat interface.
@@ -312,7 +312,7 @@ High-quality community fine-tunes built on Mistral base models:
 
 - 🌍 [Fabric](https://github.com/danielmiessler/fabric) ⭐ 43k+ – AI augmentation framework.
 - 🌍 [GPT Researcher](https://github.com/assafelovic/gpt-researcher) ⭐ 29k+ – Autonomous research agent.
-- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 84k+ – AI software engineer (formerly OpenDevin).
+- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 85k+ – AI software engineer (formerly OpenDevin).
 
 ---
 
