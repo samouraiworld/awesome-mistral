@@ -20,8 +20,8 @@ or submit a pull request for corrections and additions.
 - **Accessible:** prefer publicly readable documentation. Commercial official
   products and cloud-provider integration docs are allowed; state access limits.
 
-Fixed model releases, papers, benchmarks and explicitly marked archived official
-projects may be retained for historical reproducibility. Explain that status and
+Fixed model releases, papers, benchmarks and explicitly marked archived migration
+references may be retained for historical reproducibility. Explain that status and
 provide a current alternative where applicable. Never present these as maintained
 application recommendations.
 
