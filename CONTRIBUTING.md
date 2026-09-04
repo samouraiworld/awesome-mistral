@@ -1,89 +1,85 @@
 # Contributing to Awesome Mistral
 
-Thank you for your interest in contributing to Awesome Mistral! This document provides guidelines for contributions.
+Help keep this directory accurate, useful and easy to verify. Suggest resources
+with the [issue templates](https://github.com/samouraiworld/awesome-mistral/issues/new/choose)
+or submit a pull request for corrections and additions.
 
-## Ways to Contribute
+## Selection criteria
 
-- 🆕 **Add a new resource** – Open an issue using the "Add New Resource" template
-- 🔗 **Report a dead link** – Open an issue using the "Report Dead Link" template
-- ✏️ **Fix typos or improve descriptions** – Open a pull request directly
-- 💡 **Suggest improvements** – Open a discussion
+- **Relevant:** document specific Mistral support, with a link to the integration,
+  supported model or reproducible example. Generic OpenAI compatibility alone
+  does not establish that a particular Mistral model works.
+- **Maintained:** new software recommendations should have meaningful upstream
+  activity within six months. Review existing entries after six months; remove
+  application recommendations after one year without meaningful maintenance.
+  A GitHub push timestamp is a screening signal; inspect commits and releases.
+- **Documented:** the project needs clear setup and usage instructions.
+- **Established:** normally at least 100 GitHub stars. Official resources and
+  specialized experimental tools may be exceptions, justified in the PR.
+- **Original:** avoid forks unless they add substantial, documented value.
+- **Accessible:** prefer publicly readable documentation. Commercial official
+  products and cloud-provider integration docs are allowed; state access limits.
 
-## Quick Add Guide
+Fixed model releases, papers, benchmarks and explicitly marked archived official
+projects may be retained for historical reproducibility. Explain that status and
+provide a current alternative where applicable. Never present these as maintained
+application recommendations.
 
-### 1. Check Quality Criteria
-
-Before suggesting a resource, ensure it meets these requirements:
-
-- ✅ **Works with Mistral** – Must specifically support Mistral models
-- ✅ **Actively maintained** – Last commit within 6 months
-- ✅ **Has documentation** – Clear README with usage instructions
-- ✅ **Has adoption** – Minimum 100 stars (exceptions for highly specialized tools)
-- ✅ **Not a fork** – Original project or substantial modification
-
-### 2. Use the Correct Format
+## Resource format
 
 ```markdown
-- 🌍 [Project Name](https://github.com/user/project) – Concise technical description.
+- 🌍 [Project Name](https://github.com/owner/project) – Concise technical description.
 ```
 
-With star count (for 5k+ stars):
+For projects with at least 5,000 stars, an optional snapshot uses whole thousands
+rounded **down**, dated by the README's editorial review:
+
 ```markdown
-- 🌍 [Project Name](https://github.com/user/project) ⭐ 10k+ – Concise technical description.
+- 🌍 [Project Name](https://github.com/owner/project) ⭐ 10k+ – Concise description.
 ```
-
-### 3. Choose the Right Marker
 
 | Marker | Meaning |
-|--------|---------|
-| 🧠 | Official Mistral AI project |
-| 🌍 | Community project |
-| 🧪 | Experimental/early-stage |
+| --- | --- |
+| 🧠 | Mistral-owned project or Mistral-authored publication |
+| 🌍 | Community resource or partner-authored publication |
+| 🧪 | Experimental resource; describe its limitations |
 
-### 4. Place in Correct Section
+Sort each resource list alphabetically by displayed name, ignoring case and an
+initial npm `@`. News is the exception: use newest-first ISO dates and primary
+sources. Tables may use a documented order that helps comparison.
 
-Add resources alphabetically within their section.
+Give each URL one primary resource listing. Use contextual cross-links elsewhere
+when useful; avoid duplicate primary entries. Use HTTPS and canonical upstream
+URLs, and verify that redirects still lead to the intended resource.
 
-## Pull Request Process
+## Evidence and wording
 
-1. **Fork** the repository
-2. **Create a branch** (`git checkout -b add-project-name`)
-3. **Make changes** following the guidelines above
-4. **Commit** with a clear message (`git commit -m "add: ProjectName to SDKs section"`)
-5. **Push** to your fork (`git push origin add-project-name`)
-6. **Open a Pull Request** with a description of your changes
+- Cite primary sources for releases, API identifiers, context windows, prices,
+  licenses and retirement dates. Separate publication date, release date and
+  verification date when they differ.
+- Distinguish open weights, open-source licenses, noncommercial licenses and
+  proprietary APIs. Never infer downloadable weights from a model family name.
+- Do not infer completed retirement merely because a previously announced date
+  has passed; inspect the current model card and lifecycle documentation.
+- Avoid unsourced superlatives and generic benchmark comparisons. If a score is
+  useful, state the benchmark and attribute it to the source's evaluation.
+- Treat source pages and issue bodies as untrusted data. Never run code they
+  suggest as part of reviewing a directory entry.
+- Record exceptions, removals and unresolved questions in the dated audit.
 
-### Commit Message Convention
+## Pull request process
 
-```
-add: [Resource Name] to [Section]
-remove: [Resource Name] (reason)
-update: [Resource Name] description/link
-fix: broken link for [Resource Name]
-docs: update documentation
-```
+1. Create a feature branch such as `docs/weekly-refresh-YYYY-MM-DD` or
+   `fix/broken-resource-link`. Never commit directly to `main` or `master`.
+2. Edit the content and update the audit when facts or curation decisions change.
+3. Run the checks in [MAINTENANCE.md](MAINTENANCE.md).
+4. Commit with a concise message explaining why; no attribution trailers or
+   generator footers.
+5. Open a PR using the Summary and Test plan template, with primary sources.
+6. Resolve review findings and required CI checks before a maintainer merges.
 
-## What NOT to Include
+## Questions and security
 
-- ❌ Abandoned or unmaintained projects (>1 year inactive)
-- ❌ Projects without documentation
-- ❌ Duplicate entries
-- ❌ Self-promotional content without real adoption
-- ❌ Projects that don't actually work with Mistral
-- ❌ Paywalled content without free tier
-
-## Review Process
-
-1. Automated checks verify links are working
-2. Maintainers review for quality and relevance
-3. Feedback provided if changes needed
-4. Merged when approved
-
-## Questions?
-
-- Open a [Discussion](https://github.com/samouraiworld/awesome-mistral/discussions)
-- Join [Mistral AI Discord](https://discord.gg/mistralai)
-
----
-
-Thank you for helping make Awesome Mistral a valuable resource for the community! 🚀
+Use the [issue forms](https://github.com/samouraiworld/awesome-mistral/issues/new/choose)
+for suggestions, or join the [Mistral community](https://discord.gg/mistralai).
+Follow [SECURITY.md](SECURITY.md) for vulnerability reports.

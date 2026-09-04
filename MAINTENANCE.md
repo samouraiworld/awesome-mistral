@@ -1,47 +1,118 @@
-# Maintenance Checklist
+# Maintenance playbook
 
-This file contains a checklist for maintainers to perform monthly or upon major releases to ensure the repository remains accurate.
+Run the editorial review **every Sunday at 09:00 Europe/Paris**. Address a major
+release, material factual error or security advisory sooner when discovered.
+An editorial review must never be more than **31 days** old. CI warns after
+seven days and fails after 31; unresolved link exceptions expire after seven days.
+A successful link check alone does not constitute an editorial review.
 
-## Monthly Checks
+## Weekly procedure
 
-### Model Specifications
-- [ ] **Mistral Medium 3.5**: Verify current version and specs (128B dense, 256k ctx, Modified MIT license).
-- [ ] **Mistral Small 4**: Verify current version and specs (119B MoE / 6.5B active, 256k ctx).
-- [ ] **Mistral Large**: Verify current version (e.g., Mistral Large 3) and context length (256k).
-- [ ] **Ministral Family**: Verify Ministral 3 (3B/8B/14B = `Ministral-3-*-Instruct-2512`, 256k ctx) and any new sizes.
-- [ ] **Magistral**: All Magistral API models were retired (July 2026); Small 1.2 weights remain on HF and are listed as *(legacy)*. Watch for any new reasoning release.
-- [ ] **Leanstral**: Check for updates or new formal proof models.
-- [ ] **Voxtral**: Check the family — TTS (`Voxtral-4B-TTS-2603`), Mini 4B Realtime (`2602`), Mini Transcribe 2 (`voxtral-mini-2602`, API only), Small 24B (`2507`); Mini 3B (`2507`) is *(legacy)*.
-- [ ] **Codestral**: Verify latest version (currently 25.08 = `Codestral-2508`).
-- [ ] **OCR**: Verify latest version (currently OCR 4.1 = `mistral-ocr-4-1`; `mistral-ocr-latest` alias) and pricing.
-- [ ] **Moderation & Safety**: Check Mistral Moderation 2 (`mistral-moderation-2603`) and Shieldstral for new versions.
-- [ ] **Pricing**: Check [Mistral Pricing](https://docs.mistral.ai/inference/pricing), the [Changelog](https://docs.mistral.ai/resources/changelogs), and the [Release Notes](https://docs.mistral.ai/resources/release-notes) for changes.
-- [ ] **Model lifecycle**: Review the *Deprecated & retired models* table on [docs.mistral.ai/models](https://docs.mistral.ai/models) — mark newly retired API models *(legacy)* if weights remain, remove API-only ones, and update the Flagship (API) table. Upcoming: `mistral-medium-2508` (Aug 31, 2026), `labs-leanstral-1-5` (Sep 30, 2026).
+1. Fetch the default branch and inspect local changes and open PRs. Reuse an
+   existing maintenance PR when appropriate; otherwise create a dated `docs/`,
+   `fix/` or `chore/` feature branch from the latest remote default branch.
+   Preserve unrelated work and never commit to `main` or `master`.
+2. Read the previous audit and inspect the sources below from its verification
+   date through today. Follow each candidate to its primary source, even when
+   discovered through a search engine or social media.
+3. Check every model family against current model cards: exact IDs, weights,
+   license, context, modalities, API stage, aliases, prices and retirement dates.
+   Treat announced retirement dates and confirmed retirement as distinct facts.
+4. Check official SDK and Vibe releases, new official repositories, products,
+   regional availability and security advisories. Include material developments
+   with their actual dates; never fabricate an update in a quiet week.
+5. Run all link and content checks below. Inspect redirects for semantic changes.
+   Retry transient errors; distinguish missing pages from login requirements or
+   rate limiting. Never broadly accept 401, 403, 429, 5xx or redirect loops.
+6. Review GitHub metadata, archived/stale repositories, compatibility evidence,
+   alphabetical order, duplicate entries, markers, license wording and stars.
+   Apply the historical-resource exceptions in CONTRIBUTING.md explicitly.
+7. Check workflow permissions, SHA pins, Dependabot updates, CODEOWNERS validity,
+   branch protections, secret scanning and private vulnerability reporting.
+   Audit this repository's executable maintenance code; do not install, execute
+   or claim to security-audit every third-party project listed here.
+8. Write `audits/YYYY-MM-DD.md` with scope, sources, changes, measured checks,
+   limitations and next actions. Preserve older audits. Update `maintenance.json`
+   and the README review date/audit link only after completing the review.
+9. Commit and open/update a PR with **Summary** and **Test plan**, without
+   attribution trailers. Inspect its CI and fix failures. Leave merging to a
+   maintainer; report the PR and any unresolved blockers in the scheduled task.
 
-### Links & URLs
-- [ ] **Hugging Face IDs**: Ensure links point to specific, non-deprecated model IDs (e.g., `mistralai/Mistral-Small-4-119B-2603`).
-- [ ] **Official Docs**: Verify links to `docs.mistral.ai` pages are still valid.
-- [ ] **Product Pages**: Verify Forge, Mistral Compute / AI Cloud (`/products/aicloud/`), Vibe, and Studio URLs.
-- [ ] **Redirects**: Re-run the link check with redirects visible (`curl -sIL`) — silently redirected URLs usually mean a rename (e.g. LMArena → Arena, Vertex AI → Gemini Enterprise Agent Platform, Azure AI Studio → Microsoft Foundry).
+## Sources of record
 
-### Product Features
-- [ ] **Vibe**: le Chat was rebranded to **Vibe** (May 2026) — verify Work / Code / Chat modes and pricing tiers.
-- [ ] **Vibe Remote Agents**: Verify features related to cloud-async sandboxing and PR generation.
-- [ ] **AI Studio**: Verify Workflows (Python orchestration) and Connectors (MCP) status.
-- [ ] **Search Toolkit / Agentic Search**: Verify availability of production search pipelines and the Agentic Search tools.
-- [ ] **Fine-tuning API**: Deprecated since mid-2026 (docs moved under `/resources/deprecated/`) — keep the ⚠️ note unless Mistral reinstates it; Forge is the enterprise training path.
+| Area | Sources |
+| --- | --- |
+| Announcements | [Mistral News](https://mistral.ai/news/) |
+| Models and lifecycle | [Catalog](https://docs.mistral.ai/models), [lifecycle policy](https://docs.mistral.ai/inference/model-lifecycle), individual model cards |
+| API changes and pricing | [Changelog](https://docs.mistral.ai/resources/changelogs), [pricing](https://docs.mistral.ai/inference/pricing) |
+| Product availability | [Release notes](https://docs.mistral.ai/resources/release-notes) |
+| Model weights | [Mistral on Hugging Face](https://huggingface.co/mistralai), individual model cards and licenses |
+| SDKs | [Python releases](https://github.com/mistralai/client-python/releases), [TypeScript releases](https://github.com/mistralai/client-ts/releases) |
+| Coding agent | [Vibe releases](https://github.com/mistralai/mistral-vibe/releases) |
+| Official repositories | [Mistral GitHub](https://github.com/mistralai) |
+| Security | [Mistral advisories](https://docs.mistral.ai/resources/security-advisories), upstream GitHub advisories and repository Security settings |
 
-### New Releases
-- [ ] Check [Mistral News](https://mistral.ai/news/) for any new "stral" models.
-- [ ] Check for new SDK major versions (Python via `client-python`, TS via `client-ts`).
-- [ ] Check GitHub org repo count (currently 28) and new official repos (e.g. `mistralai/cli`, a binaries-only release repo created Aug 2026 — add once it has docs and adoption).
+When sources conflict, prefer the version-specific model card/schema for model
+specifications, the current pricing page for prices, and the changelog for API
+release dates. Document the conflict instead of silently guessing. An API probe
+is only evidence when performed with authorized access; do not spend API credits
+to establish a model's status during routine maintenance.
 
-## Formatting
-- [ ] Ensure all new links follow the `- 🧠/🌍/🧪 [Name](url) – Description.` format.
-- [ ] Verify table rendering on GitHub.
-- [ ] Confirm the table of contents anchors match their section headings.
+## Reproducible checks
 
-## Link & Data Integrity
-- [ ] Run an automated link checker (e.g. `lychee README.md` or `markdown-link-check`) and fix any dead URLs.
-- [ ] Refresh ⭐ star counts via the GitHub API; note that several repos have moved (llama.cpp → `ggml-org`, aider → `Aider-AI`, instructor → `567-labs`, outlines → `dottxt-ai`, Danswer → Onyx `onyx-dot-app`, OpenDevin → OpenHands). Hugging Face repos move too (WizardLM → `WizardLMTeam`, cognitivecomputations → `dphn`) — check for 307s.
-- [ ] Verify 🧠 entries actually point to Mistral-owned orgs/domains (not partner or community projects), and flag community entries whose upstream has been inactive for >1 year per CONTRIBUTING.md.
+Prerequisites: Python 3.11+, authenticated GitHub CLI, Lychee **0.24.2**, and
+markdownlint-cli2 **0.21.0**. CI pins the action wrappers separately by commit SHA.
+Use published tools from their upstreams; check downloaded release checksums.
+
+```sh
+python3 scripts/check_content.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
+npx --yes markdownlint-cli2@0.21.0
+mkdir -p audit-output
+git ls-files -- '*.md' '.github/ISSUE_TEMPLATE/*.yml' > audit-output/link-inputs.txt
+lychee --config lychee.toml --no-progress --verbose --format json --output audit-output/links.json --files-from audit-output/link-inputs.txt
+python3 scripts/audit_github.py --output audit-output/github.json
+git diff --check
+```
+
+Stage new documentation before creating the tracked-file inventory, or explicitly
+include it in the local check. The CI checks every tracked Markdown file and URLs
+in issue templates, including historical audit source links. Code examples are
+not executed. Local and remote anchors are checked by Lychee.
+
+Review HTTP redirects using `curl --head --location` and the verbose link-check
+output; an HTTP 200 alone cannot establish relevance. Inspect the destination's
+content, particularly for moved repositories, rebrands and cloud catalogs.
+
+## Access restrictions and evidence
+
+`maintenance.json` records exact-URL exceptions with a reason, primary evidence,
+verification date and expiry. `scripts/check_content.py` requires a one-to-one
+match with the anchored exclusions in `lychee.toml`. Review each exception every
+week; max validity is seven days. A primary-source reference confirms ownership,
+but does not prove that an authenticated destination is accessible. State that
+limitation in the report. Never report excluded links as HTTP-verified successes.
+
+Store raw check outputs in ignored `audit-output/`; summarize useful results in
+the dated audit. GitHub Actions preserves `quality-evidence` artifacts for 90 days.
+Keep failed and retried outcomes distinguishable rather than replacing evidence
+with an unsupported claim that everything passed.
+
+## Scheduling and failure handling
+
+The scheduled editorial task performs research, edits and a reviewable PR in this
+repository every Sunday at 09:00 Europe/Paris. It depends on the local task host
+being available and authenticated. On its next run after a missed review, cover
+the entire gap since the last successful editorial review.
+
+GitHub Actions independently checks the default branch every Sunday at 07:17 UTC,
+on pushes and on PRs. GitHub may delay schedules, and disables scheduled workflows
+in public repositories [after 60 days without repository activity](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule); monitor the last
+actual run, not just the presence of a cron expression. Trigger a manual run after
+restoring a missed schedule. This CI does not perform editorial research or merge.
+
+A separate scheduled reporting job opens or updates one bot-owned failure issue
+and closes it after a successful scheduled/manual check. PR checks never receive
+issue-write permissions. A failed review, overdue audit, broken link or unavailable
+source must be reported with a concrete next action. Do not silently advance the
+review date or accumulate duplicate maintenance PRs.

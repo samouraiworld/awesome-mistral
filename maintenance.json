@@ -1,0 +1,14 @@
+{
+  "last_reviewed": "2026-09-04",
+  "audit": "audits/2026-09-04.md",
+  "max_age_days": 31,
+  "link_exceptions": [
+    {
+      "url": "https://x.com/MistralAI",
+      "reason": "X restricts automated access. The Mistral documentation footer links to this account; recheck the destination manually each week.",
+      "evidence": "https://docs.mistral.ai/resources/security-advisories",
+      "checked_at": "2026-09-04",
+      "expires_on": "2026-09-11"
+    }
+  ]
+}

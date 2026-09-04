@@ -1,0 +1,13 @@
+# HTTP errors, rate limits, timeouts and redirect loops must fail the check.
+accept = ["200..=299"]
+timeout = 30
+max_retries = 2
+max_concurrency = 8
+host_concurrency = 2
+max_redirects = 10
+include_fragments = "anchor-only"
+exclude_all_private = true
+cache = false
+# X blocks automated access. Exact URL only; review evidence and expiry are
+# enforced by scripts/check_content.py from maintenance.json.
+exclude = ['^https://x\.com/MistralAI$']
