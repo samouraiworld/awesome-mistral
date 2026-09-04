@@ -8,6 +8,10 @@ max_redirects = 10
 include_fragments = "anchor-only"
 exclude_all_private = true
 cache = false
-# X blocks automated access. Exact URL only; review evidence and expiry are
-# enforced by scripts/check_content.py from maintenance.json.
-exclude = ['^https://x\.com/MistralAI$']
+# Exact anti-bot exceptions: evidence and weekly expiry in maintenance.json.
+# X ownership is corroborated upstream; Reddit returned 200 locally and 403 in CI.
+exclude = [
+    '^https://x\.com/MistralAI$',
+    '^https://www\.reddit\.com/r/LocalLLaMA/$',
+    '^https://www\.reddit\.com/r/MistralAI/$',
+]

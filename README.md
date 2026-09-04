@@ -87,7 +87,7 @@ Capabilities and deployment options vary by model and hosting provider:
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use [vLLM](https://github.com/vllm-project/vllm), [mistral.rs](https://github.com/EricLBuehler/mistral.rs), or the Mistral API instead.
 - 🧠 [Model Lifecycle Policy](https://docs.mistral.ai/inference/model-lifecycle) – Official Labs → Preview → GA → Deprecated → Retired policy; individual model cards carry retirement dates.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
-- 🧠 [Vibe](https://chat.mistral.ai) – Mistral's unified agent (formerly le Chat) with Work, Code, and Chat modes across web, mobile, CLI, and VS Code.
+- 🧠 [Vibe](https://mistral.ai/products/vibe/) – Mistral's unified agent (formerly le Chat) with Work, Code, and Chat modes across web, mobile, CLI, and VS Code.
 
 ---
 
@@ -194,12 +194,11 @@ Checked releases: [Python v2.9.4](https://github.com/mistralai/client-python/rel
 
 - 🧠 [client-python](https://github.com/mistralai/client-python) – Official Python client library.
 - 🧠 [client-ts](https://github.com/mistralai/client-ts) – Official TypeScript/JavaScript client library.
-- 🧠 [@mistralai/mistralai](https://www.npmjs.com/package/@mistralai/mistralai) – Official TypeScript/JavaScript SDK (npm).
 
 ### Community SDKs
 
-- 🌍 [@ai-sdk/mistral](https://www.npmjs.com/package/@ai-sdk/mistral) – Vercel AI SDK provider.
-- 🌍 [@langchain/mistralai](https://www.npmjs.com/package/@langchain/mistralai) – LangChain.js integration.
+- 🌍 [@ai-sdk/mistral](https://ai-sdk.dev/providers/ai-sdk-providers/mistral) – Vercel AI SDK provider.
+- 🌍 [@langchain/mistralai](https://docs.langchain.com/oss/javascript/integrations/chat/mistralai) – LangChain.js integration.
 - 🌍 [mistral.rs](https://github.com/EricLBuehler/mistral.rs) ⭐ 7k+ – Rust inference with ISQ, LoRA, quantization.
 
 ---
