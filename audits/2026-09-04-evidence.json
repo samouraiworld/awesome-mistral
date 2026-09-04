@@ -64,15 +64,25 @@
     }
   ],
   "revised_links": {
-    "total": 262,
-    "unique": 223,
-    "successful": 261,
+    "total": 263,
+    "unique": 224,
+    "successful": 260,
     "errors": 0,
-    "excludes": 1,
+    "excludes": 3,
     "timeouts": 0,
-    "redirects": 14
+    "redirects": 12
   },
   "targets": [
+    {
+      "url": "https://ai-sdk.dev/providers/ai-sdk-providers/mistral",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "README.md"
+      ]
+    },
     {
       "url": "https://arena.ai/",
       "status": {
@@ -233,25 +243,6 @@
       ]
     },
     {
-      "url": "https://chat.mistral.ai/",
-      "status": {
-        "text": "200 OK",
-        "code": 200
-      },
-      "sources": [
-        "README.md"
-      ],
-      "redirects": {
-        "origin": "https://chat.mistral.ai/",
-        "redirects": [
-          {
-            "url": "https://chat.mistral.ai/chat",
-            "code": 307
-          }
-        ]
-      }
-    },
-    {
       "url": "https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb",
       "status": {
         "text": "200 OK",
@@ -289,8 +280,8 @@
       },
       "sources": [
         ".github/ISSUE_TEMPLATE/config.yml",
-        "CONTRIBUTING.md",
-        "README.md"
+        "README.md",
+        "CONTRIBUTING.md"
       ],
       "redirects": {
         "origin": "https://discord.gg/mistralai",
@@ -321,6 +312,25 @@
       "sources": [
         "MAINTENANCE.md"
       ]
+    },
+    {
+      "url": "https://docs.langchain.com/oss/javascript/integrations/chat/mistralai",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "README.md"
+      ],
+      "redirects": {
+        "origin": "https://docs.langchain.com/oss/javascript/integrations/chat/mistralai",
+        "redirects": [
+          {
+            "url": "https://docs.langchain.com/oss/javascript/integrations/chat/mistral",
+            "code": 308
+          }
+        ]
+      }
     },
     {
       "url": "https://docs.langchain.com/oss/python/integrations/chat/mistralai",
@@ -375,12 +385,12 @@
     {
       "url": "https://docs.mistral.ai/inference/model-lifecycle",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
-        "README.md",
-        "MAINTENANCE.md"
+        "MAINTENANCE.md",
+        "README.md"
       ]
     },
     {
@@ -390,31 +400,31 @@
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
+        "MAINTENANCE.md",
         "README.md",
-        "MAINTENANCE.md"
+        "audits/2026-09-04.md"
       ]
     },
     {
       "url": "https://docs.mistral.ai/models",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "MAINTENANCE.md",
+        "README.md"
+      ]
+    },
+    {
+      "url": "https://docs.mistral.ai/models/codestral-25-08",
       "status": {
         "text": "OK (cached)",
         "code": 200
       },
       "sources": [
         "README.md",
-        "MAINTENANCE.md"
-      ]
-    },
-    {
-      "url": "https://docs.mistral.ai/models/codestral-25-08",
-      "status": {
-        "text": "200 OK",
-        "code": 200
-      },
-      "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -454,9 +464,9 @@
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
+        "MAINTENANCE.md",
         "README.md",
-        "MAINTENANCE.md"
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -476,15 +486,15 @@
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
+        "MAINTENANCE.md",
         "README.md",
-        "MAINTENANCE.md"
+        "audits/2026-09-04.md"
       ]
     },
     {
       "url": "https://docs.mistral.ai/resources/security-advisories",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
@@ -505,12 +515,12 @@
     {
       "url": "https://docs.mistral.ai/resources/security-advisories/MAI-2026-002",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -616,7 +626,7 @@
     {
       "url": "https://github.com/EricLBuehler/mistral.rs",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
@@ -916,7 +926,7 @@
     {
       "url": "https://github.com/huggingface/trl",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
@@ -1006,23 +1016,23 @@
     {
       "url": "https://github.com/mistralai",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
-        "README.md",
-        "MAINTENANCE.md"
+        "MAINTENANCE.md",
+        "README.md"
       ]
     },
     {
       "url": "https://github.com/mistralai/cli",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -1048,12 +1058,12 @@
     {
       "url": "https://github.com/mistralai/client-python/releases/tag/v2.9.4",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -1079,18 +1089,18 @@
     {
       "url": "https://github.com/mistralai/client-ts/releases/tag/v2.6.4",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
       "url": "https://github.com/mistralai/cookbook",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
@@ -1150,12 +1160,12 @@
     {
       "url": "https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.0",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -1289,6 +1299,16 @@
       ]
     },
     {
+      "url": "https://github.com/samouraiworld/awesome-mistral/actions/runs/33914804747",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "audits/2026-09-04.md"
+      ]
+    },
+    {
       "url": "https://github.com/samouraiworld/awesome-mistral/issues/new/choose",
       "status": {
         "text": "200 OK",
@@ -1370,7 +1390,7 @@
     {
       "url": "https://github.com/unslothai/unsloth",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
@@ -1380,7 +1400,7 @@
     {
       "url": "https://github.com/vllm-project/vllm",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
@@ -1500,12 +1520,12 @@
     {
       "url": "https://huggingface.co/mistralai",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
-        "README.md",
-        "MAINTENANCE.md"
+        "MAINTENANCE.md",
+        "README.md"
       ]
     },
     {
@@ -1531,12 +1551,12 @@
     {
       "url": "https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -1801,12 +1821,12 @@
     {
       "url": "https://mistral.ai/news/",
       "status": {
-        "text": "OK (cached)",
+        "text": "200 OK",
         "code": 200
       },
       "sources": [
-        "README.md",
-        "MAINTENANCE.md"
+        "MAINTENANCE.md",
+        "README.md"
       ]
     },
     {
@@ -1909,12 +1929,12 @@
     {
       "url": "https://mistral.ai/news/mistral-x-humain/",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
-        "audits/2026-09-04.md",
-        "README.md"
+        "README.md",
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -1930,7 +1950,7 @@
     {
       "url": "https://mistral.ai/news/regional-inference-open-models-new-compute/",
       "status": {
-        "text": "200 OK",
+        "text": "OK (cached)",
         "code": 200
       },
       "sources": [
@@ -1989,6 +2009,16 @@
     },
     {
       "url": "https://mistral.ai/products/studio/",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "README.md"
+      ]
+    },
+    {
+      "url": "https://mistral.ai/products/vibe/",
       "status": {
         "text": "200 OK",
         "code": 200
@@ -2096,40 +2126,10 @@
       ]
     },
     {
-      "url": "https://www.npmjs.com/package/@ai-sdk/mistral",
-      "status": {
-        "text": "200 OK",
-        "code": 200
-      },
-      "sources": [
-        "README.md"
-      ]
-    },
-    {
-      "url": "https://www.npmjs.com/package/@langchain/mistralai",
-      "status": {
-        "text": "200 OK",
-        "code": 200
-      },
-      "sources": [
-        "README.md"
-      ]
-    },
-    {
-      "url": "https://www.npmjs.com/package/@mistralai/mistralai",
-      "status": {
-        "text": "200 OK",
-        "code": 200
-      },
-      "sources": [
-        "README.md"
-      ]
-    },
-    {
       "url": "https://www.reddit.com/r/LocalLLaMA/",
       "status": {
-        "text": "200 OK",
-        "code": 200
+        "text": "Excluded",
+        "details": "This is due to your 'exclude' values"
       },
       "sources": [
         "README.md"
@@ -2138,8 +2138,8 @@
     {
       "url": "https://www.reddit.com/r/MistralAI/",
       "status": {
-        "text": "200 OK",
-        "code": 200
+        "text": "Excluded",
+        "details": "This is due to your 'exclude' values"
       },
       "sources": [
         "README.md"
@@ -2153,20 +2153,7 @@
       },
       "sources": [
         "README.md"
-      ],
-      "redirects": {
-        "origin": "https://www.youtube.com/@HuggingFace",
-        "redirects": [
-          {
-            "url": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2F%40HuggingFace%3Fcbrd%3D1&gl=FR&m=0&pc=yt&cm=2&hl=fr&src=1",
-            "code": 302
-          },
-          {
-            "url": "https://www.youtube.com/@HuggingFace?cbrd=1&ucbcb=1",
-            "code": 303
-          }
-        ]
-      }
+      ]
     },
     {
       "url": "https://www.youtube.com/@aiexplained-official",
@@ -2176,20 +2163,7 @@
       },
       "sources": [
         "README.md"
-      ],
-      "redirects": {
-        "origin": "https://www.youtube.com/@aiexplained-official",
-        "redirects": [
-          {
-            "url": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2F%40aiexplained-official%3Fcbrd%3D1&gl=FR&m=0&pc=yt&cm=2&hl=fr&src=1",
-            "code": 302
-          },
-          {
-            "url": "https://www.youtube.com/@aiexplained-official?cbrd=1&ucbcb=1",
-            "code": 303
-          }
-        ]
-      }
+      ]
     },
     {
       "url": "https://x.com/MistralAI",
@@ -2228,8 +2202,8 @@
         "code": 200
       },
       "sources": [
-        "CONTRIBUTING.md",
-        "README.md"
+        "README.md",
+        "CONTRIBUTING.md"
       ]
     },
     {
@@ -2439,8 +2413,18 @@
         "code": 200
       },
       "sources": [
-        "CONTRIBUTING.md",
-        "README.md"
+        "README.md",
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "url": "repo:audits/2026-09-04-evidence.json",
+      "status": {
+        "text": "200 OK",
+        "code": 200
+      },
+      "sources": [
+        "audits/2026-09-04.md"
       ]
     },
     {
@@ -2455,7 +2439,7 @@
     }
   ],
   "github": {
-    "checked_at": "2026-09-04T20:07:30.199443+00:00",
+    "checked_at": "2026-09-04T20:13:18.900268+00:00",
     "repositories": [
       {
         "requested": "567-labs/instructor",
@@ -2562,7 +2546,7 @@
         "html_url": "https://github.com/BerriAI/litellm",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T20:05:39Z",
+        "pushed_at": "2026-09-04T20:11:33Z",
         "stargazers_count": 58048,
         "default_branch": "litellm_internal_staging",
         "fork": false
@@ -2640,7 +2624,7 @@
         "archived": false,
         "disabled": false,
         "pushed_at": "2026-09-04T19:38:34Z",
-        "stargazers_count": 42822,
+        "stargazers_count": 42823,
         "default_branch": "main",
         "fork": false
       },
@@ -2805,7 +2789,7 @@
         "archived": false,
         "disabled": false,
         "pushed_at": "2026-09-04T20:05:54Z",
-        "stargazers_count": 145649,
+        "stargazers_count": 145650,
         "default_branch": "master",
         "fork": false
       },
@@ -2837,7 +2821,7 @@
         "html_url": "https://github.com/lobehub/lobehub",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T19:00:54Z",
+        "pushed_at": "2026-09-04T20:10:43Z",
         "stargazers_count": 82240,
         "default_branch": "canary",
         "fork": false
@@ -3013,8 +2997,8 @@
         "html_url": "https://github.com/ollama/ollama",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T20:07:24Z",
-        "stargazers_count": 180150,
+        "pushed_at": "2026-09-04T20:07:35Z",
+        "stargazers_count": 180151,
         "default_branch": "main",
         "fork": false
       },
@@ -3024,8 +3008,8 @@
         "html_url": "https://github.com/onyx-dot-app/onyx",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T20:03:43Z",
-        "stargazers_count": 31930,
+        "pushed_at": "2026-09-04T20:12:34Z",
+        "stargazers_count": 31931,
         "default_branch": "main",
         "fork": false
       },
@@ -3112,8 +3096,8 @@
         "html_url": "https://github.com/pydantic/pydantic-ai",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T20:06:57Z",
-        "stargazers_count": 19727,
+        "pushed_at": "2026-09-04T20:12:59Z",
+        "stargazers_count": 19728,
         "default_branch": "main",
         "fork": false
       },
@@ -3146,7 +3130,7 @@
         "archived": false,
         "disabled": false,
         "pushed_at": "2026-09-04T19:52:31Z",
-        "stargazers_count": 35460,
+        "stargazers_count": 35461,
         "default_branch": "main",
         "fork": false
       },
@@ -3233,7 +3217,7 @@
         "html_url": "https://github.com/vllm-project/vllm",
         "archived": false,
         "disabled": false,
-        "pushed_at": "2026-09-04T20:04:24Z",
+        "pushed_at": "2026-09-04T20:11:43Z",
         "stargazers_count": 90974,
         "default_branch": "main",
         "fork": false
@@ -3275,5 +3259,113 @@
     "voxtral-mini-transcribe-realtime-26-02.ts": "cb9d9570e7365abfb2c302a5b5eb5bea87b77b706143919a2b54ab1f843faff8",
     "voxtral-small-25-07.ts": "051e478e563e17c32fd43a4520bbb3bf15debe7f733036b6cdfba15bb2cc0b8d",
     "voxtral-tts-26-03.ts": "d3399c99a770a244514aad78229c5af3dc4e8b4ad2e56e821ecda418a8c67dcb"
+  },
+  "pre_ci_local_links": {
+    "total": 262,
+    "unique": 223,
+    "successful": 261,
+    "errors": 0,
+    "excludes": 1,
+    "timeouts": 0,
+    "redirects": 14
+  },
+  "ci": {
+    "verified_commit": "8884ce521024fa1cef58146fa4758cd449a16d16",
+    "successful_run": "https://github.com/samouraiworld/awesome-mistral/actions/runs/33915084697",
+    "first_failed_run": "https://github.com/samouraiworld/awesome-mistral/actions/runs/33914804747",
+    "first_failed_run_errors": {
+      "README.md": [
+        {
+          "url": "https://www.npmjs.com/package/@mistralai/mistralai",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 197,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 150489523
+          }
+        },
+        {
+          "url": "https://chat.mistral.ai/",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 90,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 635095824
+          }
+        },
+        {
+          "url": "https://www.npmjs.com/package/@ai-sdk/mistral",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 201,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 85719359
+          }
+        },
+        {
+          "url": "https://www.npmjs.com/package/@langchain/mistralai",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 202,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 20024104
+          }
+        },
+        {
+          "url": "https://www.reddit.com/r/MistralAI/",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 452,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 25534186
+          }
+        },
+        {
+          "url": "https://www.reddit.com/r/LocalLLaMA/",
+          "status": {
+            "text": "Rejected status code: 403 Forbidden",
+            "code": 403
+          },
+          "span": {
+            "line": 451,
+            "column": 5
+          },
+          "duration": {
+            "secs": 0,
+            "nanos": 68555167
+          }
+        }
+      ]
+    }
   }
 }
