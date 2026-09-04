@@ -1,5 +1,5 @@
 {
-  "status": "pending_user_approval",
+  "status": "applied_and_verified",
   "repository": "samouraiworld/awesome-mistral",
   "branch_protection": {
     "required_status_checks": {
@@ -29,5 +29,6 @@
   "workflow_permissions": {
     "default_workflow_permissions": "read",
     "can_approve_pull_request_reviews": false
-  }
+  },
+  "authorization": "Explicit maintainer approval in this maintenance task"
 }
