@@ -1,0 +1,34 @@
+{
+  "status": "applied_and_verified",
+  "repository": "samouraiworld/awesome-mistral",
+  "branch_protection": {
+    "required_status_checks": {
+      "strict": true,
+      "checks": [
+        {
+          "context": "Content conventions",
+          "app_id": 15368
+        },
+        {
+          "context": "Links and anchors",
+          "app_id": 15368
+        }
+      ]
+    },
+    "enforce_admins": true,
+    "required_pull_request_reviews": {
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": false,
+      "required_approving_review_count": 0
+    },
+    "restrictions": null,
+    "required_conversation_resolution": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  },
+  "workflow_permissions": {
+    "default_workflow_permissions": "read",
+    "can_approve_pull_request_reviews": false
+  },
+  "authorization": "Explicit maintainer approval in this maintenance task"
+}

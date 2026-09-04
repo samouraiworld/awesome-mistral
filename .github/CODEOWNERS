@@ -1,11 +1,3 @@
-# CODEOWNERS for awesome-mistral
-# These owners will be requested for review on PRs
-
-# Default owners for everything
-* @samouraiworld/awesome-mistral-maintainers
-
-# README changes require maintainer review
-README.md @samouraiworld/awesome-mistral-maintainers
-
-# GitHub configuration files
-.github/ @samouraiworld/awesome-mistral-maintainers
+# Verified repository administrator. Review ownership does not enforce branch
+# protection: configure required checks separately in repository settings.
+* @zxxma

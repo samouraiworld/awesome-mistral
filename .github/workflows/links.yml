@@ -1,42 +1,108 @@
-name: Check Links
+name: Repository Quality
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Weekly on Sunday
+    - cron: '17 7 * * 0' # Sunday 07:17 UTC; editorial task runs at 09:00 Europe/Paris.
   push:
     branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  linkChecker:
+  content:
+    name: Content conventions
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check editorial rules and freshness
+        run: python3 scripts/check_content.py
+      - name: Test editorial checks
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          globs: |
+            *.md
+            audits/*.md
+            .github/*.md
 
-      - name: Link Checker
+  links:
+    name: Links and anchors
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Inventory tracked documentation and issue-template links
+        run: git ls-files -- '*.md' '.github/ISSUE_TEMPLATE/*.yml' > "$RUNNER_TEMP/link-inputs.txt"
+      - name: Check links and anchors
         id: lychee
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          args: >
-            --verbose
-            --no-progress
-            --accept 200,204,206,301,302,303,307,308
-            --timeout 30
-            --max-retries 3
-            --exclude-mail
-            --exclude "^https://twitter.com"
-            --exclude "^https://x.com"
-            --exclude "^https://discord.gg"
-            README.md
+          lycheeVersion: v0.24.2
+          args: --config lychee.toml --no-progress --verbose --files-from ${{ runner.temp }}/link-inputs.txt
+          format: json
+          output: audit-output/links.json
+          jobSummary: false
+          fail: true
+      - name: Audit referenced GitHub repositories
+        if: always()
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - name: Create Issue From Link Check Results
-        if: failure()
-        uses: peter-evans/create-issue-from-file@v4
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/audit_github.py
+      - name: Preserve audit evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          title: Link Checker Report
-          content-filepath: ./lychee/out.md
-          labels: report, automated issue
+          name: quality-evidence
+          path: audit-output/
+          retention-days: 90
+          if-no-files-found: error
+
+  report:
+    name: Scheduled failure report
+    needs: [content, links]
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+      # This privileged job never checks out or executes repository code and
+      # never consumes text from a pull request or downloaded artifact.
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          CONTENT_RESULT: ${{ needs.content.result }}
+          LINKS_RESULT: ${{ needs.links.result }}
+        with:
+          script: |
+            const title = 'Repository quality checks need attention';
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'open', creator: 'github-actions[bot]', per_page: 100
+            });
+            const existing = issues.find(i => !i.pull_request && i.title === title);
+            const failed = process.env.CONTENT_RESULT !== 'success' || process.env.LINKS_RESULT !== 'success';
+            if (failed) {
+              const run = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+              const body = `Scheduled quality check failed.\n\n- Content: ${process.env.CONTENT_RESULT}\n- Links: ${process.env.LINKS_RESULT}\n\n[Inspect the run and quality-evidence artifact](${run}). Follow MAINTENANCE.md; do not suppress unexplained failures.`;
+              if (existing) {
+                await github.rest.issues.update({owner, repo, issue_number: existing.number, body});
+              } else {
+                await github.rest.issues.create({owner, repo, title, body});
+              }
+            } else if (existing) {
+              await github.rest.issues.update({owner, repo, issue_number: existing.number, state: 'closed', state_reason: 'completed'});
+            }
