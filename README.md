@@ -6,7 +6,7 @@ An independent community directory of Mistral AI models, developer tools, resear
 
 Curated for AI engineers, researchers and developers. Inclusion does not imply endorsement by Mistral AI or compatibility with every Mistral model.
 
-**Last editorial review: 2026-09-04.** Reviewed weekly; see the [audit and sources](audits/2026-09-04.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
+**Last editorial review: 2026-09-07.** Reviewed weekly; see the [audit and sources](audits/2026-09-07.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
 
 **Legend:**
 
@@ -207,11 +207,11 @@ Checked releases: [Python v2.9.4](https://github.com/mistralai/client-python/rel
 
 ### High-Performance Inference
 
-- 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization.
+- 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization. Activity watch: last upstream push 2026-03-04; reassess at the next review.
 - 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 127k+ – CPU/GPU inference with GGUF quantization.
 - 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 35k+ – Fast serving with RadixAttention.
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
-- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 90k+ – High-throughput with PagedAttention. Excellent Mistral support.
+- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 91k+ – High-throughput with PagedAttention. Excellent Mistral support.
 
 ### Local Inference
 
@@ -261,7 +261,7 @@ Checked releases: [Python v2.9.4](https://github.com/mistralai/client-python/rel
 - 🌍 [AutoAWQ](https://github.com/casper-hansen/AutoAWQ) – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [AutoGPTQ](https://github.com/AutoGPTQ/AutoGPTQ) ⭐ 5k+ – ⚠️ Archived, no longer maintained – use bitsandbytes or llama.cpp GGUF instead.
 - 🌍 [bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes) ⭐ 8k+ – 4-bit and 8-bit quantization.
-- 🌍 [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) – Quantization format specification.
+- 🌍 [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) ⭐ 15k+ – Quantization format specification.
 
 ---
 
@@ -277,7 +277,7 @@ Checked releases: [Python v2.9.4](https://github.com/mistralai/client-python/rel
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 52k+ – Data framework for RAG with Mistral.
 - 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
-- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 7k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
+- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 8k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
 
 ### Function Calling & Structured Output
@@ -315,7 +315,7 @@ Checked releases: [Python v2.9.4](https://github.com/mistralai/client-python/rel
 ### Chat Interfaces
 
 - 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 42k+ – Multi-model chat interface.
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 150k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 151k+ – Self-hosted ChatGPT-like UI.
 
 ### RAG & Knowledge Management
 
@@ -361,7 +361,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 - 🌍 [Axolotl Mistral Examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/mistral) – Config examples.
 - 🧠 [Mistral Fine-Tuning API](https://docs.mistral.ai/resources/deprecated/finetuning) – ⚠️ Deprecated, no longer actively supported – use the open-source frameworks below or [Forge](https://mistral.ai/products/forge/) for enterprise training.
 - 🌍 [QLoRA Guide](https://huggingface.co/blog/4bit-transformers-bitsandbytes) – 4-bit fine-tuning.
-- 🌍 [Unsloth Tutorials](https://github.com/unslothai/notebooks) – Official Unsloth fine-tuning notebooks, including Mistral-family examples.
+- 🌍 [Unsloth Tutorials](https://github.com/unslothai/notebooks) ⭐ 5k+ – Official Unsloth fine-tuning notebooks, including Mistral-family examples.
 
 ### RAG & Applications
 
