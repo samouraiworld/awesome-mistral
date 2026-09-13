@@ -13,8 +13,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: quality-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: quality-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   content:
@@ -62,6 +62,39 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/audit_github.py
+      - name: Measure excluded destinations separately
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import datetime
+          import json
+          from pathlib import Path
+          import subprocess
+
+          results = []
+          for entry in json.loads(Path('maintenance.json').read_text())['link_exceptions']:
+              result = subprocess.run([
+                  'curl', '--silent', '--show-error', '--location',
+                  '--max-time', '30', '--max-redirs', '10',
+                  '--proto', '=https', '--proto-redir', '=https',
+                  '--output', '/dev/null', '--write-out', '%{json}', '--url', entry['url']
+              ], capture_output=True, text=True, timeout=40)
+              measurement = json.loads(result.stdout) if result.stdout else {}
+              results.append({
+                  'url': entry['url'], 'exit_code': result.returncode,
+                  'http_code': measurement.get('http_code'),
+                  'effective_url': measurement.get('url_effective'),
+                  'redirects': measurement.get('num_redirects'),
+                  'error': result.stderr.strip()
+              })
+          output = Path('audit-output/link-exceptions.json')
+          output.parent.mkdir(parents=True, exist_ok=True)
+          output.write_text(json.dumps({
+              'checked_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'environment': 'github-actions', 'results': results
+          }, indent=2) + '\n')
+          print(output.read_text())
+          PY
       - name: Preserve audit evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

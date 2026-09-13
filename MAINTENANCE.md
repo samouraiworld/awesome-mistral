@@ -98,6 +98,12 @@ the dated audit. GitHub Actions preserves `quality-evidence` artifacts for 90 da
 Keep failed and retried outcomes distinguishable rather than replacing evidence
 with an unsupported claim that everything passed.
 
+CI also probes each excluded destination separately with a bounded HTTPS GET and
+records its status, destination and transport error in `link-exceptions.json`.
+These measurements do not count as Lychee successes or renew an exception.
+Inspect the artifact when deciding whether an exclusion is still necessary;
+a 200 response may still be a login or anti-bot page.
+
 ## Scheduling and failure handling
 
 The scheduled editorial task performs research, edits and a reviewable PR in this
@@ -110,6 +116,9 @@ on pushes and on PRs. GitHub may delay schedules, and disables scheduled workflo
 in public repositories [after 60 days without repository activity](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule); monitor the last
 actual run, not just the presence of a cron expression. Trigger a manual run after
 restoring a missed schedule. This CI does not perform editorial research or merge.
+Push, scheduled and manual runs have separate concurrency groups so a manual
+check cannot cancel the checks attached to a merge. Only superseded PR runs are
+cancelled automatically.
 
 A separate scheduled reporting job opens or updates one bot-owned failure issue
 and closes it after a successful scheduled/manual check. PR checks never receive
