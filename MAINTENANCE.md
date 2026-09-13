@@ -119,6 +119,8 @@ restoring a missed schedule. This CI does not perform editorial research or merg
 Push, scheduled and manual runs have separate concurrency groups so a manual
 check cannot cancel the checks attached to a merge. Only superseded PR runs are
 cancelled automatically.
+The issue-reporting job remains serialized across triggers to avoid duplicate
+failure issues when scheduled and manual runs finish together.
 
 A separate scheduled reporting job opens or updates one bot-owned failure issue
 and closes it after a successful scheduled/manual check. PR checks never receive

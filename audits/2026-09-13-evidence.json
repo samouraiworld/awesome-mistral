@@ -1404,5 +1404,54 @@
     "errors": 0,
     "cached": 55,
     "detailed_stats": true
+  },
+  "first_pr_ci": {
+    "run": "https://github.com/samouraiworld/awesome-mistral/actions/runs/34744658037",
+    "commit": "9295bb1",
+    "conclusion": "success",
+    "exceptions": {
+      "checked_at": "2026-09-13T07:13:21.923777+00:00",
+      "environment": "github-actions",
+      "results": [
+        {
+          "url": "https://x.com/MistralAI",
+          "exit_code": 0,
+          "http_code": 403,
+          "effective_url": "https://x.com/MistralAI",
+          "redirects": 0,
+          "error": ""
+        },
+        {
+          "url": "https://www.reddit.com/r/LocalLLaMA/",
+          "exit_code": 0,
+          "http_code": 403,
+          "effective_url": "https://www.reddit.com/r/LocalLLaMA/",
+          "redirects": 0,
+          "error": ""
+        },
+        {
+          "url": "https://www.reddit.com/r/MistralAI/",
+          "exit_code": 0,
+          "http_code": 403,
+          "effective_url": "https://www.reddit.com/r/MistralAI/",
+          "redirects": 0,
+          "error": ""
+        }
+      ]
+    },
+    "links": {
+      "total": 304,
+      "unique": 246,
+      "successful": 301,
+      "unknown": 0,
+      "unsupported": 0,
+      "timeouts": 0,
+      "redirects": 11,
+      "remaps": 0,
+      "excludes": 3,
+      "errors": 0,
+      "cached": 55,
+      "detailed_stats": true
+    }
   }
 }
