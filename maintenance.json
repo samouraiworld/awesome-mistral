@@ -1,28 +1,28 @@
 {
-  "last_reviewed": "2026-09-08",
-  "audit": "audits/2026-09-08.md",
+  "last_reviewed": "2026-09-13",
+  "audit": "audits/2026-09-13.md",
   "max_age_days": 31,
   "link_exceptions": [
     {
       "url": "https://x.com/MistralAI",
-      "reason": "X restricts automated access. The Mistral documentation footer links to this account; recheck the destination manually each week.",
-      "evidence": "https://docs.mistral.ai/resources/security-advisories",
-      "checked_at": "2026-09-08",
-      "expires_on": "2026-09-15"
+      "reason": "HTTP 403 from the GitHub-hosted runner in PR 25 on 2026-09-13; HTTP 200 from the maintenance host the same day. Recheck both environments weekly. The official Mistral documentation footer corroborates account ownership, not authenticated access.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/34744658037",
+      "checked_at": "2026-09-13",
+      "expires_on": "2026-09-20"
     },
     {
       "url": "https://www.reddit.com/r/LocalLLaMA/",
-      "reason": "HTTP 403 from the GitHub-hosted runner in PR 22, run 33914804747; independently rechecked from the maintenance host with HTTP 200 on 2026-09-08. Recheck both environments weekly.",
-      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/33914804747",
-      "checked_at": "2026-09-08",
-      "expires_on": "2026-09-15"
+      "reason": "HTTP 403 from the GitHub-hosted runner in PR 25 on 2026-09-13; HTTP 200 from the maintenance host the same day. Recheck both environments weekly.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/34744658037",
+      "checked_at": "2026-09-13",
+      "expires_on": "2026-09-20"
     },
     {
       "url": "https://www.reddit.com/r/MistralAI/",
-      "reason": "HTTP 403 from the GitHub-hosted runner in PR 22, run 33914804747; independently rechecked from the maintenance host with HTTP 200 on 2026-09-08. Recheck both environments weekly.",
-      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/33914804747",
-      "checked_at": "2026-09-08",
-      "expires_on": "2026-09-15"
+      "reason": "HTTP 403 from the GitHub-hosted runner in PR 25 on 2026-09-13; HTTP 200 from the maintenance host the same day. Recheck both environments weekly.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/34744658037",
+      "checked_at": "2026-09-13",
+      "expires_on": "2026-09-20"
     }
   ]
 }
