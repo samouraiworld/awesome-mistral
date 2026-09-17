@@ -6,7 +6,7 @@ An independent community directory of Mistral AI models, developer tools, resear
 
 Curated for AI engineers, researchers and developers. Inclusion does not imply endorsement by Mistral AI or compatibility with every Mistral model.
 
-**Last editorial review: 2026-09-13.** Reviewed weekly; see the [audit and sources](audits/2026-09-13.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
+**Last editorial review: 2026-09-17.** Reviewed weekly; see the [audit and sources](audits/2026-09-17.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
 
 **Legend:**
 
@@ -105,7 +105,7 @@ Capabilities and deployment options vary by model and hosting provider:
 
 ### Flagship Models (API)
 
-Snapshot checked on **2026-09-13** against the [model catalog](https://docs.mistral.ai/models) and [pricing](https://docs.mistral.ai/inference/pricing). License refers to downloadable weights where available; API usage has separate service terms. Context is the advertised window, not a hardware requirement.
+Snapshot checked on **2026-09-17** against the [model catalog](https://docs.mistral.ai/models) and [pricing](https://docs.mistral.ai/inference/pricing). License refers to downloadable weights where available; API usage has separate service terms. Context is the advertised window, not a hardware requirement.
 
 | Model | Context | License | Best For |
 |-------|---------|---------|----------|
