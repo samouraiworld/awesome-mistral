@@ -433,7 +433,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 - 🧠 [Mistral AI Discord](https://discord.gg/mistralai) – Official community server.
 - 🧠 [Mistral AI Twitter/X](https://x.com/MistralAI) – Official updates.
 
-### Conferences & Talks
+### Video Channels
 
 - 🌍 [AI Explained](https://www.youtube.com/@aiexplained-official) – Technical breakdowns.
 - 🌍 [Hugging Face YouTube](https://www.youtube.com/@HuggingFace) – Tutorials with Mistral.
@@ -473,10 +473,9 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 
 ### Quick Guidelines
 
-1. Ensure all links point to real, existing resources
-2. Use consistent formatting: `- 🧠/🌍/🧪 [Name](url) – Brief description.`
-3. Prefer high-signal, actively maintained projects
-4. Include star counts for major projects (⭐ 5k+)
+1. Cite primary sources and ensure every link leads to the intended resource
+2. Follow the [resource format](CONTRIBUTING.md#resource-format), including alphabetical order and the optional ⭐ snapshot from 5k stars
+3. Meet the [selection criteria](CONTRIBUTING.md#selection-criteria) for relevance, maintenance and adoption
 
 ---
 

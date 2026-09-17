@@ -70,6 +70,17 @@ class ContentChecks(unittest.TestCase):
                     "checked_at": "2026-08-27", "expires_on": "2026-09-03"}]}
         self.assertTrue(check_metadata(data, "Last editorial review: 2026-09-04.", dt.date(2026, 9, 4)))
 
+    def test_exception_can_outlive_one_unmerged_weekly_review(self):
+        def data(expires_on):
+            return {"last_reviewed": "2026-09-04", "max_age_days": 31,
+                    "audit": "audits/2026-09-04.md", "link_exceptions": [{
+                        "url": "https://example.org", "reason": "Runner 403",
+                        "evidence": "https://example.org/run",
+                        "checked_at": "2026-09-04", "expires_on": expires_on}]}
+        text = "Last editorial review: 2026-09-04."
+        self.assertEqual(check_metadata(data("2026-09-18"), text, dt.date(2026, 9, 16)), [])
+        self.assertTrue(check_metadata(data("2026-09-19"), text, dt.date(2026, 9, 16)))
+
 
 if __name__ == "__main__":
     unittest.main()

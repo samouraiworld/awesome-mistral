@@ -68,8 +68,8 @@ def check_metadata(data, text, today):
     for entry in data["link_exceptions"]:
         checked = dt.date.fromisoformat(entry["checked_at"])
         expires = dt.date.fromisoformat(entry["expires_on"])
-        if not checked <= today <= expires or not 0 < (expires - checked).days <= 7:
-            errors.append(f"Link exception expired, future-dated or longer than 7 days: {entry['url']}")
+        if not checked <= today <= expires or not 0 < (expires - checked).days <= 14:
+            errors.append(f"Link exception expired, future-dated or longer than 14 days: {entry['url']}")
         if not entry["reason"] or not entry["evidence"].startswith("https://"):
             errors.append(f"Missing evidence for link exception: {entry['url']}")
     return errors
