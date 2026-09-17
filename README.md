@@ -219,7 +219,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 - 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization. Activity watch: last upstream push 2026-03-04; reassess at the next review.
 - 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 128k+ – CPU/GPU inference with GGUF quantization.
-- 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 35k+ – Fast serving with RadixAttention.
+- 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 36k+ – Fast serving with RadixAttention.
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
 - 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 91k+ – High-throughput with PagedAttention. Excellent Mistral support.
 
@@ -229,7 +229,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 - 🌍 [Jan](https://jan.ai) – Open-source ChatGPT alternative running locally.
 - 🌍 [LM Studio](https://lmstudio.ai) – Desktop GUI for local LLMs.
 - 🌍 [Msty](https://msty.ai) – Desktop app for running local LLMs.
-- 🌍 [Ollama](https://ollama.com) ⭐ 180k+ – Simple CLI for local Mistral models.
+- 🌍 [Ollama](https://ollama.com) ⭐ 181k+ – Simple CLI for local Mistral models.
 - 🧪 [voxtral.c](https://github.com/antirez/voxtral.c) – Experimental C inference for Voxtral Mini 4B Realtime. Activity watch: last upstream push 2026-02-15; verify compatibility before use.
 
 ### Cloud & Container Deployment
@@ -280,7 +280,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 ### Agent Frameworks
 
 - 🌍 [Aeon](https://github.com/aeonfun/aeon) – Autonomous agent framework that runs unattended on GitHub Actions and drives Mistral Vibe as one of six coding-agent harnesses behind a single contract, with quality scoring, persistent memory, and a self-healing loop.
-- 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 60k+ – Microsoft's multi-agent framework.
+- 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 61k+ – Microsoft's multi-agent framework.
 - 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 58k+ – Multi-agent orchestration.
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
 - 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 146k+ – LLM app framework with native Mistral support.
@@ -303,7 +303,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### IDE Extensions & Code Assistants
 
-- 🌍 [Aider](https://github.com/Aider-AI/aider) ⭐ 48k+ – AI pair programming in terminal.
+- 🌍 [Aider](https://github.com/Aider-AI/aider) ⭐ 49k+ – AI pair programming in terminal.
 - 🌍 [Continue](https://github.com/continuedev/continue) ⭐ 35k+ – Open-source AI code assistant (VSCode/JetBrains).
 - 🌍 [Tabby](https://github.com/TabbyML/tabby) ⭐ 33k+ – Self-hosted GitHub Copilot alternative.
 - 🧠 [Vibe for Code](https://mistral.ai/products/vibe/code/) – Mistral Vibe's coding agent for the terminal and IDEs (VS Code, JetBrains, Zed); the former Mistral Code product page now redirects here.
@@ -324,8 +324,8 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### Chat Interfaces
 
-- 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 43k+ – Multi-model chat interface.
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 151k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 44k+ – Multi-model chat interface.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 152k+ – Self-hosted ChatGPT-like UI.
 
 ### RAG & Knowledge Management
 
@@ -339,7 +339,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 - 🌍 [Fabric](https://github.com/danielmiessler/Fabric) ⭐ 43k+ – AI augmentation framework.
 - 🌍 [GPT Researcher](https://github.com/assafelovic/gpt-researcher) ⭐ 29k+ – Autonomous research agent.
-- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 87k+ – AI software engineer (formerly OpenDevin).
+- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 88k+ – AI software engineer (formerly OpenDevin).
 
 ---
 
@@ -392,7 +392,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 ### Evaluation Frameworks
 
 - 🌍 [HELM](https://github.com/stanford-crfm/helm) – Stanford's holistic evaluation.
-- 🌍 [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ⭐ 13k+ – EleutherAI's eval framework.
+- 🌍 [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) ⭐ 14k+ – EleutherAI's eval framework.
 - 🌍 [OpenCompass](https://github.com/open-compass/opencompass) ⭐ 7k+ – Comprehensive LLM evaluation.
 
 ### Code Benchmarks
