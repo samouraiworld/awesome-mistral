@@ -6,5 +6,5 @@
     "MD060": false
   },
   "globs": ["*.md", "audits/*.md", ".github/*.md"],
-  "ignores": [".remember/**", ".claude/**", "audit-output/**"]
+  "ignores": [".remember/**", "audit-output/**"]
 }
