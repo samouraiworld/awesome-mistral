@@ -1,0 +1,1519 @@
+{
+  "checked_at": "2026-09-17T08:05:55.893486+00:00",
+  "base_commit": "a92e1b7",
+  "scope": "2026-09-13 through 2026-09-17",
+  "models": {
+    "commit": "4a8de8582893949f2f62a37ca9e4339d9f078bf3",
+    "count": 66,
+    "files": [
+      {
+        "path": "src/schema/models/models/codestral-24-05.ts",
+        "blob": "853ddb1f7f7ac5d3a8a2cf7809f8283bd3dc52ed"
+      },
+      {
+        "path": "src/schema/models/models/codestral-25-01.ts",
+        "blob": "c79694ebd23c4b024c05e1e43acb8b4ad2c1f031"
+      },
+      {
+        "path": "src/schema/models/models/codestral-25-08.ts",
+        "blob": "24a40c3321f80870d4fdd27cd8bd577cfcda8612"
+      },
+      {
+        "path": "src/schema/models/models/codestral-embed-25-05.ts",
+        "blob": "d7d6b67b8edc07a31f46a7d860efdb7bdf980700"
+      },
+      {
+        "path": "src/schema/models/models/codestral-mamba-7b-0-1.ts",
+        "blob": "a4829614d5e3a733b8c470a73be584d531dad606"
+      },
+      {
+        "path": "src/schema/models/models/devstral-2-25-12.ts",
+        "blob": "e72908361d4875617dd5df9614e2ff749f58a624"
+      },
+      {
+        "path": "src/schema/models/models/devstral-medium-1-0-25-07.ts",
+        "blob": "214e127cb41f5bae1342d566518650c17c178b61"
+      },
+      {
+        "path": "src/schema/models/models/devstral-small-1-0-25-05.ts",
+        "blob": "47f3c11aa8e60a2c9d0e10b235915b3abe5870aa"
+      },
+      {
+        "path": "src/schema/models/models/devstral-small-1-1-25-07.ts",
+        "blob": "39db82e24514cb0fbdb067824369b93fed6dc0d3"
+      },
+      {
+        "path": "src/schema/models/models/devstral-small-2-25-12.ts",
+        "blob": "16f2652fc102e59b139d2d184359afffbd35979b"
+      },
+      {
+        "path": "src/schema/models/models/leanstral-1-5.ts",
+        "blob": "0b0aa1dd596ee14e1ad08a673c79b130df19a3d3"
+      },
+      {
+        "path": "src/schema/models/models/leanstral-26-03.ts",
+        "blob": "c82493b9cf9300186bbe35c98e8b60e271991ba7"
+      },
+      {
+        "path": "src/schema/models/models/magistral-medium-1-0-25-06.ts",
+        "blob": "48aaa4fc31006990bb54ad50f988d714df20d4c8"
+      },
+      {
+        "path": "src/schema/models/models/magistral-medium-1-1-25-07.ts",
+        "blob": "496a381415e75b26749403ae92afc4106c18d3bb"
+      },
+      {
+        "path": "src/schema/models/models/magistral-medium-1-2-25-09.ts",
+        "blob": "f7de2f27a6dc2118dd7e48c32ee4242e608fa12d"
+      },
+      {
+        "path": "src/schema/models/models/magistral-small-1-0-25-06.ts",
+        "blob": "c49a3b201f9d2c22f5b04db155ca8db6a7bcbee4"
+      },
+      {
+        "path": "src/schema/models/models/magistral-small-1-1-25-07.ts",
+        "blob": "80d96185bc114e8775e46bfba8ef8926bb236000"
+      },
+      {
+        "path": "src/schema/models/models/magistral-small-1-2-25-09.ts",
+        "blob": "d039d41c9616ded3d0105ceba0e8a0e1d4c63685"
+      },
+      {
+        "path": "src/schema/models/models/mathstral-7b-0-1.ts",
+        "blob": "062ce191a0d08a3b1a123cc4f75c6667e638ab6b"
+      },
+      {
+        "path": "src/schema/models/models/ministral-3-14b-25-12.ts",
+        "blob": "1d8942db3117cb888e5e24f2310ad118773fd06e"
+      },
+      {
+        "path": "src/schema/models/models/ministral-3-3b-25-12.ts",
+        "blob": "41997ca8452e6f17a8c1f66e1f6518f435dd08da"
+      },
+      {
+        "path": "src/schema/models/models/ministral-3-8b-25-12.ts",
+        "blob": "fac3e4bedcf8bc8996abf881bf15e45d91d946ee"
+      },
+      {
+        "path": "src/schema/models/models/ministral-3b-24-1.ts",
+        "blob": "fabded5b9648c019c5604d641206ec923bdcf9fe"
+      },
+      {
+        "path": "src/schema/models/models/ministral-8b-24-1.ts",
+        "blob": "1883a3ed17a7819b0e953bc4b67470ab0eff34eb"
+      },
+      {
+        "path": "src/schema/models/models/mistral-7b-0-1.ts",
+        "blob": "0aab021aa42b30cd805a815656012d206984ed64"
+      },
+      {
+        "path": "src/schema/models/models/mistral-7b-0-2.ts",
+        "blob": "0a9dd5698ff434825b3521f8207d36d319fef400"
+      },
+      {
+        "path": "src/schema/models/models/mistral-7b-0-3.ts",
+        "blob": "1db09c415a6c3e0c6df266ef65e8ac0620143220"
+      },
+      {
+        "path": "src/schema/models/models/mistral-embed-23-12.ts",
+        "blob": "e69ffa076efe806c1ee3acde85b35955903b23a1"
+      },
+      {
+        "path": "src/schema/models/models/mistral-large-1-0-24-02.ts",
+        "blob": "97433f65b0a0a6fe8b6cd3bcfb412e3c77fbd18d"
+      },
+      {
+        "path": "src/schema/models/models/mistral-large-2-0-24-07.ts",
+        "blob": "efaae1f2dda3ecabb04c4731138e0dea7f20d554"
+      },
+      {
+        "path": "src/schema/models/models/mistral-large-2-1-24-11.ts",
+        "blob": "172599e2d95597f0e642d8ae5875ed29543f71ee"
+      },
+      {
+        "path": "src/schema/models/models/mistral-large-3-25-12.ts",
+        "blob": "6755b391bef2a2370e2e8c4f3d8761e50c444236"
+      },
+      {
+        "path": "src/schema/models/models/mistral-medium-1-0-23-12.ts",
+        "blob": "d9793e17e949ef61510b42f40d29b8b15539375e"
+      },
+      {
+        "path": "src/schema/models/models/mistral-medium-3-1-25-08.ts",
+        "blob": "376ed1baeb83c4ab9b781d7fd9a0570223eb3a34"
+      },
+      {
+        "path": "src/schema/models/models/mistral-medium-3-25-05.ts",
+        "blob": "a3d67ac102d77f031125827610e0ca85ea35666f"
+      },
+      {
+        "path": "src/schema/models/models/mistral-medium-3-5-26-04.ts",
+        "blob": "3315b4b6ffc0521f3a92bd6f9a1f2e72263abc0e"
+      },
+      {
+        "path": "src/schema/models/models/mistral-moderation-24-11.ts",
+        "blob": "af9bfb1a99014396bc16b68d9774064386694aa8"
+      },
+      {
+        "path": "src/schema/models/models/mistral-moderation-26-03.ts",
+        "blob": "32889088a5d9d1a9c3fa8445eb8093906565765f"
+      },
+      {
+        "path": "src/schema/models/models/mistral-nemo-12b-24-07.ts",
+        "blob": "d72fde737f12d79d3c4aeb05c20dffb1e8904c26"
+      },
+      {
+        "path": "src/schema/models/models/mistral-next.ts",
+        "blob": "0dd7101c89d6bae544adb12f0777e7ebf4a71f2e"
+      },
+      {
+        "path": "src/schema/models/models/mistral-saba-25-02.ts",
+        "blob": "fca32624823d339db41f42bee395c6bd60ffb479"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-1-0-24-02.ts",
+        "blob": "b0407c40ab9eace3013fec6a4adfdda21e8e0606"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-2-0-24-09.ts",
+        "blob": "f8e152e71798ec1a54e95d789364afdd221c84b6"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-3-0-25-01.ts",
+        "blob": "a7481c6ef734ebefded9a3439f15ec988291f540"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-3-1-25-03.ts",
+        "blob": "f0b3242d45b780ff91f2b1f50d268e334dd09bef"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-3-2-25-06.ts",
+        "blob": "f02b32d3da4a1f5754310bf2c5778ddaaef63efb"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-4-0-26-03.ts",
+        "blob": "130b027aa8ad1b65f7afae87c2ae394fea6a2204"
+      },
+      {
+        "path": "src/schema/models/models/mistral-small-creative-25-12.ts",
+        "blob": "a7769e5e5e0b6d834bb61ceb191d5845b826e720"
+      },
+      {
+        "path": "src/schema/models/models/mixtral-8x22b-0-1-0-3.ts",
+        "blob": "323f49bbfdf057f4566665f28d8f6563053a852a"
+      },
+      {
+        "path": "src/schema/models/models/mixtral-8x7b-0-1.ts",
+        "blob": "2f34bfc8036984e5cc4d9f0b3cdaf8f0a5ee5517"
+      },
+      {
+        "path": "src/schema/models/models/ocr-2-25-05.ts",
+        "blob": "52d387a7f8a92d9d037cb3af865bb745d12c12c9"
+      },
+      {
+        "path": "src/schema/models/models/ocr-25-03.ts",
+        "blob": "85c6e975419d05f164ce5737bc3b500f26a87467"
+      },
+      {
+        "path": "src/schema/models/models/ocr-3-25-12.ts",
+        "blob": "d78a98c7aa27ef5a0a34a29b7e93d9e3ae517c63"
+      },
+      {
+        "path": "src/schema/models/models/ocr-4-0.ts",
+        "blob": "f77eb537c491af1a324698b4674a53b1641bc893"
+      },
+      {
+        "path": "src/schema/models/models/ocr-4-1.ts",
+        "blob": "984add40633687b9fa0b2c5828af41aa5fe16265"
+      },
+      {
+        "path": "src/schema/models/models/pixtral-12b-24-09.ts",
+        "blob": "180011b997ef4522cc81c5d929fb1ac2c1e24703"
+      },
+      {
+        "path": "src/schema/models/models/pixtral-large-24-11.ts",
+        "blob": "f0e65712cd0e7c199e7315b077d3f16eff2301c4"
+      },
+      {
+        "path": "src/schema/models/models/shieldstral-1-0.ts",
+        "blob": "16d613199d8254a331554c0dfc4ef024d4c877d0"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-mini-25-07.ts",
+        "blob": "44da415a1c4682e5429d6f697348f2f3a6d842ba"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-mini-transcribe-25-07.ts",
+        "blob": "c5bab25c18d833418febbeb5f5206f3f01ae4822"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-mini-transcribe-26-02.ts",
+        "blob": "4f4a8c90177140a34c2f92166015bd9f6d679002"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-mini-transcribe-realtime-26-02.ts",
+        "blob": "b628e2cc92a0d89308240b6f2b8cb2ea789ed408"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-small-25-07.ts",
+        "blob": "ce24d71af6465c25574e0df9285ca79f09ffb49a"
+      },
+      {
+        "path": "src/schema/models/models/voxtral-tts-26-03.ts",
+        "blob": "7047b9fe9e3e730c534840d0b6670b45ae52292e"
+      },
+      {
+        "path": "src/schema/models/models/zai-glm-5-2.ts",
+        "blob": "cfb72dbf9ba093d0e126e14b60a6fa39d74a61a6"
+      },
+      {
+        "path": "src/schema/models/models/zai-glm-5-3.ts",
+        "blob": "7ec3d0fc87239818a92627e5aefe410f36a813f6"
+      }
+    ]
+  },
+  "model_schema_changes_since_previous_review": [
+    {
+      "commit": "4a8de8582893949f2f62a37ca9e4339d9f078bf3",
+      "added": [
+        "src/schema/models/models/zai-glm-5-3.ts"
+      ],
+      "modified": [
+        "src/schema/models/models/index.ts"
+      ]
+    }
+  ],
+  "future_retirement_dates": [
+    "leanstral-1-5.ts: retirementDate: '2026-09-30'"
+  ],
+  "hf_models": [
+    {
+      "id": "mistralai/Devstral-2-123B-Instruct-2512",
+      "status": 200,
+      "sha": "1613bf01adb5e1c6fdc196b46e6b173eae75eb4a",
+      "lastModified": "2026-07-15T12:19:49.000Z",
+      "license": "other"
+    },
+    {
+      "id": "mistralai/Devstral-Small-2-24B-Instruct-2512",
+      "status": 200,
+      "sha": "55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+      "lastModified": "2026-07-15T12:20:36.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Leanstral-1.5-119B-A6B",
+      "status": 200,
+      "sha": "81592da95d94ab0439bfce16df1d55b402e598b6",
+      "lastModified": "2026-07-15T12:24:10.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Magistral-Small-2509",
+      "status": 200,
+      "sha": "a31cc96ab10cf19bc42c628fedf1e359e0853c49",
+      "lastModified": "2026-02-23T18:04:17.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Ministral-3-14B-Instruct-2512",
+      "status": 200,
+      "sha": "29439f81c2be264d8d393273f99e7db9c0961120",
+      "lastModified": "2026-07-15T12:20:59.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Ministral-3-3B-Instruct-2512",
+      "status": 200,
+      "sha": "b35d4dfe56c142746f54dbd64f579faab2744308",
+      "lastModified": "2026-07-15T12:21:35.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Ministral-3-8B-Instruct-2512",
+      "status": 200,
+      "sha": "5b26027e7b19eeb4b7352e1fed3926375dd2cb4d",
+      "lastModified": "2026-07-15T12:22:08.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "status": 200,
+      "sha": "383ffea2c7d60dfd44ca960e8e691709d4fdb9cd",
+      "lastModified": "2026-07-15T12:22:43.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Mistral-Medium-3.5-128B",
+      "status": 200,
+      "sha": "22b2b868a15677cfa6061277ed2f653d1349a9ab",
+      "lastModified": "2026-07-15T12:23:17.000Z",
+      "license": "other"
+    },
+    {
+      "id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "status": 200,
+      "sha": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+      "lastModified": "2025-12-22T10:16:55.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Mistral-Small-4-119B-2603",
+      "status": 200,
+      "sha": "a11f36bebf709121056b1dbcc943d1c6afbe494d",
+      "lastModified": "2026-07-15T12:23:29.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+      "status": 200,
+      "sha": "cc88a6cc19fbd17d9f1c0ee0b0d70a748dce698d",
+      "lastModified": "2025-07-24T16:41:56.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Pixtral-12B-2409",
+      "status": 200,
+      "sha": "a5ca2b7a9421a35ea24411c46e970758b8d3c6a7",
+      "lastModified": "2026-06-02T04:44:58.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Pixtral-Large-Instruct-2411",
+      "status": 200,
+      "sha": "c1e51f6f11974a1199685d35c62f5a425c2d001e",
+      "lastModified": "2026-06-02T04:46:39.000Z",
+      "license": "other"
+    },
+    {
+      "id": "mistralai/Shieldstral-1.0-3B",
+      "status": 200,
+      "sha": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+      "lastModified": "2026-08-05T10:06:52.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Voxtral-4B-TTS-2603",
+      "status": 200,
+      "sha": "b81be46c3777f88621676791b512bb01dc1cb970",
+      "lastModified": "2026-03-31T13:43:59.000Z",
+      "license": "cc-by-nc-4.0"
+    },
+    {
+      "id": "mistralai/Voxtral-Mini-3B-2507",
+      "status": 200,
+      "sha": "3060fe34b35ba5d44202ce9ff3c097642914f8f3",
+      "lastModified": "2025-07-28T17:16:11.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "status": 200,
+      "sha": "2769294da9567371363522aac9bbcfdd19447add",
+      "lastModified": "2026-03-11T15:04:02.000Z",
+      "license": "apache-2.0"
+    },
+    {
+      "id": "mistralai/Voxtral-Small-24B-2507",
+      "status": 200,
+      "sha": "da5b42409f279fdd92febee0511a6c32828569c1",
+      "lastModified": "2025-12-20T23:34:49.000Z",
+      "license": "apache-2.0"
+    }
+  ],
+  "hf_newest": [
+    {
+      "id": "mistralai/Shieldstral-1.0-3B",
+      "createdAt": "2026-07-16T10:24:13.000Z"
+    },
+    {
+      "id": "mistralai/Leanstral-1.5-119B-A6B",
+      "createdAt": "2026-07-01T16:43:19.000Z"
+    },
+    {
+      "id": "mistralai/Mistral-Medium-3.5-128B-EAGLE",
+      "createdAt": "2026-04-27T13:35:34.000Z"
+    },
+    {
+      "id": "mistralai/Mistral-Medium-3.5-128B",
+      "createdAt": "2026-03-31T09:50:20.000Z"
+    },
+    {
+      "id": "mistralai/Leanstral-2603",
+      "createdAt": "2026-03-11T14:01:29.000Z"
+    }
+  ],
+  "news_feed_latest": [
+    {
+      "title": "Mistral and Mozilla are bringing open, private and multilingual AI to your web browser",
+      "link": "https://mistral.ai/news/mistral-x-mozilla/",
+      "pubDate": "Wed, 16 Sep 2026 12:00:00 GMT"
+    },
+    {
+      "title": "Cloudera and Mistral Partner to Bring Specialized, Sovereign Intelligence to Enterprise Data",
+      "link": "https://mistral.ai/news/mistral-x-cloudera/",
+      "pubDate": "Thu, 10 Sep 2026 10:42:55 GMT"
+    },
+    {
+      "title": "Modernizing complex legacy code with AI agents.",
+      "link": "https://mistral.ai/news/legacy-code-modernization/",
+      "pubDate": "Wed, 09 Sep 2026 12:00:46 GMT"
+    },
+    {
+      "title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+      "link": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "pubDate": "Tue, 08 Sep 2026 12:00:22 GMT"
+    },
+    {
+      "title": "Mistral x HUMAIN ",
+      "link": "https://mistral.ai/news/mistral-x-humain/",
+      "pubDate": "Mon, 24 Aug 2026 16:02:41 GMT"
+    }
+  ],
+  "releases": {
+    "python": [
+      {
+        "tag_name": "v2.10.1",
+        "published_at": "2026-09-15T08:12:33Z",
+        "html_url": "https://github.com/mistralai/client-python/releases/tag/v2.10.1",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.10.0",
+        "published_at": "2026-09-09T13:27:19Z",
+        "html_url": "https://github.com/mistralai/client-python/releases/tag/v2.10.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.9.4",
+        "published_at": "2026-08-21T18:06:05Z",
+        "html_url": "https://github.com/mistralai/client-python/releases/tag/v2.9.4",
+        "prerelease": false
+      }
+    ],
+    "ts": [
+      {
+        "tag_name": "v2.7.0",
+        "published_at": "2026-09-09T13:10:25Z",
+        "html_url": "https://github.com/mistralai/client-ts/releases/tag/v2.7.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.6.4",
+        "published_at": "2026-08-21T10:16:30Z",
+        "html_url": "https://github.com/mistralai/client-ts/releases/tag/v2.6.4",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.6.3",
+        "published_at": "2026-08-14T09:54:13Z",
+        "html_url": "https://github.com/mistralai/client-ts/releases/tag/v2.6.3",
+        "prerelease": false
+      }
+    ],
+    "vibe": [
+      {
+        "tag_name": "v2.25.4",
+        "published_at": "2026-09-12T18:39:34Z",
+        "html_url": "https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.4",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.25.3",
+        "published_at": "2026-09-11T13:05:47Z",
+        "html_url": "https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.3",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.25.2",
+        "published_at": "2026-09-10T14:42:15Z",
+        "html_url": "https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.2",
+        "prerelease": false
+      }
+    ],
+    "cli": [
+      {
+        "tag_name": "cli/v0.6.0",
+        "published_at": "2026-09-16T16:59:08Z",
+        "html_url": "https://github.com/mistralai/cli/releases/tag/cli/v0.6.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "cli/v0.5.0",
+        "published_at": "2026-09-11T10:51:44Z",
+        "html_url": "https://github.com/mistralai/cli/releases/tag/cli/v0.5.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "cli/v0.4.1",
+        "published_at": "2026-09-03T11:08:26Z",
+        "html_url": "https://github.com/mistralai/cli/releases/tag/cli/v0.4.1",
+        "prerelease": false
+      }
+    ],
+    "common": [
+      {
+        "tag_name": "v1.11.7",
+        "published_at": "2026-07-23T09:24:19Z",
+        "html_url": "https://github.com/mistralai/mistral-common/releases/tag/v1.11.7",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v1.11.6",
+        "published_at": "2026-07-17T13:58:13Z",
+        "html_url": "https://github.com/mistralai/mistral-common/releases/tag/v1.11.6",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v1.11.5",
+        "published_at": "2026-06-26T13:26:08Z",
+        "html_url": "https://github.com/mistralai/mistral-common/releases/tag/v1.11.5",
+        "prerelease": false
+      }
+    ]
+  },
+  "new_org_repos": [
+    {
+      "full_name": "mistralai/cli",
+      "created_at": "2026-08-17T10:25:52Z",
+      "archived": false
+    },
+    {
+      "full_name": "mistralai/vllm",
+      "created_at": "2026-07-24T09:06:16Z",
+      "archived": false
+    },
+    {
+      "full_name": "mistralai/FLTEval",
+      "created_at": "2026-07-02T15:38:32Z",
+      "archived": false
+    },
+    {
+      "full_name": "mistralai/LeanstralSafeVerify",
+      "created_at": "2026-07-01T20:31:06Z",
+      "archived": false
+    },
+    {
+      "full_name": "mistralai/search-starter-app",
+      "created_at": "2026-05-20T15:37:12Z",
+      "archived": false
+    }
+  ],
+  "lobehub": {
+    "https://github.com/lobehub": 404,
+    "https://github.com/lobehub/lobehub": 404,
+    "https://lobehub.com/": 200,
+    "api_repo": "404"
+  },
+  "github": {
+    "checked_at": "2026-09-17T08:08:56.706743+00:00",
+    "repositories": [
+      {
+        "requested": "567-labs/instructor",
+        "full_name": "567-labs/instructor",
+        "html_url": "https://github.com/567-labs/instructor",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T21:58:03Z",
+        "stargazers_count": 13910,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "aeonfun/aeon",
+        "full_name": "aeonfun/aeon",
+        "html_url": "https://github.com/aeonfun/aeon",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T16:15:40Z",
+        "stargazers_count": 738,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "Aider-AI/aider",
+        "full_name": "Aider-AI/aider",
+        "html_url": "https://github.com/Aider-AI/aider",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-05-22T14:02:20Z",
+        "stargazers_count": 49012,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "antirez/voxtral.c",
+        "full_name": "antirez/voxtral.c",
+        "html_url": "https://github.com/antirez/voxtral.c",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-02-15T18:58:52Z",
+        "stargazers_count": 1749,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "arcee-ai/mergekit",
+        "full_name": "arcee-ai/mergekit",
+        "html_url": "https://github.com/arcee-ai/mergekit",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-12T03:24:42Z",
+        "stargazers_count": 7354,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "Arize-ai/phoenix",
+        "full_name": "Arize-ai/phoenix",
+        "html_url": "https://github.com/Arize-ai/phoenix",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T08:03:10Z",
+        "stargazers_count": 11509,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "assafelovic/gpt-researcher",
+        "full_name": "assafelovic/gpt-researcher",
+        "html_url": "https://github.com/assafelovic/gpt-researcher",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-08-27T19:34:56Z",
+        "stargazers_count": 29489,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "AutoGPTQ/AutoGPTQ",
+        "full_name": "AutoGPTQ/AutoGPTQ",
+        "html_url": "https://github.com/AutoGPTQ/AutoGPTQ",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2025-04-11T13:27:20Z",
+        "stargazers_count": 5070,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "axolotl-ai-cloud/axolotl",
+        "full_name": "axolotl-ai-cloud/axolotl",
+        "html_url": "https://github.com/axolotl-ai-cloud/axolotl",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T06:03:27Z",
+        "stargazers_count": 12481,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "BerriAI/litellm",
+        "full_name": "BerriAI/litellm",
+        "html_url": "https://github.com/BerriAI/litellm",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T08:05:35Z",
+        "stargazers_count": 58957,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "bigcode-project/bigcodebench",
+        "full_name": "bigcode-project/bigcodebench",
+        "html_url": "https://github.com/bigcode-project/bigcodebench",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2026-01-03T07:22:42Z",
+        "stargazers_count": 519,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "bitsandbytes-foundation/bitsandbytes",
+        "full_name": "bitsandbytes-foundation/bitsandbytes",
+        "html_url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-07T14:36:23Z",
+        "stargazers_count": 8481,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "casper-hansen/AutoAWQ",
+        "full_name": "casper-hansen/AutoAWQ",
+        "html_url": "https://github.com/casper-hansen/AutoAWQ",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2025-05-11T08:52:59Z",
+        "stargazers_count": 2348,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "continuedev/continue",
+        "full_name": "continuedev/continue",
+        "html_url": "https://github.com/continuedev/continue",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T12:36:08Z",
+        "stargazers_count": 35938,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "crewAIInc/crewAI",
+        "full_name": "crewAIInc/crewAI",
+        "html_url": "https://github.com/crewAIInc/crewAI",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:37:39Z",
+        "stargazers_count": 58678,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "danielmiessler/Fabric",
+        "full_name": "danielmiessler/Fabric",
+        "html_url": "https://github.com/danielmiessler/Fabric",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-07T19:17:46Z",
+        "stargazers_count": 43943,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "danny-avila/LibreChat",
+        "full_name": "danny-avila/LibreChat",
+        "html_url": "https://github.com/danny-avila/LibreChat",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:47:20Z",
+        "stargazers_count": 44314,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "deepset-ai/haystack",
+        "full_name": "deepset-ai/haystack",
+        "html_url": "https://github.com/deepset-ai/haystack",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T22:36:29Z",
+        "stargazers_count": 26526,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "deepspeedai/DeepSpeed",
+        "full_name": "deepspeedai/DeepSpeed",
+        "html_url": "https://github.com/deepspeedai/DeepSpeed",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:42:08Z",
+        "stargazers_count": 43127,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "dottxt-ai/outlines",
+        "full_name": "dottxt-ai/outlines",
+        "html_url": "https://github.com/dottxt-ai/outlines",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-09T19:35:39Z",
+        "stargazers_count": 15820,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "EleutherAI/lm-evaluation-harness",
+        "full_name": "EleutherAI/lm-evaluation-harness",
+        "html_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-14T10:51:06Z",
+        "stargazers_count": 14006,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "EricLBuehler/mistral.rs",
+        "full_name": "EricLBuehler/mistral.rs",
+        "html_url": "https://github.com/EricLBuehler/mistral.rs",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-08T03:18:32Z",
+        "stargazers_count": 7692,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "evalplus/evalplus",
+        "full_name": "evalplus/evalplus",
+        "html_url": "https://github.com/evalplus/evalplus",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2025-10-02T22:56:38Z",
+        "stargazers_count": 1814,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "ggml-org/ggml",
+        "full_name": "ggml-org/ggml",
+        "html_url": "https://github.com/ggml-org/ggml",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-14T13:40:37Z",
+        "stargazers_count": 15363,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "ggml-org/llama.cpp",
+        "full_name": "ggml-org/llama.cpp",
+        "html_url": "https://github.com/ggml-org/llama.cpp",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:55:17Z",
+        "stargazers_count": 128501,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "hiyouga/LlamaFactory",
+        "full_name": "hiyouga/LlamaFactory",
+        "html_url": "https://github.com/hiyouga/LlamaFactory",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-14T08:09:48Z",
+        "stargazers_count": 74826,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "huggingface/accelerate",
+        "full_name": "huggingface/accelerate",
+        "html_url": "https://github.com/huggingface/accelerate",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-14T14:22:31Z",
+        "stargazers_count": 9869,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "huggingface/peft",
+        "full_name": "huggingface/peft",
+        "html_url": "https://github.com/huggingface/peft",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T17:24:21Z",
+        "stargazers_count": 21690,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "huggingface/text-generation-inference",
+        "full_name": "huggingface/text-generation-inference",
+        "html_url": "https://github.com/huggingface/text-generation-inference",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2026-03-21T11:34:22Z",
+        "stargazers_count": 10885,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "huggingface/trl",
+        "full_name": "huggingface/trl",
+        "html_url": "https://github.com/huggingface/trl",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:41:08Z",
+        "stargazers_count": 19329,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "khoj-ai/khoj",
+        "full_name": "khoj-ai/khoj",
+        "html_url": "https://github.com/khoj-ai/khoj",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-08-02T01:55:40Z",
+        "stargazers_count": 37376,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "langchain-ai/langchain",
+        "full_name": "langchain-ai/langchain",
+        "html_url": "https://github.com/langchain-ai/langchain",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T19:58:47Z",
+        "stargazers_count": 146496,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "langchain-ai/langgraph",
+        "full_name": "langchain-ai/langgraph",
+        "html_url": "https://github.com/langchain-ai/langgraph",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T02:12:42Z",
+        "stargazers_count": 41800,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "langfuse/langfuse",
+        "full_name": "langfuse/langfuse",
+        "html_url": "https://github.com/langfuse/langfuse",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T08:07:42Z",
+        "stargazers_count": 34709,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "meta-pytorch/torchtune",
+        "full_name": "meta-pytorch/torchtune",
+        "html_url": "https://github.com/meta-pytorch/torchtune",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-09T11:38:33Z",
+        "stargazers_count": 5812,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "microsoft/autogen",
+        "full_name": "microsoft/autogen",
+        "html_url": "https://github.com/microsoft/autogen",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-04-15T11:59:09Z",
+        "stargazers_count": 61010,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "microsoft/semantic-kernel",
+        "full_name": "microsoft/semantic-kernel",
+        "html_url": "https://github.com/microsoft/semantic-kernel",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-11T06:58:37Z",
+        "stargazers_count": 28565,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/cli",
+        "full_name": "mistralai/cli",
+        "html_url": "https://github.com/mistralai/cli",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T16:59:07Z",
+        "stargazers_count": 2,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/client-python",
+        "full_name": "mistralai/client-python",
+        "html_url": "https://github.com/mistralai/client-python",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-15T10:42:38Z",
+        "stargazers_count": 768,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/client-ts",
+        "full_name": "mistralai/client-ts",
+        "html_url": "https://github.com/mistralai/client-ts",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-14T10:48:53Z",
+        "stargazers_count": 157,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/cookbook",
+        "full_name": "mistralai/cookbook",
+        "html_url": "https://github.com/mistralai/cookbook",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T16:28:30Z",
+        "stargazers_count": 2327,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/mistral-common",
+        "full_name": "mistralai/mistral-common",
+        "html_url": "https://github.com/mistralai/mistral-common",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T22:36:26Z",
+        "stargazers_count": 944,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/mistral-finetune",
+        "full_name": "mistralai/mistral-finetune",
+        "html_url": "https://github.com/mistralai/mistral-finetune",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2026-06-16T15:22:10Z",
+        "stargazers_count": 3093,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/mistral-inference",
+        "full_name": "mistralai/mistral-inference",
+        "html_url": "https://github.com/mistralai/mistral-inference",
+        "archived": true,
+        "disabled": false,
+        "pushed_at": "2026-06-16T15:40:44Z",
+        "stargazers_count": 10826,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/mistral-vibe",
+        "full_name": "mistralai/mistral-vibe",
+        "html_url": "https://github.com/mistralai/mistral-vibe",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T16:51:32Z",
+        "stargazers_count": 4963,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mistralai/platform-docs-public",
+        "full_name": "mistralai/platform-docs-public",
+        "html_url": "https://github.com/mistralai/platform-docs-public",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T13:48:47Z",
+        "stargazers_count": 73,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mlc-ai/mlc-llm",
+        "full_name": "mlc-ai/mlc-llm",
+        "html_url": "https://github.com/mlc-ai/mlc-llm",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-08-17T20:50:06Z",
+        "stargazers_count": 23164,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "mudler/LocalAI",
+        "full_name": "mudler/LocalAI",
+        "html_url": "https://github.com/mudler/LocalAI",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T06:10:52Z",
+        "stargazers_count": 49139,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "NVIDIA/TensorRT-LLM",
+        "full_name": "NVIDIA/TensorRT-LLM",
+        "html_url": "https://github.com/NVIDIA/TensorRT-LLM",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:51:02Z",
+        "stargazers_count": 14636,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "ollama/ollama",
+        "full_name": "ollama/ollama",
+        "html_url": "https://github.com/ollama/ollama",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T01:33:20Z",
+        "stargazers_count": 181224,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "onyx-dot-app/onyx",
+        "full_name": "onyx-dot-app/onyx",
+        "html_url": "https://github.com/onyx-dot-app/onyx",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T04:35:11Z",
+        "stargazers_count": 32143,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "open-compass/opencompass",
+        "full_name": "open-compass/opencompass",
+        "html_url": "https://github.com/open-compass/opencompass",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T06:42:50Z",
+        "stargazers_count": 7447,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "open-webui/open-webui",
+        "full_name": "open-webui/open-webui",
+        "html_url": "https://github.com/open-webui/open-webui",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T02:47:38Z",
+        "stargazers_count": 152329,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "openai/human-eval",
+        "full_name": "openai/human-eval",
+        "html_url": "https://github.com/openai/human-eval",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2025-01-17T18:22:17Z",
+        "stargazers_count": 3382,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "OpenHands/OpenHands",
+        "full_name": "OpenHands/OpenHands",
+        "html_url": "https://github.com/OpenHands/OpenHands",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:15:18Z",
+        "stargazers_count": 88231,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "PrefectHQ/marvin",
+        "full_name": "PrefectHQ/marvin",
+        "html_url": "https://github.com/PrefectHQ/marvin",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-11T15:14:36Z",
+        "stargazers_count": 6198,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "promptfoo/promptfoo",
+        "full_name": "promptfoo/promptfoo",
+        "html_url": "https://github.com/promptfoo/promptfoo",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T04:02:20Z",
+        "stargazers_count": 25207,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "PromtEngineer/localGPT",
+        "full_name": "PromtEngineer/localGPT",
+        "html_url": "https://github.com/PromtEngineer/localGPT",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-08-26T04:52:30Z",
+        "stargazers_count": 22199,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "pydantic/pydantic-ai",
+        "full_name": "pydantic/pydantic-ai",
+        "html_url": "https://github.com/pydantic/pydantic-ai",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:46:25Z",
+        "stargazers_count": 19997,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "rocketride-org/rocketride-server",
+        "full_name": "rocketride-org/rocketride-server",
+        "html_url": "https://github.com/rocketride-org/rocketride-server",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:02:47Z",
+        "stargazers_count": 8458,
+        "default_branch": "develop",
+        "fork": false
+      },
+      {
+        "requested": "run-llama/llama_index",
+        "full_name": "run-llama/llama_index",
+        "html_url": "https://github.com/run-llama/llama_index",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-15T23:21:17Z",
+        "stargazers_count": 52194,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "sgl-project/sglang",
+        "full_name": "sgl-project/sglang",
+        "html_url": "https://github.com/sgl-project/sglang",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T08:06:04Z",
+        "stargazers_count": 36085,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "skypilot-org/skypilot",
+        "full_name": "skypilot-org/skypilot",
+        "html_url": "https://github.com/skypilot-org/skypilot",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:55:47Z",
+        "stargazers_count": 10610,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "stanford-crfm/helm",
+        "full_name": "stanford-crfm/helm",
+        "html_url": "https://github.com/stanford-crfm/helm",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-01T01:33:19Z",
+        "stargazers_count": 2910,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "TabbyML/tabby",
+        "full_name": "TabbyML/tabby",
+        "html_url": "https://github.com/TabbyML/tabby",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-06-30T20:38:02Z",
+        "stargazers_count": 33884,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "The-Vibe-Company/quivr",
+        "full_name": "The-Vibe-Company/quivr",
+        "html_url": "https://github.com/The-Vibe-Company/quivr",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-08-31T18:02:45Z",
+        "stargazers_count": 39530,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "turboderp-org/exllamav2",
+        "full_name": "turboderp-org/exllamav2",
+        "html_url": "https://github.com/turboderp-org/exllamav2",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-03-04T13:12:20Z",
+        "stargazers_count": 4624,
+        "default_branch": "master",
+        "fork": false
+      },
+      {
+        "requested": "unslothai/notebooks",
+        "full_name": "unslothai/notebooks",
+        "html_url": "https://github.com/unslothai/notebooks",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-09T12:09:24Z",
+        "stargazers_count": 5687,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "unslothai/unsloth",
+        "full_name": "unslothai/unsloth",
+        "html_url": "https://github.com/unslothai/unsloth",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:35:44Z",
+        "stargazers_count": 76274,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "vllm-project/vllm",
+        "full_name": "vllm-project/vllm",
+        "html_url": "https://github.com/vllm-project/vllm",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-17T07:38:58Z",
+        "stargazers_count": 91983,
+        "default_branch": "main",
+        "fork": false
+      },
+      {
+        "requested": "zylon-ai/private-gpt",
+        "full_name": "zylon-ai/private-gpt",
+        "html_url": "https://github.com/zylon-ai/private-gpt",
+        "archived": false,
+        "disabled": false,
+        "pushed_at": "2026-09-16T10:26:38Z",
+        "stargazers_count": 57517,
+        "default_branch": "main",
+        "fork": false
+      }
+    ]
+  },
+  "local_exceptions": {
+    "checked_at": "2026-09-17T08:12:05.032006+00:00",
+    "environment": "maintenance-host",
+    "results": [
+      {
+        "url": "https://x.com/MistralAI",
+        "exit_code": 0,
+        "http_code": 200,
+        "effective_url": "https://x.com/MistralAI",
+        "redirects": 0,
+        "error": ""
+      },
+      {
+        "url": "https://www.reddit.com/r/LocalLLaMA/",
+        "exit_code": 0,
+        "http_code": 200,
+        "effective_url": "https://www.reddit.com/r/LocalLLaMA/",
+        "redirects": 0,
+        "error": ""
+      },
+      {
+        "url": "https://www.reddit.com/r/MistralAI/",
+        "exit_code": 0,
+        "http_code": 200,
+        "effective_url": "https://www.reddit.com/r/MistralAI/",
+        "redirects": 0,
+        "error": ""
+      }
+    ]
+  },
+  "runner_exceptions": {
+    "run": "https://github.com/samouraiworld/awesome-mistral/actions/runs/35197785819",
+    "checked_at": "2026-09-17T08:06:10.281781+00:00",
+    "environment": "github-actions",
+    "results": [
+      {
+        "url": "https://x.com/MistralAI",
+        "exit_code": 0,
+        "http_code": 403,
+        "effective_url": "https://x.com/MistralAI",
+        "redirects": 0,
+        "error": ""
+      },
+      {
+        "url": "https://www.reddit.com/r/LocalLLaMA/",
+        "exit_code": 0,
+        "http_code": 403,
+        "effective_url": "https://www.reddit.com/r/LocalLLaMA/",
+        "redirects": 0,
+        "error": ""
+      },
+      {
+        "url": "https://www.reddit.com/r/MistralAI/",
+        "exit_code": 0,
+        "http_code": 403,
+        "effective_url": "https://www.reddit.com/r/MistralAI/",
+        "redirects": 0,
+        "error": ""
+      }
+    ]
+  },
+  "repository_settings": {
+    "branch_protection": {
+      "strict": true,
+      "contexts": [
+        "Content conventions",
+        "Links and anchors"
+      ],
+      "enforce_admins": true,
+      "allow_force_pushes": false,
+      "allow_deletions": false,
+      "required_conversation_resolution": true
+    },
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "enabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "enabled"
+      },
+      "dependabot_security_updates": {
+        "status": "enabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_ai_detection": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      },
+      "secret_scanning_delegated_alert_dismissal": {
+        "status": "disabled"
+      },
+      "secret_scanning_delegated_bypass": {
+        "status": "disabled"
+      }
+    },
+    "workflow_permissions": {
+      "default_workflow_permissions": "read",
+      "can_approve_pull_request_reviews": false
+    },
+    "private_vulnerability_reporting": {
+      "enabled": true
+    },
+    "open_secret_alerts": 0,
+    "open_dependabot_alerts": 0,
+    "codeowners_errors": [],
+    "delete_branch_on_merge": false
+  },
+  "initial_links": {
+    "total": 320,
+    "unique": 260,
+    "successful": 317,
+    "unknown": 0,
+    "unsupported": 0,
+    "timeouts": 0,
+    "redirects": 13,
+    "remaps": 0,
+    "excludes": 3,
+    "errors": 0,
+    "cached": 56,
+    "detailed_stats": true
+  }
+}

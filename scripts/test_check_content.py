@@ -16,6 +16,38 @@ class ContentChecks(unittest.TestCase):
         self.assertTrue(any("alphabetical" in e for e in errors))
         self.assertTrue(any("duplicate" in e for e in errors))
 
+    def test_blank_line_or_paragraph_does_not_reset_order(self):
+        for separator in ["", "Contextual paragraph."]:
+            text = "\n".join([
+                "- 🌍 [Zed](https://example.org/zed) – A tool.",
+                separator,
+                "- 🌍 [Alpha](https://example.org/alpha) – Another tool.",
+            ])
+            self.assertTrue(any("alphabetical" in e for e in check_readme(text)), separator)
+
+    def test_heading_starts_a_new_list(self):
+        text = "\n".join([
+            "- 🌍 [Zed](https://example.org/zed) – A tool.",
+            "",
+            "### Next section",
+            "",
+            "- 🌍 [Alpha](https://example.org/alpha) – Another tool.",
+        ])
+        self.assertEqual(check_readme(text), [])
+
+    def test_linked_list_items_need_standard_marker_format(self):
+        for line in ["- [Tool](https://example.org/tool) – A tool.",
+                     "* 🌍 [Tool](https://example.org/tool) – A tool.",
+                     "  - 🌍 [Tool](https://example.org/tool) – A nested tool."]:
+            self.assertTrue(any("marker" in e for e in check_readme(line)), line)
+
+    def test_news_and_navigation_items_are_not_resources(self):
+        text = "\n".join([
+            "- [Latest Updates](#latest-updates)",
+            "- **2026-09-16 · [Release](https://example.org/release)** – Release notes.",
+        ])
+        self.assertEqual(check_readme(text), [])
+
     def test_official_marker_rejects_lookalike_domains(self):
         self.assertTrue(check_readme("- 🧠 [Tool](https://mistral.ai.evil.example/tool) – A tool."))
 
@@ -37,6 +69,17 @@ class ContentChecks(unittest.TestCase):
                     "evidence": "https://example.org/help",
                     "checked_at": "2026-08-27", "expires_on": "2026-09-03"}]}
         self.assertTrue(check_metadata(data, "Last editorial review: 2026-09-04.", dt.date(2026, 9, 4)))
+
+    def test_exception_can_outlive_one_unmerged_weekly_review(self):
+        def data(expires_on):
+            return {"last_reviewed": "2026-09-04", "max_age_days": 31,
+                    "audit": "audits/2026-09-04.md", "link_exceptions": [{
+                        "url": "https://example.org", "reason": "Runner 403",
+                        "evidence": "https://example.org/run",
+                        "checked_at": "2026-09-04", "expires_on": expires_on}]}
+        text = "Last editorial review: 2026-09-04."
+        self.assertEqual(check_metadata(data("2026-09-18"), text, dt.date(2026, 9, 16)), [])
+        self.assertTrue(check_metadata(data("2026-09-19"), text, dt.date(2026, 9, 16)))
 
 
 if __name__ == "__main__":

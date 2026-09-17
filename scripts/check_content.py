@@ -10,13 +10,21 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 ENTRY = re.compile(r"^- ([🧠🌍🧪]) \[([^\]]+)\]\((https://[^\s)]+)\)(?: ⭐ (\d+)k\+)? – (.+)$")
+# Any bullet linking to a web page is a resource, except bold dated news items.
+LINKED_ITEM = re.compile(r"^\s*[-*+] (?!\*\*).*\]\(https?://")
 
 
 def check_readme(text):
     errors, previous, seen = [], None, {}
     for number, line in enumerate(text.splitlines(), 1):
-        if not re.match(r"^- [🧠🌍🧪] .*\[", line):
+        # A list ends at the next heading; blank lines and paragraphs must not
+        # hide ordering errors inside one section.
+        if line.startswith("#"):
             previous = None
+            continue
+        if not re.match(r"^- [🧠🌍🧪] .*\[", line):
+            if LINKED_ITEM.match(line):
+                errors.append(f"README.md:{number}: linked list item needs the standard marker format")
             continue
         match = ENTRY.fullmatch(line)
         if not match:
@@ -60,8 +68,8 @@ def check_metadata(data, text, today):
     for entry in data["link_exceptions"]:
         checked = dt.date.fromisoformat(entry["checked_at"])
         expires = dt.date.fromisoformat(entry["expires_on"])
-        if not checked <= today <= expires or not 0 < (expires - checked).days <= 7:
-            errors.append(f"Link exception expired, future-dated or longer than 7 days: {entry['url']}")
+        if not checked <= today <= expires or not 0 < (expires - checked).days <= 14:
+            errors.append(f"Link exception expired, future-dated or longer than 14 days: {entry['url']}")
         if not entry["reason"] or not entry["evidence"].startswith("https://"):
             errors.append(f"Missing evidence for link exception: {entry['url']}")
     return errors

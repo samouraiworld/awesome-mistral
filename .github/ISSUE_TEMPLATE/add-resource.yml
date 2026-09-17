@@ -33,7 +33,7 @@ body:
       description: Which section should this resource be added to?
       options:
         - Official Mistral Resources
-        - Models
+        - Model Families
         - Community Fine-Tuned Models
         - SDKs & APIs
         - Inference & Deployment

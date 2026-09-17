@@ -8,7 +8,7 @@ max_redirects = 10
 include_fragments = "anchor-only"
 exclude_all_private = true
 cache = false
-# Exact anti-bot exceptions: evidence and weekly expiry in maintenance.json.
+# Exact anti-bot exceptions: evidence and expiry (at most 14 days) in maintenance.json.
 # X ownership is corroborated upstream; Reddit returned 200 locally and 403 in CI.
 exclude = [
     '^https://x\.com/MistralAI$',

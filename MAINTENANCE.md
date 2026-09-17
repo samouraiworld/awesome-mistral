@@ -3,7 +3,7 @@
 Run the editorial review **every Sunday at 09:00 Europe/Paris**. Address a major
 release, material factual error or security advisory sooner when discovered.
 An editorial review must never be more than **31 days** old. CI warns after
-seven days and fails after 31; unresolved link exceptions expire after seven days.
+seven days and fails after 31; unresolved link exceptions expire after at most 14 days.
 A successful link check alone does not constitute an editorial review.
 
 ## Weekly procedure
@@ -46,11 +46,12 @@ A successful link check alone does not constitute an editorial review.
 | Models and lifecycle | [Catalog](https://docs.mistral.ai/models), [lifecycle policy](https://docs.mistral.ai/inference/model-lifecycle), individual model cards |
 | API changes and pricing | [Changelog](https://docs.mistral.ai/resources/changelogs), [pricing](https://docs.mistral.ai/inference/pricing) |
 | Product availability | [Release notes](https://docs.mistral.ai/resources/release-notes) |
+| Model specifications | [Model schemas](https://github.com/mistralai/platform-docs-public/tree/main/src/schema/models/models) behind the catalog; compare against the previous review's commit |
 | Model weights | [Mistral on Hugging Face](https://huggingface.co/mistralai), individual model cards and licenses |
 | SDKs | [Python releases](https://github.com/mistralai/client-python/releases), [TypeScript releases](https://github.com/mistralai/client-ts/releases) |
-| Coding agent | [Vibe releases](https://github.com/mistralai/mistral-vibe/releases) |
+| Coding agent and CLI | [Vibe releases](https://github.com/mistralai/mistral-vibe/releases), [Mistral CLI releases](https://github.com/mistralai/cli/releases) |
 | Official repositories | [Mistral GitHub](https://github.com/mistralai) |
-| Security | [Mistral advisories](https://docs.mistral.ai/resources/security-advisories), upstream GitHub advisories and repository Security settings |
+| Security | [Mistral advisories](https://docs.mistral.ai/resources/security-advisories), [GitHub advisory database](https://github.com/advisories), upstream repository advisories and Security settings |
 
 When sources conflict, prefer the version-specific model card/schema for model
 specifications, the current pricing page for prices, and the changelog for API
@@ -61,13 +62,14 @@ to establish a model's status during routine maintenance.
 ## Reproducible checks
 
 Prerequisites: Python 3.11+, authenticated GitHub CLI, Lychee **0.24.2**, and
-markdownlint-cli2 **0.21.0**. CI pins the action wrappers separately by commit SHA.
+markdownlint-cli2 **0.23.2** (the version bundled by the pinned CI action). CI pins
+the action wrappers separately by commit SHA.
 Use published tools from their upstreams; check downloaded release checksums.
 
 ```sh
 python3 scripts/check_content.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
-npx --yes markdownlint-cli2@0.21.0
+npx --yes markdownlint-cli2@0.23.2
 mkdir -p audit-output
 git ls-files -- '*.md' '.github/ISSUE_TEMPLATE/*.yml' > audit-output/link-inputs.txt
 lychee --config lychee.toml --no-progress --verbose --format json --output audit-output/links.json --files-from audit-output/link-inputs.txt
@@ -89,7 +91,8 @@ content, particularly for moved repositories, rebrands and cloud catalogs.
 `maintenance.json` records exact-URL exceptions with a reason, primary evidence,
 verification date and expiry. `scripts/check_content.py` requires a one-to-one
 match with the anchored exclusions in `lychee.toml`. Review each exception every
-week; max validity is seven days. A primary-source reference confirms ownership,
+week; max validity is 14 days, so a review PR awaiting merge does not break the
+default branch. A primary-source reference confirms ownership,
 but does not prove that an authenticated destination is accessible. State that
 limitation in the report. Never report excluded links as HTTP-verified successes.
 
@@ -107,8 +110,10 @@ a 200 response may still be a login or anti-bot page.
 ## Scheduling and failure handling
 
 The scheduled editorial task performs research, edits and a reviewable PR in this
-repository every Sunday at 09:00 Europe/Paris. It depends on the local task host
-being available and authenticated. On its next run after a missed review, cover
+repository every Sunday at 07:00 UTC (09:00 Europe/Paris in summer time). It runs
+in a hosted automation environment and depends on that account's usage limits,
+network access and repository permissions; a run that stops before research is a
+missed review, not a quiet week. On its next run after a missed review, cover
 the entire gap since the last successful editorial review.
 
 GitHub Actions independently checks the default branch every Sunday at 07:17 UTC,
