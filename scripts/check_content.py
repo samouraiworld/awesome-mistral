@@ -10,13 +10,21 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 ENTRY = re.compile(r"^- ([🧠🌍🧪]) \[([^\]]+)\]\((https://[^\s)]+)\)(?: ⭐ (\d+)k\+)? – (.+)$")
+# Any bullet linking to a web page is a resource, except bold dated news items.
+LINKED_ITEM = re.compile(r"^\s*[-*+] (?!\*\*).*\]\(https?://")
 
 
 def check_readme(text):
     errors, previous, seen = [], None, {}
     for number, line in enumerate(text.splitlines(), 1):
-        if not re.match(r"^- [🧠🌍🧪] .*\[", line):
+        # A list ends at the next heading; blank lines and paragraphs must not
+        # hide ordering errors inside one section.
+        if line.startswith("#"):
             previous = None
+            continue
+        if not re.match(r"^- [🧠🌍🧪] .*\[", line):
+            if LINKED_ITEM.match(line):
+                errors.append(f"README.md:{number}: linked list item needs the standard marker format")
             continue
         match = ENTRY.fullmatch(line)
         if not match:

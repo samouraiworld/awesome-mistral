@@ -153,11 +153,10 @@ Snapshot checked on **2026-09-13** against the [model catalog](https://docs.mist
 
 ### Specialized Models
 
-- 🧠 [Codestral Embed](https://docs.mistral.ai/models/codestral-embed-25-05) – API embedding model for code retrieval (`codestral-embed`).
-- 🧠 [Mistral Embed](https://docs.mistral.ai/models/mistral-embed-23-12) – API embedding model for text retrieval (`mistral-embed`).
-
 - 🧠 [Codestral 25.08](https://docs.mistral.ai/models/codestral-25-08) – Proprietary API model for fill-in-the-middle code completion (`codestral-2508`, 128k context); no downloadable weights listed for this version.
+- 🧠 [Codestral Embed](https://docs.mistral.ai/models/codestral-embed-25-05) – API embedding model for code retrieval (`codestral-embed`).
 - 🧠 [Leanstral 1.5](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) – Lean 4 formal proof agent (119B / 6.5B active, Apache 2.0). Mistral reports 587/672 solved PutnamBench problems. Free on the API as `labs-leanstral-1-5` (scheduled for retirement September 30, 2026).
+- 🧠 [Mistral Embed](https://docs.mistral.ai/models/mistral-embed-23-12) – API embedding model for text retrieval (`mistral-embed`).
 - 🧠 [Mistral Moderation 2](https://docs.mistral.ai/models/mistral-moderation-26-03) – Content moderation with 128k context and jailbreaking, dangerous, and criminal detection (API `mistral-moderation-2603`, free).
 - 🧠 [Mistral OCR 4.1](https://mistral.ai/news/ocr-4/) – Document intelligence with bounding boxes, block classification, and page/block/word-level confidence scores across 170 languages (API `mistral-ocr-4-1`; `mistral-ocr-latest` and `mistral-ocr-4` alias to it; $4/1k pages, $2 with Batch API).
 - 🧠 [Shieldstral](https://huggingface.co/mistralai/Shieldstral-1.0-3B) – Policy-adaptive multimodal safety classifier (3.8B total, Apache 2.0): accepts plain-language moderation policies at inference time, no retraining required.
@@ -310,10 +309,9 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### Development Tools
 
-- 🧠 [Mistral CLI](https://github.com/mistralai/cli) – Official standalone command-line releases for macOS and Linux, with installation documentation and SHA-256 checksums; this repository distributes binaries rather than source.
-
 - 🌍 [Langfuse](https://github.com/langfuse/langfuse) ⭐ 34k+ – Open-source LLM observability.
 - 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 58k+ – Unified API for 100+ LLMs.
+- 🧠 [Mistral CLI](https://github.com/mistralai/cli) – Official standalone command-line releases for macOS and Linux, with installation documentation and SHA-256 checksums; this repository distributes binaries rather than source.
 - 🌍 [Phoenix](https://github.com/Arize-ai/phoenix) ⭐ 11k+ – ML observability for LLM apps.
 - 🌍 [Promptfoo](https://github.com/promptfoo/promptfoo) ⭐ 25k+ – LLM evaluation and red-teaming.
 - 🌍 [Weights & Biases](https://wandb.ai) – Experiment tracking with LLM support.
