@@ -285,7 +285,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
 - 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 146k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 52k+ – Data framework for RAG with Mistral.
-- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
+- 🌍 [LobeHub](https://lobehub.com/) – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents. Its GitHub organization has returned HTTP 404 since 2026-09-17, so no star snapshot is shown until the source can be verified again.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
 - 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 8k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
@@ -305,8 +305,8 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 - 🌍 [Aider](https://github.com/Aider-AI/aider) ⭐ 48k+ – AI pair programming in terminal.
 - 🌍 [Continue](https://github.com/continuedev/continue) ⭐ 35k+ – Open-source AI code assistant (VSCode/JetBrains).
-- 🧠 [Mistral Code](https://mistral.ai/news/mistral-code) – Official AI coding assistant (VS Code/JetBrains) built on the Mistral coding stack.
 - 🌍 [Tabby](https://github.com/TabbyML/tabby) ⭐ 33k+ – Self-hosted GitHub Copilot alternative.
+- 🧠 [Vibe for Code](https://mistral.ai/products/vibe/code/) – Mistral Vibe's coding agent for the terminal and IDEs (VS Code, JetBrains, Zed); the former Mistral Code product page now redirects here.
 
 ### Development Tools
 
@@ -369,7 +369,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 ### Fine-Tuning Tutorials
 
 - 🌍 [Axolotl Mistral Examples](https://github.com/axolotl-ai-cloud/axolotl/tree/main/examples/mistral) – Config examples.
-- 🧠 [Mistral Fine-Tuning API](https://docs.mistral.ai/resources/deprecated/finetuning) – ⚠️ Deprecated, no longer actively supported – use the open-source frameworks below or [Forge](https://mistral.ai/products/forge/) for enterprise training.
+- 🧠 [Mistral Fine-Tuning API](https://docs.mistral.ai/resources/deprecated/finetuning) – ⚠️ Deprecated, no longer actively supported – use the [fine-tuning frameworks](#fine-tuning-frameworks) above or [Forge](https://mistral.ai/products/forge/) for enterprise training.
 - 🌍 [QLoRA Guide](https://huggingface.co/blog/4bit-transformers-bitsandbytes) – 4-bit fine-tuning.
 - 🌍 [Unsloth Tutorials](https://github.com/unslothai/notebooks) ⭐ 5k+ – Official Unsloth fine-tuning notebooks, including Mistral-family examples.
 
@@ -448,9 +448,9 @@ Cloud catalogs vary by region, version and retirement policy. A provider listing
 
 ### Cloud Providers
 
-- 🌍 [AWS Bedrock](https://aws.amazon.com/bedrock/) – Mistral via Amazon Bedrock.
+- 🌍 [AWS Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-mistral-ai.html) – Mistral model cards in Amazon Bedrock.
 - 🌍 [Google Cloud Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/mistral) – Mistral partner models on Google Cloud (formerly Vertex AI).
-- 🌍 [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-from-partners) – Mistral models in the Foundry model catalog (formerly Azure AI Studio).
+- 🌍 [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure#mistral-models-sold-by-azure) – Mistral models sold directly by Azure in the Foundry catalog (formerly Azure AI Studio).
 - 🌍 [Replicate](https://replicate.com/) – Run Mistral via API.
 - 🌍 [Together AI](https://together.ai/) – Mistral model hosting.
 
