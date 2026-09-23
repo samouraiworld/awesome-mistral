@@ -6,7 +6,7 @@ An independent community directory of Mistral AI models, developer tools, resear
 
 Curated for AI engineers, researchers and developers. Inclusion does not imply endorsement by Mistral AI or compatibility with every Mistral model.
 
-**Last editorial review: 2026-09-17.** Reviewed weekly; see the [audit and sources](audits/2026-09-17.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
+**Last editorial review: 2026-09-23.** Reviewed weekly; see the [audit and sources](audits/2026-09-23.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
 
 **Legend:**
 
@@ -45,6 +45,8 @@ Curated for AI engineers, researchers and developers. Inclusion does not imply e
 
 Dates below are publication or availability dates, not the date this list was edited. Older announcements remain in the topic sections. Review [Mistral News](https://mistral.ai/news/), the [API changelog](https://docs.mistral.ai/resources/changelogs), and [product release notes](https://docs.mistral.ai/resources/release-notes) for the complete history.
 
+- **2026-09-22 · [Vibe merges Chat and Work](https://docs.mistral.ai/resources/release-notes)** – Questions and tasks now start from one Vibe experience instead of separate tabs. The same release notes add spreadsheet (Excel/CSV) support in Vibe Work, Mini App Canvas for interactive apps and dashboards, and an Agentic Knowledge Base.
+- **2026-09-18 · [Vibe 2.25.5](https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.5)** – The Unified Harness is no longer labelled experimental (`--legacy-harness` restores the Python harness); adds skill toggles, explicit-only skills and `/loop` in the VS Code extension. Later patches through [2.25.8](https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.8) (2026-09-23) are fixes and Rust CLI improvements.
 - **2026-09-16 · [Mistral × Mozilla](https://mistral.ai/news/mistral-x-mozilla/)** – Firefox Smart Window (beta) now uses Mistral models. [Mozilla's announcement](https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/) names Mistral Small 4 for the US and Canada and adds French-language beta access in France; Mistral expects the UK and Germany to follow later this year and states that partners commit to zero data retention.
 - **2026-09-16 · [Mistral CLI 0.6.0](https://github.com/mistralai/cli/releases/tag/cli/v0.6.0)** – Adds prerequisite-driven capability activation and `mistral apps capability list` outside an app, caches registry descriptors, and reports failed scaffolding steps as failures.
 - **2026-09-15 · [Python SDK 2.10.1](https://github.com/mistralai/client-python/releases/tag/v2.10.1)** – Adds managed-index operations. Despite the patch version, it removes `JudgeDefinition.model` and `prompt`, replaces pipeline-config `definition` with `definitions`, and adds required response fields; read the breaking-change notes before upgrading.
@@ -97,7 +99,7 @@ Capabilities and deployment options vary by model and hosting provider:
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use [vLLM](https://github.com/vllm-project/vllm), [mistral.rs](https://github.com/EricLBuehler/mistral.rs), or the Mistral API instead.
 - 🧠 [Model Lifecycle Policy](https://docs.mistral.ai/inference/model-lifecycle) – Official Labs → Preview → GA → Deprecated → Retired policy; individual model cards carry retirement dates.
 - 🧠 [Platform Docs Public](https://github.com/mistralai/platform-docs-public) – Open-source documentation repository.
-- 🧠 [Vibe](https://mistral.ai/products/vibe/) – Mistral's unified agent (formerly le Chat) with Work, Code, and Chat modes across web, mobile, CLI, and VS Code.
+- 🧠 [Vibe](https://mistral.ai/products/vibe/) – Mistral's unified agent (formerly le Chat) across web, mobile, CLI, and VS Code; chat and Work tasks share one experience since September 2026, alongside Vibe Code.
 
 ---
 
@@ -284,7 +286,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
 - 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 146k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 52k+ – Data framework for RAG with Mistral.
-- 🌍 [LobeHub](https://lobehub.com/) – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents. Its GitHub organization has returned HTTP 404 since 2026-09-17, so no star snapshot is shown until the source can be verified again.
+- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
 - 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
 - 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 8k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
