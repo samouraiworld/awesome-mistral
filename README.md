@@ -327,7 +327,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### Chat Interfaces
 
-- 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 44k+ – Multi-model chat interface.
+- 🌍 [LibreChat](https://github.com/LibreChat-AI/LibreChat) ⭐ 45k+ – Multi-model chat interface.
 - 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 152k+ – Self-hosted ChatGPT-like UI.
 
 ### RAG & Knowledge Management
