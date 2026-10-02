@@ -37,7 +37,18 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     text = (root / "README.md").read_text()
-    names = set(re.findall(r"https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", text))
+    # These first path segments are GitHub site sections, not usernames, so
+    # "github.com/advisories/GHSA-..." must not be treated as an owner/repo.
+    NON_OWNER_PATHS = {
+        "advisories", "apps", "codespaces", "dashboard", "features",
+        "marketplace", "notifications", "orgs", "pulls", "issues", "search",
+        "settings", "sponsors", "topics", "security",
+    }
+    names = {
+        name
+        for name in re.findall(r"https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", text)
+        if name.split("/", 1)[0] not in NON_OWNER_PATHS
+    }
     # Ollama's primary listing links to its product website.
     if "https://ollama.com" in text:
         names.add("ollama/ollama")
