@@ -10,3 +10,7 @@ indent_size = 2
 
 [*.py]
 indent_size = 4
+
+# Shared organisation scripts are copied verbatim; never reformat them.
+[.github/scripts/*.selftest.sh]
+trim_trailing_whitespace = false

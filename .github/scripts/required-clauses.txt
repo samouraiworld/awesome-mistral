@@ -1,0 +1,36 @@
+# Clauses this repository must keep carrying. One per line:
+#
+#     path/to/file :: text that must appear somewhere in it
+#
+# `#` starts a comment only at the beginning of a line, because a clause is a
+# fragment of prose and markdown headings begin with one. Whitespace is
+# collapsed on both sides before matching, so a rewrap is not a policy change.
+#
+# Pin the shortest fragment that cannot survive the deletion you are guarding
+# against. Retiring a clause is a deliberate act: do it in its own commit, so
+# the decision is visible in the history rather than in a merge nobody read.
+#
+# Every clause below quotes THIS repository's own wording. The checker and its
+# self-test are byte-for-byte copies of the organisation's shared scripts; this
+# file is not, and must never be copied from another repository.
+#
+# Pin files whose CONTENT is the policy, not files whose content is code. A
+# workflow's jobs are guarded by `check-aggregate-covers-jobs.py` instead.
+
+# ── the attribution rule ────────────────────────────────────────────────────
+# The attribution gate scans for the vendor name and has no opinion about the
+# policy mandating it going away. Both the section and the rule under it are
+# pinned, because the heading can survive while the rule is emptied.
+AGENTS.md :: ## Assistant attribution — hard rule
+AGENTS.md :: Never name an AI assistant, its vendor, or a model
+AGENTS.md :: a commit author or committer identity
+
+# ── how changes reach main ──────────────────────────────────────────────────
+AGENTS.md :: Never commit to `main` or `master`.
+MAINTENANCE.md :: Preserve unrelated work and never commit to `main` or `master`.
+MAINTENANCE.md :: Leave merging to a maintainer
+
+# ── what a link check may accept ────────────────────────────────────────────
+# Weakening this is how a red check gets "fixed" without fixing anything.
+MAINTENANCE.md :: Never broadly accept 401, 403, 429, 5xx or redirect loops.
+MAINTENANCE.md :: max validity is 14 days
