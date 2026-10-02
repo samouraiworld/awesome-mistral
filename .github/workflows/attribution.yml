@@ -1,0 +1,266 @@
+name: Attribution
+
+# Deliberately a workflow of its own, with no `paths-ignore`. The thing this
+# gate looks for lives in prose and in design assets, so a filter that skips
+# documentation-only pushes would skip exactly the changes most likely to
+# reintroduce it. The same holds for the required-clauses job below, whose
+# every clause is prose.
+#
+# Branch protection on `main` requires ONE context from this workflow:
+# `Vendor attribution`. That name now belongs to the `ci-ok` job at the bottom,
+# which passes only when every other job here passed. So a gate added to this
+# file reaches branch protection by being added to `ci-ok`'s `needs:` — which
+# `check-aggregate-covers-jobs.py` enforces — and never by a settings change.
+#
+# Renaming `ci-ok` away from `Vendor attribution` leaves the old context
+# required and never reported, which freezes the repository.
+on:
+  push:
+    branches: [main]
+    # Tag pushes, because a tag NAME and its annotation are surfaces the
+    # attribution rule names and no other event carries them.
+    tags: ["**"]
+  # `edited` is not in the default set (`opened, synchronize, reopened`), and
+  # without it the title and body gates below are advisory: both stay editable
+  # after the checks pass, so a clean run could be banked and the text made
+  # dirty afterwards with nothing re-reading it.
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # One group per pull request; every other run gets a group of its own.
+  #
+  # GitHub keeps at most one PENDING run per group and cancels the older
+  # pending one when a newer run queues, whatever `cancel-in-progress` says.
+  # With `github.ref` as the group on a push, two quick pushes to `main` could
+  # leave the first push's run cancelled before it started — and the
+  # commit-message step reads only the commits of ITS push, so those commits
+  # would be read by nobody. `run_id` is unique, so a push, a tag or a manual
+  # run never shares a group and is never cancelled.
+  group: attribution-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  # Superseded pull-request runs are cancelled: the newer run reads the same
+  # branch, title and body at their newer state.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  attribution:
+    timeout-minutes: 10
+    name: Vendor attribution (tracked files)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # The self-test runs first, so every pipeline re-proves the check can
+      # still fail, and fails for the right reason. A gate that has silently
+      # stopped catching anything reports the same green as a clean tree.
+      - name: Prove this check can fail
+        run: .github/scripts/check-vendor-attribution.selftest.sh
+      - name: No tracked file carries assistant attribution
+        run: python3 .github/scripts/check-vendor-attribution.py .
+
+  metadata-attribution:
+    timeout-minutes: 10
+    name: Vendor attribution (the surfaces that are not files)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        # Every step here pipes a producer into the checker, and the default
+        # shell is `bash -e` WITHOUT pipefail: a `git` that failed would send an
+        # empty stream on and the surface would read as absent. Naming bash
+        # explicitly gets `-eo pipefail`, so "could not look" stays a failure.
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The branch's own commits have to be reachable, and the sha each
+          # range starts from with them.
+          #
+          # No `ref:`. This action adds a `refs/pull/*` refspec only when `ref`
+          # starts with `refs/pull/`, so a bare sha from a FORK is in no fetched
+          # ref and the checkout fails. The default pull-request ref is the
+          # merge commit, whose second parent is the head, so the head sha is in
+          # the object store either way and the range below ends there.
+          fetch-depth: 0
+      # The job above scans tracked files. `git ls-files` cannot see a commit
+      # message, a branch name, a pull-request title or body, or a tag — and the
+      # rule in AGENTS.md names every one of them.
+      - name: Prove these checks can fail
+        run: .github/scripts/check-vendor-attribution.selftest.sh
+      # Event data is passed through `env:`, never interpolated into `run:`. A
+      # pull-request title is written by whoever opened it.
+      - name: The branch name carries no attribution
+        env:
+          REF: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: >-
+          printf '%s' "$REF" |
+          python3 .github/scripts/check-vendor-attribution.py --text "branch name"
+      - name: No commit message or commit identity on this branch carries attribution
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          # On a pull request, every commit the branch adds — ending at the head
+          # sha, not at the checked-out merge commit, whose message GitHub
+          # generates and nobody authored.
+          #
+          # On a push, every commit the push added: `before..sha`. Reading only
+          # the tip would miss most of them here, because this repository allows
+          # merge commits and rebase merges as well as squash merges — a rebase
+          # merge lands several commits in one push, and a merge commit's
+          # message is written in the merge dialog, after every pull-request
+          # run.
+          #
+          # A push that creates a ref (a new tag: `before` is forty zeros) has
+          # no previous tip. Only the default branch is known to have been read
+          # already: this workflow's push trigger runs on `main` alone, and a
+          # commit on any other branch was read only if a pull request happened
+          # to carry it. So every commit the tag reaches that is not on the
+          # default branch of `origin` is read — a tag on a feature branch with
+          # no pull request included. The checkout's `fetch-depth: 0` fetches
+          # that branch; its ref missing from the clone, or an empty branch
+          # name, stops the step with a message naming the ref rather than
+          # leaving a bare `git` error to decode.
+          #
+          # When that list is empty — the usual release tag, on a commit already
+          # on `main` — the tagged commit alone is read, because an empty stream
+          # is refused as "could not look" and would turn every ordinary release
+          # tag red. A manual run (no `before`) reads the tip commit alone.
+          #
+          # A `before` that is set but absent from the clone is a failure, not
+          # a fallback: falling back to `-1` would silently read one commit of a
+          # push that added several. That includes force-moving an ANNOTATED
+          # tag: `before` is then the old tag object, which no ref holds any
+          # more, so that push fails here loudly rather than guessing a range.
+          # Moving a LIGHTWEIGHT tag back to an ancestor of where it was makes
+          # `before..sha` empty, and that fails closed with "arrived empty".
+          # That is expected: re-point such a tag by deleting and re-pushing it.
+          #
+          # Two dots are right HERE and wrong for a diff. `git log A..B` is the
+          # set of commits in B and not in A, which is the branch's own commits
+          # whether or not A is an ancestor. Do not "fix" this line by analogy
+          # with the rule that a residue diff needs a merge base.
+          zeros=0000000000000000000000000000000000000000
+          if [ -n "$BASE" ]; then
+            set -- "$BASE..$HEAD_SHA"
+          elif [ "$BEFORE" = "$zeros" ]; then
+            read_already="refs/remotes/origin/$DEFAULT_BRANCH"
+            if [ -z "$DEFAULT_BRANCH" ]; then
+              echo "::error::the default branch name is empty, so the commits this tag adds cannot be told apart from those already read"
+              exit 1
+            fi
+            if ! git rev-parse -q --verify "$read_already^{commit}" >/dev/null; then
+              echo "::error::the default branch ref '$read_already' is not in this clone, so the commits this tag adds cannot be told apart from those already read"
+              exit 1
+            fi
+            unheld="$(git rev-list "$AFTER" --not "$read_already")"
+            if [ -n "$unheld" ]; then
+              set -- "$AFTER" --not "$read_already"
+            else
+              set -- -1 "$AFTER"
+            fi
+          elif [ -n "$BEFORE" ]; then
+            if ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+              echo "::error::the push's previous tip $BEFORE is not in this clone, so the commits this push added cannot be listed"
+              exit 1
+            fi
+            set -- "$BEFORE..$AFTER"
+          else
+            set -- -1
+          fi
+          git log --format=%B "$@" |
+            python3 .github/scripts/check-vendor-attribution.py \
+              --text "commit messages on this branch"
+          # The same commits' author and committer identities. A message can be
+          # clean while the commit is still attributed through its author field:
+          # a hosted automation's default git identity did exactly that here in
+          # a pull request on 2026-09-27, and every message gate stayed green.
+          git log --format='%an <%ae>%n%cn <%ce>' "$@" |
+            python3 .github/scripts/check-vendor-attribution.py \
+              --text "commit authors and committers on this branch"
+      # The two below are conditional on the event rather than tolerant of an
+      # empty surface. `--allow-empty` on the title would have absorbed a typo in
+      # the field name for good: `.titel` is empty on every event, reads as "not
+      # a pull request", and passes forever. A step-level `if:` skips the step,
+      # not the job, so `ci-ok` still sees this job succeed or fail.
+      - name: The pull request title carries no attribution
+        if: github.event_name == 'pull_request'
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: >-
+          printf '%s' "$TITLE" |
+          python3 .github/scripts/check-vendor-attribution.py
+          --text "pull request title"
+      # The body keeps `--allow-empty`: GitHub requires a title and does not
+      # require a body, so an empty body here is a real empty body.
+      #
+      # A bot's body is exempt (organisation owner decision B4, 2026-09-09):
+      # Dependabot quotes an upstream changelog it did not write. Its title, its
+      # commits and its diff are still scanned. B4's premise is that a body never
+      # enters git history; here `squash_merge_commit_message` is
+      # `COMMIT_MESSAGES`, not `PR_BODY`, so on a squash merge the body does not
+      # become the commit message. Nothing gates this condition: if B4 is ever
+      # overturned, this comment is the only record the exemption was deliberate.
+      - name: The pull request body carries no attribution
+        if: >-
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.user.type != 'Bot'
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: >-
+          printf '%s' "$BODY" |
+          python3 .github/scripts/check-vendor-attribution.py
+          --text "pull request body" --allow-empty
+      - name: No tag on this commit carries attribution
+        run: >-
+          git tag --points-at HEAD --format='%(refname:strip=2)%0a%(contents)' |
+          python3 .github/scripts/check-vendor-attribution.py
+          --text "tags on this commit" --allow-empty
+
+  required-clauses:
+    name: Required clauses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # Every other gate refuses something PRESENT. None of them has an opinion
+      # about a rule going ABSENT, which is how a merge taking `main..branch` as
+      # a stale branch's residue reverted an attribution policy elsewhere in
+      # this organisation on 2026-09-12 with CI green throughout.
+      - name: Prove the clause check can fail
+        run: .github/scripts/check-required-clauses.selftest.sh
+      - name: Every clause this repository must carry is still there
+        run: python3 .github/scripts/check-required-clauses.py .
+
+  ci-ok:
+    # The required status check on `main`, by this name. See the top of file.
+    name: Vendor attribution
+    runs-on: ubuntu-latest
+    needs:
+      - attribution
+      - metadata-attribution
+      - required-clauses
+    # `always()` keeps this job from being skipped when a gate fails, because a
+    # skipped required check is read as satisfied.
+    if: always()
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Prove this gate can fail
+        run: .github/scripts/aggregate-result.selftest.sh
+      # A gate present in this workflow but absent from `needs:` above can fail
+      # while the required check stays green. Proven before it is relied on.
+      - name: Prove the coverage check can fail
+        run: .github/scripts/check-aggregate-covers-jobs.selftest.sh
+      - name: This gate depends on every other job
+        run: python3 .github/scripts/check-aggregate-covers-jobs.py .github/workflows/attribution.yml
+      # No job in this workflow is conditional, so nothing may skip: no
+      # `SKIP_OK`. A gate that gains an `if:` must be named here deliberately,
+      # in its own diff.
+      - name: Every gate passed
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: printf '%s' "$RESULTS" | python3 .github/scripts/aggregate-result.py

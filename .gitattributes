@@ -1,0 +1,3 @@
+# Byte-for-byte copies of the organisation's shared scripts. Their self-tests
+# carry deliberate whitespace-only test data, so whitespace checks skip them.
+.github/scripts/*.selftest.sh -whitespace
