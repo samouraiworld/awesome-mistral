@@ -8,6 +8,14 @@ max_redirects = 10
 include_fragments = "anchor-only"
 exclude_all_private = true
 cache = false
+# GitHub answers scripted requests for file pages (`/blob/`) with 503, from CI
+# and maintainer hosts alike, while serving the same files from its raw CDN.
+# Check file links there instead: a missing file, branch or repository still
+# fails with 404. Readers keep the normal GitHub link; a `#fragment` on a file
+# link is not checked.
+remap = [
+    '^https://github\.com/([^/]+)/([^/]+)/blob/([^#]+)(#.*)?$ https://raw.githubusercontent.com/$1/$2/$3',
+]
 # Exact anti-bot exceptions: evidence and expiry (at most 14 days) in maintenance.json.
 # X ownership is corroborated upstream; Reddit returned 200 locally and 403 in CI.
 exclude = [

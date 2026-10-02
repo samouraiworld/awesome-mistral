@@ -82,6 +82,11 @@ include it in the local check. The CI checks every tracked Markdown file and URL
 in issue templates, including historical audit source links. Code examples are
 not executed. Local and remote anchors are checked by Lychee.
 
+GitHub file pages (`/blob/`) are checked through `raw.githubusercontent.com` by
+a `remap` in `lychee.toml`, because GitHub answers scripted requests for those
+pages with 503. A missing file still fails with 404; fragments on file links are
+not checked. Keep linking readers to the normal GitHub page.
+
 Review HTTP redirects using `curl --head --location` and the verbose link-check
 output; an HTTP 200 alone cannot establish relevance. Inspect the destination's
 content, particularly for moved repositories, rebrands and cloud catalogs.
