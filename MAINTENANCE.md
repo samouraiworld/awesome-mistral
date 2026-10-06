@@ -34,8 +34,8 @@ A successful link check alone does not constitute an editorial review.
 8. Write `audits/YYYY-MM-DD.md` with scope, sources, changes, measured checks,
    limitations and next actions. Preserve older audits. Update `maintenance.json`
    and the README review date/audit link only after completing the review.
-9. Commit and open/update a PR with **Summary** and **Test plan**, without
-   attribution trailers. Inspect its CI and fix failures. Leave merging to a
+9. Commit and open/update a PR with **Summary** and **Test plan**, following
+   [AGENTS.md](AGENTS.md): maintainer identity, no attribution anywhere. Inspect its CI and fix failures. Leave merging to a
    maintainer; report the PR and any unresolved blockers in the scheduled task.
 
 ## Sources of record
@@ -75,12 +75,26 @@ git ls-files -- '*.md' '.github/ISSUE_TEMPLATE/*.yml' > audit-output/link-inputs
 lychee --config lychee.toml --no-progress --verbose --format json --output audit-output/links.json --files-from audit-output/link-inputs.txt
 python3 scripts/audit_github.py --output audit-output/github.json
 git diff --check
+python3 .github/scripts/check-vendor-attribution.py .
+git log --format='%an <%ae>%n%cn <%ce>%n%B' origin/main..HEAD | python3 .github/scripts/check-vendor-attribution.py --text "commits on this branch"
 ```
+
+The **Vendor attribution** workflow repeats the last two checks on every pull
+request, together with the branch name, PR title and body, and proves each gate
+can still fail before relying on it. Its scripts are byte-for-byte copies of the
+organisation's shared ones; update them by copying, never by local edits.
+`.github/scripts/required-clauses.txt` pins the policy sentences that must not
+silently disappear from this file and from AGENTS.md.
 
 Stage new documentation before creating the tracked-file inventory, or explicitly
 include it in the local check. The CI checks every tracked Markdown file and URLs
 in issue templates, including historical audit source links. Code examples are
 not executed. Local and remote anchors are checked by Lychee.
+
+GitHub file pages (`/blob/`) are checked through `raw.githubusercontent.com` by
+a `remap` in `lychee.toml`, because GitHub answers scripted requests for those
+pages with 503. A missing file still fails with 404; fragments on file links are
+not checked. Keep linking readers to the normal GitHub page.
 
 Review HTTP redirects using `curl --head --location` and the verbose link-check
 output; an HTTP 200 alone cannot establish relevance. Inspect the destination's

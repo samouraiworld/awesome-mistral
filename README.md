@@ -6,7 +6,7 @@ An independent community directory of Mistral AI models, developer tools, resear
 
 Curated for AI engineers, researchers and developers. Inclusion does not imply endorsement by Mistral AI or compatibility with every Mistral model.
 
-**Last editorial review: 2026-09-23.** Reviewed weekly; see the [audit and sources](audits/2026-09-23.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
+**Last editorial review: 2026-10-06.** Reviewed weekly; see the [audit and sources](audits/2026-10-06.md), [maintenance process](MAINTENANCE.md), and [security policy](SECURITY.md). Star counts are rounded down snapshots from that review, not quality scores.
 
 **Legend:**
 
@@ -45,7 +45,13 @@ Curated for AI engineers, researchers and developers. Inclusion does not imply e
 
 Dates below are publication or availability dates, not the date this list was edited. Older announcements remain in the topic sections. Review [Mistral News](https://mistral.ai/news/), the [API changelog](https://docs.mistral.ai/resources/changelogs), and [product release notes](https://docs.mistral.ai/resources/release-notes) for the complete history.
 
+- **2026-10-06 · [Vibe 2.26.0](https://github.com/mistralai/mistral-vibe/releases/tag/v2.26.0)** – Vibe now always runs on the Unified Harness and exits with an error instead of silently falling back to the legacy engine when its runtime is missing. The `~/.vibe/.env` API-key fallback is now created owner-only (`0600`); keys saved there by earlier versions may still be readable by other local accounts. The Rust CLI (selected with `VIBE_CLI`) gains first-run onboarding, `/teleport` to Vibe Code Web, `/voice` and `/loop`, and now sends client usage telemetry; `enable_telemetry = false` in `config.toml` turns telemetry off.
+- **2026-09-29 · [Model deprecations and GLM 5.3 GA](https://docs.mistral.ai/resources/changelogs)** – OCR 4.0 (`mistral-ocr-4-0`) and Leanstral 1.5 (`labs-leanstral-1-5`) were deprecated with retirement on 2026-09-30; OCR 4.1 (`mistral-ocr-4-1` or `mistral-ocr-latest`) replaces OCR 4.0 at the same price. The third-party Z.ai GLM 5.3 (`zai-glm-5-3`) is now generally available, and GLM 5.2 (`zai-glm-5-2`) is deprecated with retirement on 2026-10-31.
+- **2026-09-28 · [Mistral opens a Munich hub](https://mistral.ai/news/hallo-deutschland/)** – German hub for physics and industrial AI, built around more than 30 physicists, researchers and engineers from the acquired Emmi AI. Mistral names work with BMW on crash simulation, with Siemens Energy on industrial applications, and a Technical University of Munich research partnership on automotive aerodynamics.
+- **2026-09-28 · [Python SDK 3.0.0](https://github.com/mistralai/client-python/releases/tag/v3.0.0)** – Major release: the SDK moves from `httpx` to `httpx2` (custom clients must be HTTPX2 clients) and the `agents` extra to MCP 2.2. `chat` and `agents` completions no longer accept the `web_search`, `web_search_premium` and `code_interpreter` tools, which remain available through the Conversations and Agents APIs. Follow the [migration guide](https://github.com/mistralai/client-python/blob/main/MIGRATION.md) before upgrading.
+- **2026-09-26 · [Mistral CLI 0.7.0](https://github.com/mistralai/cli/releases/tag/cli/v0.7.0)** – Adds `mistral apps deploy/publish/unpublish/dev`, an `evals` command group for the offline-evaluation lifecycle, `mistral context` for organization/workspace selection, `login --api-key`, and a daily GitHub-based update check.
 - **2026-09-22 · [Vibe merges Chat and Work](https://docs.mistral.ai/resources/release-notes)** – Questions and tasks now start from one Vibe experience instead of separate tabs. The same release notes add spreadsheet (Excel/CSV) support in Vibe Work, Mini App Canvas for interactive apps and dashboards, and an Agentic Knowledge Base.
+- **2026-09-20 · [CVE-2026-93993](https://github.com/advisories/GHSA-92v2-hh9v-6vj5)** – High-severity Mistral Vibe remote code execution: worktree creation ran a cloned repository's git hooks (e.g. `post-checkout`) before trust validation, letting a malicious repository run shell commands as the user. Fixed in [Vibe 2.25.5](https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.5) ("Worktree operations skip repository hooks", 2026-09-18); no Mistral MAI advisory number covers this CVE as of this review, so it is cited via the GitHub Advisory Database. Upgrade to 2.25.5 or later.
 - **2026-09-18 · [Vibe 2.25.5](https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.5)** – The Unified Harness is no longer labelled experimental (`--legacy-harness` restores the Python harness); adds skill toggles, explicit-only skills and `/loop` in the VS Code extension. Later patches through [2.25.8](https://github.com/mistralai/mistral-vibe/releases/tag/v2.25.8) (2026-09-23) are fixes and Rust CLI improvements.
 - **2026-09-16 · [Mistral × Mozilla](https://mistral.ai/news/mistral-x-mozilla/)** – Firefox Smart Window (beta) now uses Mistral models. [Mozilla's announcement](https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/) names Mistral Small 4 for the US and Canada and adds French-language beta access in France; Mistral expects the UK and Germany to follow later this year and states that partners commit to zero data retention.
 - **2026-09-16 · [Mistral CLI 0.6.0](https://github.com/mistralai/cli/releases/tag/cli/v0.6.0)** – Adds prerequisite-driven capability activation and `mistral apps capability list` outside an app, caches registry descriptors, and reports failed scaffolding steps as failures.
@@ -65,7 +71,7 @@ Dates below are publication or availability dates, not the date this list was ed
 - **2026-08-11 · [Regional inference and European infrastructure](https://mistral.ai/news/regional-inference-open-models-new-compute/)** – Regional endpoints, Priority Tier preview, third-party model hosting and European compute commitments. The catalog now serves its first third-party model, [Z.ai GLM 5.2](https://z.ai/blog/glm-5.2) (`zai-glm-5-2`, public preview, 1M context), hosted unmodified by Mistral and not a Mistral model.
 - **2026-08-04 · [Shieldstral](https://mistral.ai/news/shieldstral/)** – Open-weight safety classifier accepting policies expressed in natural language.
 
-**Upcoming:** the [API changelog](https://docs.mistral.ai/resources/changelogs) schedules `labs-leanstral-1-5` retirement for **2026-09-30**. Downloadable weights and hosted API availability are separate; recheck the official schedule before migrating.
+**Upcoming:** the [API changelog](https://docs.mistral.ai/resources/changelogs) schedules the third-party `zai-glm-5-2` retirement for **2026-10-31**; `zai-glm-5-3` replaces it. Downloadable weights and hosted API availability are separate; recheck the official schedule before migrating.
 
 ---
 
@@ -90,10 +96,10 @@ Capabilities and deployment options vary by model and hosting provider:
 - 🧠 [Mistral AI](https://mistral.ai) – Official company website with product information and announcements.
 - 🧠 [Mistral AI Documentation](https://docs.mistral.ai) – Comprehensive API documentation, guides, and model specifications.
 - 🧠 [Mistral AI GitHub](https://github.com/mistralai) – Official GitHub organization and public repositories.
-- 🧠 [Mistral Compute (AI Cloud)](https://mistral.ai/products/aicloud/) – GPU infrastructure for training and inference; consult the product page for deployment options and access.
+- 🧠 [Mistral Compute (AI Cloud)](https://mistral.ai/cloud/compute/) – GPU infrastructure for training and inference; consult the product page for deployment options and access.
 - 🧠 [Mistral Cookbook](https://github.com/mistralai/cookbook) – Official notebooks and examples for common use cases.
 - 🧠 [Mistral Forge](https://mistral.ai/news/forge) – Enterprise platform for training frontier-grade models on proprietary data.
-- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant featuring cloud-async Remote Agents and sandbox PR generation. Use 2.25.4 or later ([MAI-2026-003](https://docs.mistral.ai/resources/security-advisories/MAI-2026-003)).
+- 🧠 [Mistral Vibe](https://github.com/mistralai/mistral-vibe) – Native CLI coding assistant featuring cloud-async Remote Agents and sandbox PR generation. Use 2.25.5 or later: fixes both [MAI-2026-003](https://docs.mistral.ai/resources/security-advisories/MAI-2026-003) (2.25.4) and a worktree git-hook RCE, [CVE-2026-93993](https://github.com/advisories/GHSA-92v2-hh9v-6vj5) (2.25.5).
 - 🧠 [mistral-common](https://github.com/mistralai/mistral-common) – Official tokenization and pre-processing library.
 - 🧠 [mistral-finetune](https://github.com/mistralai/mistral-finetune) – ⚠️ Archived, no longer maintained – use [Axolotl](https://github.com/axolotl-ai-cloud/axolotl), [Unsloth](https://github.com/unslothai/unsloth), or Hugging Face [TRL](https://github.com/huggingface/trl) instead.
 - 🧠 [mistral-inference](https://github.com/mistralai/mistral-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use [vLLM](https://github.com/vllm-project/vllm), [mistral.rs](https://github.com/EricLBuehler/mistral.rs), or the Mistral API instead.
@@ -107,7 +113,7 @@ Capabilities and deployment options vary by model and hosting provider:
 
 ### Flagship Models (API)
 
-Snapshot checked on **2026-09-17** against the [model catalog](https://docs.mistral.ai/models) and [pricing](https://docs.mistral.ai/inference/pricing). License refers to downloadable weights where available; API usage has separate service terms. Context is the advertised window, not a hardware requirement.
+Snapshot checked on **2026-10-06** against the [model catalog](https://docs.mistral.ai/models) and [pricing](https://docs.mistral.ai/inference/pricing). License refers to downloadable weights where available; API usage has separate service terms. Context is the advertised window, not a hardware requirement.
 
 | Model | Context | License | Best For |
 |-------|---------|---------|----------|
@@ -157,7 +163,7 @@ Snapshot checked on **2026-09-17** against the [model catalog](https://docs.mist
 
 - 🧠 [Codestral 25.08](https://docs.mistral.ai/models/codestral-25-08) – Proprietary API model for fill-in-the-middle code completion (`codestral-2508`, 128k context); no downloadable weights listed for this version.
 - 🧠 [Codestral Embed](https://docs.mistral.ai/models/codestral-embed-25-05) – API embedding model for code retrieval (`codestral-embed`).
-- 🧠 [Leanstral 1.5](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) – Lean 4 formal proof agent (119B / 6.5B active, Apache 2.0). Mistral reports 587/672 solved PutnamBench problems. Free on the API as `labs-leanstral-1-5` (scheduled for retirement September 30, 2026).
+- 🧠 [Leanstral 1.5](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) – Lean 4 formal proof agent (119B / 6.5B active, Apache 2.0). Mistral reports 587/672 solved PutnamBench problems. *(legacy – published API retirement 2026-09-30 for `labs-leanstral-1-5`; no hosted successor named)*
 - 🧠 [Mistral Embed](https://docs.mistral.ai/models/mistral-embed-23-12) – API embedding model for text retrieval (`mistral-embed`).
 - 🧠 [Mistral Moderation 2](https://docs.mistral.ai/models/mistral-moderation-26-03) – Content moderation with 128k context and jailbreaking, dangerous, and criminal detection (API `mistral-moderation-2603`, free).
 - 🧠 [Mistral OCR 4.1](https://mistral.ai/news/ocr-4/) – Document intelligence with bounding boxes, block classification, and page/block/word-level confidence scores across 170 languages (API `mistral-ocr-4-1`; `mistral-ocr-latest` and `mistral-ocr-4` alias to it; $4/1k pages, $2 with Batch API).
@@ -199,7 +205,7 @@ Historical community fine-tunes of earlier Mistral models, retained for reproduc
 
 ### Official SDKs
 
-Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/releases/tag/v2.10.1) (2026-09-15) and [TypeScript v2.7.0](https://github.com/mistralai/client-ts/releases/tag/v2.7.0) (2026-09-09). Python 2.10.0 and TypeScript 2.7.0 remove legacy observability operations and change connector request types; TypeScript connector creation now requires an explicit `protocol`. Python 2.10.1 adds further breaking changes to judge and pipeline-config models. Review the breaking-change notes before upgrading.
+Checked releases: [Python v3.0.0](https://github.com/mistralai/client-python/releases/tag/v3.0.0) (2026-09-28) and [TypeScript v2.7.0](https://github.com/mistralai/client-ts/releases/tag/v2.7.0) (2026-09-09). Python 2.10.0 and TypeScript 2.7.0 remove legacy observability operations and change connector request types; TypeScript connector creation now requires an explicit `protocol`. Python 2.10.1 adds further breaking changes to judge and pipeline-config models. Python 3.0.0 switches to `httpx2` and removes built-in tools from chat and agents completions; follow its [migration guide](https://github.com/mistralai/client-python/blob/main/MIGRATION.md). Review the breaking-change notes before upgrading.
 
 **Security:** [MAI-2026-002](https://docs.mistral.ai/resources/security-advisories/MAI-2026-002) documents compromised SDK releases from May 2026, including Python `mistralai` 2.4.6 and npm `@mistralai/mistralai` 2.2.2–2.2.4. Consult the advisory for the full affected-package list and remediation; these releases are not recommended.
 
@@ -218,11 +224,12 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### High-Performance Inference
 
-- 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – Fast inference with EXL2 quantization. Activity watch: last upstream push 2026-03-04; reassess at the next review.
-- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 128k+ – CPU/GPU inference with GGUF quantization.
+- 🌍 [ExLlamaV2](https://github.com/turboderp-org/exllamav2) – ⚠️ Archived, no longer maintained – the upstream README points to [ExLlamaV3](https://github.com/turboderp-org/exllamav3) for continued development.
+- 🌍 [ExLlamaV3](https://github.com/turboderp-org/exllamav3) – Successor to ExLlamaV2: EXL3 quantization (QTIP-based), tensor/expert-parallel inference, continuous batching and speculative decoding for consumer GPUs.
+- 🌍 [llama.cpp](https://github.com/ggml-org/llama.cpp) ⭐ 130k+ – CPU/GPU inference with GGUF quantization.
 - 🌍 [SGLang](https://github.com/sgl-project/sglang) ⭐ 36k+ – Fast serving with RadixAttention.
 - 🌍 [Text Generation Inference](https://github.com/huggingface/text-generation-inference) ⭐ 10k+ – ⚠️ Archived, no longer maintained – use vLLM or SGLang instead.
-- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 91k+ – High-throughput with PagedAttention. Excellent Mistral support.
+- 🌍 [vLLM](https://github.com/vllm-project/vllm) ⭐ 93k+ – High-throughput with PagedAttention. Excellent Mistral support.
 
 ### Local Inference
 
@@ -230,7 +237,7 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 - 🌍 [Jan](https://jan.ai) – Open-source ChatGPT alternative running locally.
 - 🌍 [LM Studio](https://lmstudio.ai) – Desktop GUI for local LLMs.
 - 🌍 [Msty](https://msty.ai) – Desktop app for running local LLMs.
-- 🌍 [Ollama](https://ollama.com) ⭐ 181k+ – Simple CLI for local Mistral models.
+- 🌍 [Ollama](https://ollama.com) ⭐ 182k+ – Simple CLI for local Mistral models.
 - 🧪 [voxtral.c](https://github.com/antirez/voxtral.c) – Experimental C inference for Voxtral Mini 4B Realtime. Activity watch: last upstream push 2026-02-15; verify compatibility before use.
 
 ### Cloud & Container Deployment
@@ -249,9 +256,9 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 - 🌍 [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) ⭐ 12k+ – Streamlined LoRA/QLoRA/full fine-tuning.
 - 🌍 [Hugging Face PEFT](https://github.com/huggingface/peft) ⭐ 21k+ – Parameter-Efficient Fine-Tuning.
 - 🌍 [Hugging Face TRL](https://github.com/huggingface/trl) ⭐ 19k+ – RLHF and DPO training.
-- 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 74k+ – Unified fine-tuning framework.
+- 🌍 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) ⭐ 75k+ – Unified fine-tuning framework.
 - 🌍 [torchtune](https://github.com/meta-pytorch/torchtune) ⭐ 5k+ – ⚠️ No longer maintained – development wound down in 2025; use Axolotl or Unsloth instead.
-- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 76k+ – Fine-tuning and local inference tools; performance depends on the model and hardware.
+- 🌍 [Unsloth](https://github.com/unslothai/unsloth) ⭐ 77k+ – Fine-tuning and local inference tools; performance depends on the model and hardware.
 
 ### Training Infrastructure
 
@@ -282,13 +289,13 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 - 🌍 [Aeon](https://github.com/aeonfun/aeon) – Autonomous agent framework that runs unattended on GitHub Actions and drives Mistral Vibe as one of six coding-agent harnesses behind a single contract, with quality scoring, persistent memory, and a self-healing loop.
 - 🌍 [AutoGen](https://github.com/microsoft/autogen) ⭐ 61k+ – Microsoft's multi-agent framework.
-- 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 58k+ – Multi-agent orchestration.
+- 🌍 [CrewAI](https://github.com/crewAIInc/crewAI) ⭐ 59k+ – Multi-agent orchestration.
 - 🌍 [Haystack](https://github.com/deepset-ai/haystack) ⭐ 26k+ – End-to-end NLP framework.
-- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 146k+ – LLM app framework with native Mistral support.
+- 🌍 [LangChain](https://github.com/langchain-ai/langchain) ⭐ 147k+ – LLM app framework with native Mistral support.
 - 🌍 [LlamaIndex](https://github.com/run-llama/llama_index) ⭐ 52k+ – Data framework for RAG with Mistral.
-- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 82k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
-- 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 19k+ – Type-safe AI agent framework.
-- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 8k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
+- 🌍 [LobeHub](https://github.com/lobehub/lobehub) ⭐ 83k+ – Agent operations platform (formerly Lobe Chat) that hires, schedules, and reports on a fleet of AI agents.
+- 🌍 [PydanticAI](https://github.com/pydantic/pydantic-ai) ⭐ 20k+ – Type-safe AI agent framework.
+- 🌍 [RocketRide](https://github.com/rocketride-org/rocketride-server) ⭐ 17k+ – C++ AI pipeline engine with dedicated Mistral text/vision nodes, Python/TypeScript SDKs, and a visual IDE.
 - 🌍 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) ⭐ 28k+ – Microsoft's AI orchestration SDK.
 
 ### Function Calling & Structured Output
@@ -305,14 +312,14 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 ### IDE Extensions & Code Assistants
 
 - 🌍 [Aider](https://github.com/Aider-AI/aider) ⭐ 49k+ – AI pair programming in terminal.
-- 🌍 [Continue](https://github.com/continuedev/continue) ⭐ 35k+ – Open-source AI code assistant (VSCode/JetBrains).
+- 🌍 [Continue](https://github.com/continuedev/continue) ⭐ 36k+ – Open-source AI code assistant (VSCode/JetBrains).
 - 🌍 [Tabby](https://github.com/TabbyML/tabby) ⭐ 33k+ – Self-hosted GitHub Copilot alternative.
 - 🧠 [Vibe for Code](https://mistral.ai/products/vibe/code/) – Mistral Vibe's coding agent for the terminal and IDEs (VS Code, JetBrains, Zed); the former Mistral Code product page now redirects here.
 
 ### Development Tools
 
-- 🌍 [Langfuse](https://github.com/langfuse/langfuse) ⭐ 34k+ – Open-source LLM observability.
-- 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 58k+ – Unified API for 100+ LLMs.
+- 🌍 [Langfuse](https://github.com/langfuse/langfuse) ⭐ 35k+ – Open-source LLM observability.
+- 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 60k+ – Unified API for 100+ LLMs.
 - 🧠 [Mistral CLI](https://github.com/mistralai/cli) – Official standalone command-line releases for macOS and Linux, with installation documentation and SHA-256 checksums; this repository distributes binaries rather than source.
 - 🌍 [Phoenix](https://github.com/Arize-ai/phoenix) ⭐ 11k+ – ML observability for LLM apps.
 - 🌍 [Promptfoo](https://github.com/promptfoo/promptfoo) ⭐ 25k+ – LLM evaluation and red-teaming.
@@ -324,8 +331,8 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### Chat Interfaces
 
-- 🌍 [LibreChat](https://github.com/danny-avila/LibreChat) ⭐ 44k+ – Multi-model chat interface.
-- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 152k+ – Self-hosted ChatGPT-like UI.
+- 🌍 [LibreChat](https://github.com/LibreChat-AI/LibreChat) ⭐ 45k+ – Multi-model chat interface.
+- 🌍 [Open WebUI](https://github.com/open-webui/open-webui) ⭐ 154k+ – Self-hosted ChatGPT-like UI.
 
 ### RAG & Knowledge Management
 
@@ -337,9 +344,9 @@ Checked releases: [Python v2.10.1](https://github.com/mistralai/client-python/re
 
 ### Specialized Applications
 
-- 🌍 [Fabric](https://github.com/danielmiessler/Fabric) ⭐ 43k+ – AI augmentation framework.
+- 🌍 [Fabric](https://github.com/danielmiessler/Fabric) ⭐ 44k+ – AI augmentation framework.
 - 🌍 [GPT Researcher](https://github.com/assafelovic/gpt-researcher) ⭐ 29k+ – Autonomous research agent.
-- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 88k+ – AI software engineer (formerly OpenDevin).
+- 🌍 [OpenHands](https://github.com/OpenHands/OpenHands) ⭐ 90k+ – AI software engineer (formerly OpenDevin).
 
 ---
 
@@ -354,7 +361,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 
 ### Community Examples
 
-- 🌍 [LangGraph](https://github.com/langchain-ai/langgraph) ⭐ 41k+ – Stateful multi-agent and workflow examples with Mistral.
+- 🌍 [LangGraph](https://github.com/langchain-ai/langgraph) ⭐ 42k+ – Stateful multi-agent and workflow examples with Mistral.
 
 ---
 
@@ -398,7 +405,7 @@ See the [Mistral Cookbook](https://github.com/mistralai/cookbook) for notebooks 
 ### Code Benchmarks
 
 - 🌍 [BigCodeBench](https://github.com/bigcode-project/bigcodebench) – ⚠️ Archived, no longer maintained – use EvalPlus or HumanEval instead.
-- 🌍 [EvalPlus](https://github.com/evalplus/evalplus) – Published code-evaluation suite; activity watch, last upstream push 2025-10-02.
+- 🌍 [EvalPlus](https://github.com/evalplus/evalplus) – Published code-evaluation suite, retained as a benchmark for reproducibility; no upstream push since 2025-10-02.
 - 🌍 [HumanEval](https://github.com/openai/human-eval) – Historical code-generation benchmark accompanying the 2021 paper; retained for reproducibility.
 
 ---
