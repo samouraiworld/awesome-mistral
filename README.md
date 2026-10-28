@@ -350,6 +350,7 @@ Checked releases: [Python v3.2.0](https://github.com/mistralai/client-python/rel
 
 ### Development Tools
 
+- 🧪 [Agent Standup](https://github.com/Atoll92/agent-standup) – VS Code extension, CLI and macOS app that visualizes local Mistral Vibe sessions as a team call. Its reader is upstream-tested on Vibe 2.26.1; Vibe 3 subagent events require support for the renamed `agents.*` tools and are not recognized by the current reader.
 - 🌍 [Langfuse](https://github.com/langfuse/langfuse) ⭐ 36k+ – Open-source LLM observability.
 - 🌍 [LiteLLM](https://github.com/BerriAI/litellm) ⭐ 62k+ – Unified API for 100+ LLMs.
 - 🧠 [Mistral CLI](https://github.com/mistralai/cli) – Official standalone command-line releases for macOS and Linux, with installation documentation and SHA-256 checksums; this repository distributes binaries rather than source. Checked version: [0.14.0](https://github.com/mistralai/cli/releases/tag/cli/v0.14.0) (2026-10-27); managed capabilities and deployment commands may require organization feature flags.
