@@ -12,14 +12,14 @@
     },
     {
       "url": "https://www.reddit.com/r/LocalLLaMA/",
-      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The community's existence was not independently verified this week; excluded links are not counted as verified successes. Remove the entry if it remains unverifiable at the next review.",
+      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The community's existence was not independently verified this week and no primary source links it; excluded links are not counted as verified successes. Remove the entry if it remains unverifiable at the next review.",
       "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/41284467095",
       "checked_at": "2026-11-04",
       "expires_on": "2026-11-18"
     },
     {
       "url": "https://www.reddit.com/r/MistralAI/",
-      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The community's existence was not independently verified this week; excluded links are not counted as verified successes. Remove the entry if it remains unverifiable at the next review.",
+      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The mistral.ai site footer, captured on 2026-11-04, links this subreddit, which corroborates the destination but does not verify its content. Excluded links are not counted as verified successes.",
       "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/41284467095",
       "checked_at": "2026-11-04",
       "expires_on": "2026-11-18"
