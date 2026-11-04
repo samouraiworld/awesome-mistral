@@ -1,28 +1,28 @@
 {
-  "last_reviewed": "2026-10-28",
-  "audit": "audits/2026-10-28.md",
+  "last_reviewed": "2026-11-04",
+  "audit": "audits/2026-11-04.md",
   "max_age_days": 31,
   "link_exceptions": [
     {
       "url": "https://x.com/MistralAI",
-      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-10-25; HTTP 200 and visible official-account content from the maintenance host on 2026-10-28. The official documentation footer corroborates ownership. Recheck both environments weekly; this does not prove authenticated access.",
-      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/40172976757",
-      "checked_at": "2026-10-28",
-      "expires_on": "2026-11-11"
+      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01; HTTP 200 from the maintenance host on 2026-11-04. The official documentation footer and the 2026-10-29 Mistral Large 4 announcement link this account. Recheck both environments weekly; this does not prove authenticated access.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/41284467095",
+      "checked_at": "2026-11-04",
+      "expires_on": "2026-11-18"
     },
     {
       "url": "https://www.reddit.com/r/LocalLLaMA/",
-      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-10-25; HTTP 200 from the maintenance host on 2026-10-28, but the response is an application shell rather than independently readable community content. Recheck both environments weekly; excluded links are not counted as verified successes.",
-      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/40172976757",
-      "checked_at": "2026-10-28",
-      "expires_on": "2026-11-11"
+      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The community's existence was not independently verified this week and no primary source links it; excluded links are not counted as verified successes. Remove the entry if it remains unverifiable at the next review.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/41284467095",
+      "checked_at": "2026-11-04",
+      "expires_on": "2026-11-18"
     },
     {
       "url": "https://www.reddit.com/r/MistralAI/",
-      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-10-25; HTTP 200 from the maintenance host on 2026-10-28, but the response is an application shell rather than independently readable community content. Recheck both environments weekly; excluded links are not counted as verified successes.",
-      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/40172976757",
-      "checked_at": "2026-10-28",
-      "expires_on": "2026-11-11"
+      "reason": "HTTP 403 from the GitHub-hosted runner on 2026-11-01 and, for the first time, also from the maintenance host on 2026-11-04 (page, about.json and old.reddit.com all blocked scripted clients). The mistral.ai site footer, captured on 2026-11-04, links this subreddit, which corroborates the destination but does not verify its content. Excluded links are not counted as verified successes.",
+      "evidence": "https://github.com/samouraiworld/awesome-mistral/actions/runs/41284467095",
+      "checked_at": "2026-11-04",
+      "expires_on": "2026-11-18"
     }
   ]
 }
