@@ -17,9 +17,8 @@ remap = [
     '^https://github\.com/([^/]+)/([^/]+)/blob/([^#]+)(#.*)?$ https://raw.githubusercontent.com/$1/$2/$3',
 ]
 # Exact anti-bot exceptions: evidence and expiry (at most 14 days) in maintenance.json.
-# X ownership is corroborated upstream; Reddit returned 200 locally and 403 in CI.
+# X and r/MistralAI ownership is corroborated upstream; both return 403 to the CI runner.
 exclude = [
     '^https://x\.com/MistralAI$',
-    '^https://www\.reddit\.com/r/LocalLLaMA/$',
     '^https://www\.reddit\.com/r/MistralAI/$',
 ]
